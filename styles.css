@@ -1012,7 +1012,151 @@ img { display: block; max-width: 100%; }
 @media (max-width: 768px) { .back-to-top-btn { bottom: 7rem; right: 0.875rem; width: 36px; height: 36px; } }
 
 /* ======================================================================
-   UTILITIES
+   MOBILE APP SPECIFIC ENHANCEMENTS (iOS & Android Native Feel)
+   ====================================================================== */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(4.25rem + env(safe-area-inset-bottom, 0px)) !important;
+  }
+  
+  .container-custom {
+    padding: 0 0.875rem;
+  }
+
+  .announcement-bar {
+    font-size: 0.72rem;
+    padding: 0.35rem 0;
+  }
+
+  .logo-img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hero-slider-wrap {
+    min-height: auto;
+  }
+
+  .hero-slide {
+    padding: 1.25rem 0 1.5rem 0;
+  }
+
+  .hero-title {
+    font-size: 1.65rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Swipeable Category Row on Mobile */
+  .category-scroll-mobile {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+  .category-scroll-mobile .category-circle-card {
+    flex-shrink: 0;
+    width: 90px;
+    padding: 0.75rem 0.25rem;
+    scroll-snap-align: start;
+  }
+  .category-scroll-mobile .category-circle-img-wrap {
+    width: 66px;
+    height: 66px;
+  }
+
+  /* Filter tabs swipeable */
+  #catalogFilters {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0.4rem;
+    padding-bottom: 0.35rem;
+  }
+  #catalogFilters::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-tab-btn {
+    flex-shrink: 0;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  /* Price filter pills swipeable */
+  .price-filter-bar {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0.4rem;
+    padding-bottom: 0.25rem;
+  }
+  .price-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .price-filter-pill {
+    flex-shrink: 0;
+    font-size: 0.72rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  /* 2-Col Mobile Product Grid */
+  .product-card {
+    border-radius: 10px;
+  }
+  .product-img-wrap {
+    padding: 0.625rem;
+  }
+  .product-content {
+    padding: 0.625rem;
+  }
+  .product-brand {
+    font-size: 0.625rem;
+    margin-bottom: 0.15rem;
+  }
+  .product-title {
+    font-size: 0.78rem;
+    height: 2.3em;
+    line-height: 1.25;
+    margin-bottom: 0.35rem;
+  }
+  .current-price {
+    font-size: 0.95rem;
+  }
+  .original-price {
+    font-size: 0.72rem;
+  }
+
+  /* Deal of the week mobile */
+  .deal-section {
+    padding: 1.125rem;
+    border-radius: 14px;
+  }
+  .countdown-unit {
+    min-width: 48px;
+    padding: 0.4rem 0.5rem;
+  }
+  .countdown-num {
+    font-size: 1.15rem;
+  }
+  .countdown-label {
+    font-size: 0.58rem;
+  }
+}
+
+/* ======================================================================
+   UTILITIES & ANIMATIONS
    ====================================================================== */
 body.overflow-hidden { overflow: hidden !important; touch-action: none; }
 

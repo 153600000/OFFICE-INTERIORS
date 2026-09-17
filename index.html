@@ -61,24 +61,22 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body style="padding-bottom: 0;" class="md:pb-0 pb-20">
+<body>
 
   <!-- ANNOUNCEMENT BAR -->
   <div class="announcement-bar">
-    <div class="container-custom" style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
-      <span style="font-weight:600;">Certified Refurbished Office Furniture · Pan-India Delivery</span>
-      <div style="display:flex; align-items:center; gap:1.25rem; font-size:0.8125rem;">
-        <a href="tel:+917760951238" style="display:flex; align-items:center; gap:0.375rem;">
-          <i class="fas fa-phone-alt" style="font-size:0.7rem;"></i> +91 77609 51238
+    <div class="container-custom flex justify-between items-center text-xs">
+      <span class="truncate font-medium">Certified Refurbished Furniture · Pan-India Delivery</span>
+      <div class="flex items-center gap-3 text-xs flex-shrink-0 ml-2">
+        <a href="tel:+917760951238" class="flex items-center gap-1 font-semibold hover:underline">
+          <i class="fas fa-phone-alt text-[10px]"></i> <span class="hidden sm:inline">+91 77609 51238</span><span class="sm:hidden">Call Us</span>
         </a>
-        <span style="opacity:0.35;">|</span>
-        <button onclick="openResellModal()" style="display:flex; align-items:center; gap:0.375rem; color:#fde68a; font-weight:600;">
-          <i class="fas fa-recycle" style="font-size:0.75rem;"></i> Sell Your Furniture
+        <span class="opacity-35 hidden sm:inline">|</span>
+        <button onclick="openResellModal()" class="hidden sm:flex items-center gap-1 text-amber-200 font-semibold hover:underline">
+          <i class="fas fa-recycle text-[11px]"></i> Sell Furniture
         </button>
-        <span style="opacity:0.35;" class="hidden sm:inline">|</span>
-        <span class="hidden sm:inline" style="opacity:0.9;">
-          <i class="fas fa-shield-alt" style="margin-right:0.25rem;"></i>1-Year Warranty
-        </span>
+        <span class="opacity-35 hidden sm:inline">|</span>
+        <span class="hidden sm:inline opacity-90"><i class="fas fa-shield-alt mr-1"></i>1-Yr Warranty</span>
       </div>
     </div>
   </div>
@@ -87,23 +85,23 @@
   <header id="mainHeader" class="main-header">
 
     <!-- Top row: logo, search, actions -->
-    <div class="container-custom" style="display:flex; align-items:center; gap:1rem; padding-top:0.75rem; padding-bottom:0.75rem;">
+    <div class="container-custom" style="display:flex; align-items:center; gap:0.75rem; padding-top:0.6rem; padding-bottom:0.6rem;">
 
       <!-- Logo -->
       <a href="#" class="logo-badge" style="flex-shrink:0;">
-        <img src="logo.jpeg" alt="Office Interiors" class="logo-img" width="40" height="40">
+        <img src="logo.jpeg" alt="Office Interiors" class="logo-img" width="38" height="38">
         <div>
-          <div style="font-family:var(--font-heading); font-size:1.2rem; font-weight:800; color:var(--text-primary); line-height:1; letter-spacing:-0.02em;">
+          <div style="font-family:var(--font-heading); font-size:1.15rem; font-weight:800; color:var(--text-primary); line-height:1; letter-spacing:-0.02em;">
             OFFICE<span style="color:var(--green);"> INTERIORS</span>
           </div>
-          <div style="font-size:0.62rem; font-weight:500; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.05em; margin-top:0.1rem;">
+          <div class="hidden sm:block" style="font-size:0.62rem; font-weight:500; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.05em; margin-top:0.1rem;">
             Refurbished · Certified · Delivered
           </div>
         </div>
       </a>
 
       <!-- Search (desktop) -->
-      <div class="hidden lg:flex" style="flex:1; max-width:500px;">
+      <div class="hidden lg:flex" style="flex:1; max-width:500px; margin:0 1rem;">
         <div class="search-input-group" style="width:100%;">
           <span style="padding:0 0.625rem 0 0.875rem; color:var(--text-muted); font-size:0.875rem; flex-shrink:0;"><i class="fas fa-search"></i></span>
           <input type="text" id="searchInput" placeholder="Search chairs, desks, Herman Miller..." autocomplete="off">
@@ -128,9 +126,9 @@
           <i class="fas fa-recycle" style="font-size:0.75rem;"></i> Sell Furniture
         </button>
 
-        <!-- Wishlist -->
-        <button id="wishlistToggleBtn" onclick="toggleWishlistDrawer()" title="Wishlist" aria-label="Wishlist"
-          style="position:relative; width:40px; height:40px; display:flex; align-items:center; justify-content:center; border-radius:var(--radius-sm); color:var(--text-secondary); font-size:1.1rem; transition:var(--transition); background:transparent; border:none;">
+        <!-- Wishlist (desktop/tablet) -->
+        <button id="wishlistToggleBtn" onclick="toggleWishlistDrawer()" title="Wishlist" aria-label="Wishlist" class="hidden sm:flex"
+          style="position:relative; width:38px; height:38px; align-items:center; justify-content:center; border-radius:var(--radius-sm); color:var(--text-secondary); font-size:1.1rem; transition:var(--transition); background:transparent; border:none;">
           <i class="far fa-heart"></i>
           <span id="wishlistCountBadge"
             style="position:absolute; top:2px; right:2px; background:#ef4444; color:#fff; font-size:0.6rem; font-weight:800; width:16px; height:16px; border-radius:50%; display:flex; align-items:center; justify-content:center; border:1.5px solid #fff;">0</span>
@@ -138,7 +136,7 @@
 
         <!-- Cart -->
         <button id="cartDrawerBtn" title="Cart" aria-label="Cart"
-          style="display:flex; align-items:center; gap:0.5rem; background:var(--text-primary); color:#fff; font-size:0.8125rem; font-weight:600; padding:0.5rem 0.875rem; border-radius:var(--radius-sm); border:none; cursor:pointer; transition:var(--transition);">
+          style="display:flex; align-items:center; gap:0.4rem; background:var(--text-primary); color:#fff; font-size:0.8125rem; font-weight:600; padding:0.45rem 0.8rem; border-radius:var(--radius-sm); border:none; cursor:pointer; transition:var(--transition);">
           <span style="position:relative;">
             <i class="fas fa-shopping-bag" style="font-size:0.9rem;"></i>
             <span id="cartCountBadge"
@@ -149,17 +147,17 @@
 
         <!-- Mobile menu button -->
         <button id="mobileMenuBtn" class="lg:hidden" aria-label="Menu"
-          style="width:40px; height:40px; display:flex; align-items:center; justify-content:center; border-radius:var(--radius-sm); color:var(--text-secondary); font-size:1.15rem; background:transparent; border:none; cursor:pointer;">
+          style="width:38px; height:38px; display:flex; align-items:center; justify-content:center; border-radius:var(--radius-sm); color:var(--text-secondary); font-size:1.15rem; background:transparent; border:none; cursor:pointer;">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile search -->
-    <div class="lg:hidden" style="padding:0.5rem 1.25rem; border-top:1px solid var(--border-light);">
+    <div class="lg:hidden" style="padding:0.4rem 0.875rem 0.6rem 0.875rem; border-top:1px solid var(--border-light);">
       <div class="search-input-group" style="width:100%;">
-        <span style="padding:0 0.625rem 0 0.875rem; color:var(--text-muted); font-size:0.875rem; flex-shrink:0;"><i class="fas fa-search"></i></span>
-        <input type="text" id="mobileSearchInput" placeholder="Search chairs, desks, Herman Miller..." autocomplete="off">
+        <span style="padding:0 0.5rem 0 0.75rem; color:var(--text-muted); font-size:0.875rem; flex-shrink:0;"><i class="fas fa-search"></i></span>
+        <input type="text" id="mobileSearchInput" placeholder="Search Aeron, chairs, standing desks..." autocomplete="off">
         <button id="mobileSearchClear" onclick="clearFilters()" style="padding:0 0.75rem; color:var(--text-muted); display:none;" aria-label="Clear">
           <i class="fas fa-times"></i>
         </button>
@@ -292,25 +290,25 @@
   </section>
 
   <!-- ==================== BROWSE BY CATEGORY ==================== -->
-  <section class="py-12 bg-white border-b border-slate-100">
+  <section class="py-8 sm:py-12 bg-white border-b border-slate-100">
     <div class="container-custom">
-      <div class="flex items-center justify-between mb-8">
+      <div class="flex items-center justify-between mb-4 sm:mb-8">
         <div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Shop By Category</h2>
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900">Shop By Category</h2>
         </div>
-        <a href="#catalog" onclick="filterCatalog('all')" class="text-sm font-semibold text-emerald-600 hover:text-emerald-700 flex items-center gap-1 group">
-          View Full Catalog <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition"></i>
+        <a href="#catalog" onclick="filterCatalog('all')" class="text-xs sm:text-sm font-semibold text-emerald-600 hover:text-emerald-700 flex items-center gap-1 group">
+          View All <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition"></i>
         </a>
       </div>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+      <div class="category-scroll-mobile sm:grid sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4">
         <!-- Cat 1 -->
         <div onclick="filterCatalog('chairs')" class="category-circle-card group">
           <div class="category-circle-img-wrap">
             <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-4.webp" alt="Ergonomic Chairs" onerror="this.src='https://toqri.com/wp-content/uploads/2023/10/Aeron3-3-300x300.webp'">
           </div>
-          <h3 class="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Ergonomic Chairs</h3>
-          <span class="text-xs text-slate-400 mt-0.5">14+ Models</span>
+          <h3 class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Chairs</h3>
+          <span class="text-[10px] sm:text-xs text-slate-400 mt-0.5">14+ Models</span>
         </div>
 
         <!-- Cat 2 -->
@@ -318,8 +316,8 @@
           <div class="category-circle-img-wrap">
             <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-3.webp" alt="Height Adjustable Desks">
           </div>
-          <h3 class="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Standing Desks</h3>
-          <span class="text-xs text-slate-400 mt-0.5">Electric & Solid Wood</span>
+          <h3 class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Standing Desks</h3>
+          <span class="text-[10px] sm:text-xs text-slate-400 mt-0.5">Electric</span>
         </div>
 
         <!-- Cat 3 -->
@@ -327,8 +325,8 @@
           <div class="category-circle-img-wrap">
             <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-2.webp" alt="Pedestals & Storage">
           </div>
-          <h3 class="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Storage Pedestals</h3>
-          <span class="text-xs text-slate-400 mt-0.5">Lockable Metal Units</span>
+          <h3 class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Storage</h3>
+          <span class="text-[10px] sm:text-xs text-slate-400 mt-0.5">Pedestals</span>
         </div>
 
         <!-- Cat 4 -->
@@ -336,8 +334,8 @@
           <div class="category-circle-img-wrap">
             <img src="https://toqri.com/wp-content/uploads/2025/05/Accessories_new_1.webp" alt="Replacement Parts">
           </div>
-          <h3 class="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Spares & Parts</h3>
-          <span class="text-xs text-slate-400 mt-0.5">Arm Pads & Lumbar</span>
+          <h3 class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Spares</h3>
+          <span class="text-[10px] sm:text-xs text-slate-400 mt-0.5">Pads & Parts</span>
         </div>
 
         <!-- Cat 5 -->
@@ -345,8 +343,8 @@
           <div class="category-circle-img-wrap">
             <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design.webp" alt="Cafeteria Chairs">
           </div>
-          <h3 class="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Cafeteria Seating</h3>
-          <span class="text-xs text-slate-400 mt-0.5">Breakout & Canteen</span>
+          <h3 class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Cafeteria</h3>
+          <span class="text-[10px] sm:text-xs text-slate-400 mt-0.5">Seating</span>
         </div>
 
         <!-- Cat 6 -->
@@ -354,8 +352,8 @@
           <div class="category-circle-img-wrap">
             <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-5.webp" alt="Workstations & Tables">
           </div>
-          <h3 class="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Office Tables</h3>
-          <span class="text-xs text-slate-400 mt-0.5">Boardroom & Modular</span>
+          <h3 class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Tables</h3>
+          <span class="text-[10px] sm:text-xs text-slate-400 mt-0.5">Modular</span>
         </div>
       </div>
     </div>
@@ -364,42 +362,42 @@
 
 
   <!-- ==================== DEAL OF THE WEEK SECTION ==================== -->
-  <section id="dealSection" class="py-12">
+  <section id="dealSection" class="py-8 sm:py-12">
     <div class="container-custom">
       <div class="deal-section">
-        <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <div class="grid lg:grid-cols-12 gap-6 sm:gap-8 items-center">
           
           <div class="lg:col-span-5 flex justify-center">
-            <div class="relative w-full max-w-md bg-white p-6 rounded-2xl shadow-md border border-emerald-100 flex items-center justify-center">
-              <span class="absolute top-4 left-4 bg-red-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">
+            <div class="relative w-full max-w-md bg-white p-4 sm:p-6 rounded-2xl shadow-md border border-emerald-100 flex items-center justify-center">
+              <span class="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-full shadow">
                 17% OFF WEEKLY DEAL
               </span>
-              <img id="dealImage" src="https://toqri.com/wp-content/uploads/2023/10/WhatsApp-Image-2025-11-21-at-11.05.56-AM-300x300.jpeg" alt="Deal of the week" class="max-h-72 object-contain hover:scale-105 transition duration-300">
+              <img id="dealImage" src="https://toqri.com/wp-content/uploads/2023/10/WhatsApp-Image-2025-11-21-at-11.05.56-AM-300x300.jpeg" alt="Deal of the week" class="max-h-52 sm:max-h-72 object-contain hover:scale-105 transition duration-300">
             </div>
           </div>
 
           <div class="lg:col-span-7">
             <div class="flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-emerald-700 mb-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+              <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
               Limited Time Special Offer
             </div>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight mb-3">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-2 sm:mb-3">
               Solid Wood Top – Height Adjustable Desk T13-23D
             </h2>
-            <p class="text-sm sm:text-base text-slate-600 mb-4">
+            <p class="text-xs sm:text-base text-slate-600 mb-4">
               Premium 120 x 60 CM Rubberwood finish desk equipped with 3 memory presets, digital display controller, whisper-quiet motor, and 80kg weight load. Elevation span from 62cm to 128cm for seamless sit-stand health.
             </p>
 
             <!-- Price & Savings -->
-            <div class="flex items-baseline gap-4 mb-6">
-              <span class="text-3xl sm:text-4xl font-extrabold text-emerald-700">₹26,500</span>
-              <span class="text-lg text-slate-400 line-through">₹32,000</span>
-              <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-md">Save ₹5,500</span>
+            <div class="flex items-baseline gap-3 sm:gap-4 mb-4 sm:mb-6">
+              <span class="text-2xl sm:text-4xl font-extrabold text-emerald-700">₹26,500</span>
+              <span class="text-base sm:text-lg text-slate-400 line-through">₹32,000</span>
+              <span class="bg-emerald-100 text-emerald-800 text-[11px] sm:text-xs font-bold px-2 py-0.5 rounded-md">Save ₹5,500</span>
             </div>
 
             <!-- Countdown Timer -->
-            <div class="mb-6">
-              <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Offer Ends In:</div>
+            <div class="mb-5 sm:mb-6">
+              <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Offer Ends In:</div>
               <div class="countdown-box">
                 <div class="countdown-unit">
                   <div class="countdown-num" id="dealDays">03</div>
@@ -421,16 +419,16 @@
             </div>
 
             <!-- Actions -->
-            <div class="flex flex-wrap items-center gap-3">
-              <button onclick="addToCart('prod-1')" class="btn-primary">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
+              <button onclick="addToCart('prod-1')" class="btn-primary justify-center">
                 <i class="fas fa-shopping-bag text-xs"></i>
                 <span>Add To Cart</span>
               </button>
-              <button onclick="buyViaWhatsAppItem('prod-1')" class="bg-[#25d366] hover:bg-[#1eb956] text-white font-bold py-3.5 px-5 rounded-xl shadow-md transition flex items-center gap-2 text-xs">
+              <button onclick="buyViaWhatsAppItem('prod-1')" class="btn-whatsapp justify-center">
                 <i class="fab fa-whatsapp text-base"></i>
                 <span>Order via WhatsApp</span>
               </button>
-              <button onclick="openQuickView('prod-1')" class="btn-outline !text-slate-800 !border-slate-300 hover:!bg-slate-100">
+              <button onclick="openQuickView('prod-1')" class="btn-outline justify-center">
                 <i class="fas fa-sliders text-xs"></i>
                 <span>Specifications</span>
               </button>
@@ -501,19 +499,19 @@
       </div>
 
       <!-- Budget & Price Filters Bar -->
-      <div class="flex flex-wrap items-center justify-between gap-3 mb-5 bg-slate-50/80 p-3 rounded-2xl border border-slate-200">
-        <div class="flex flex-wrap items-center gap-2">
-          <span class="text-xs font-bold text-slate-600 uppercase tracking-wider mr-1">
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 mb-5 bg-slate-50/80 p-2.5 sm:p-3 rounded-2xl border border-slate-200">
+        <div class="price-filter-bar flex items-center gap-1.5 sm:gap-2">
+          <span class="text-xs font-bold text-slate-600 uppercase tracking-wider mr-1 flex-shrink-0">
             <i class="fas fa-filter text-emerald-600 mr-1"></i> Budget:
           </span>
-          <button onclick="filterPriceRange('all')" class="price-filter-pill active" data-range="all">All Budgets</button>
-          <button onclick="filterPriceRange('under-15k')" class="price-filter-pill" data-range="under-15k">Under ₹15,000</button>
-          <button onclick="filterPriceRange('15k-35k')" class="price-filter-pill" data-range="15k-35k">₹15,000 – ₹35,000</button>
-          <button onclick="filterPriceRange('above-35k')" class="price-filter-pill" data-range="above-35k">Luxury (₹35,000+)</button>
+          <button onclick="filterPriceRange('all')" class="price-filter-pill active" data-range="all">All</button>
+          <button onclick="filterPriceRange('under-15k')" class="price-filter-pill" data-range="under-15k">Under ₹15k</button>
+          <button onclick="filterPriceRange('15k-35k')" class="price-filter-pill" data-range="15k-35k">₹15k – ₹35k</button>
+          <button onclick="filterPriceRange('above-35k')" class="price-filter-pill" data-range="above-35k">₹35k+ Luxury</button>
         </div>
 
-        <div class="flex items-center gap-2">
-          <button onclick="toggleGradeAFilter()" id="gradeAToggleBtn" class="text-xs font-semibold text-slate-700 hover:text-emerald-700 bg-white border border-slate-200 px-3 py-1.5 rounded-xl transition flex items-center gap-1.5 shadow-2xs">
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <button onclick="toggleGradeAFilter()" id="gradeAToggleBtn" class="w-full sm:w-auto text-xs font-semibold text-slate-700 hover:text-emerald-700 bg-white border border-slate-200 px-3 py-1.5 rounded-xl transition flex items-center justify-center gap-1.5 shadow-2xs">
             <i class="far fa-check-circle text-slate-400" id="gradeACheckIcon"></i>
             <span>Grade A Certified Only</span>
           </button>
@@ -544,7 +542,7 @@
       </div>
 
       <!-- Products Grid (2 columns on mobile, 3 on tablet, 4 on desktop) -->
-      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6" id="productsGrid">
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-6" id="productsGrid">
         <!-- Products will be rendered dynamically by app.js -->
       </div>
 
@@ -552,14 +550,14 @@
   </section>
 
   <!-- ==================== EXECUTIVE CHAIR COMPARISON MATRIX ==================== -->
-  <section class="py-16 bg-white border-t border-slate-100">
+  <section class="py-12 sm:py-16 bg-white border-t border-slate-100">
     <div class="container-custom">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-10">
         <div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 tracking-tight">
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 mt-2 tracking-tight">
             Compare Top Chairs
           </h2>
-          <p class="text-sm text-slate-500 mt-1">Side-by-side comparison of our top 3 certified ergonomic chairs.</p>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">Side-by-side comparison of our top 3 certified ergonomic chairs.</p>
         </div>
         <a href="https://wa.me/917760951238?text=Hi%20Office%20Interiors%2C%20can%20you%20help%20me%20choose%20the%20best%20chair%20for%20my%20setup%3F" target="_blank" class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-4 py-2.5 rounded-xl hover:bg-emerald-100 transition inline-flex items-center gap-2">
           <i class="fab fa-whatsapp text-sm text-emerald-600"></i>
@@ -567,8 +565,13 @@
         </a>
       </div>
 
+      <div class="md:hidden flex items-center gap-1.5 text-xs text-slate-400 mb-2 font-medium">
+        <i class="fas fa-arrows-left-right text-emerald-600 text-[11px]"></i>
+        <span>Swipe table horizontally to compare</span>
+      </div>
+
       <div class="overflow-x-auto border border-slate-200 rounded-2xl shadow-xs">
-        <table class="w-full text-left text-xs sm:text-sm border-collapse">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse min-w-[620px]">
           <thead>
             <tr class="bg-slate-50 text-slate-900 border-b border-slate-200">
               <th class="p-4 sm:p-5 font-bold uppercase text-[11px] text-slate-500">Key Specification</th>
