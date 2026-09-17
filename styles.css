@@ -9,14 +9,14 @@
   --primary-green-light: #e8f7ee;
   --accent-orange: #ea580c;
   --accent-amber: #f59e0b;
-  --dark-charcoal: #1e2522;
+  --dark-charcoal: #222222;
   --dark-card: #28332e;
-  --body-text: #475569;
-  --heading-text: #1e293b;
-  --light-bg: #f8faf9;
-  --border-light: #e2e8f0;
-  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-heading: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --body-text: #454545;
+  --heading-text: #222222;
+  --light-bg: #f7f7f7;
+  --border-light: #e5e5e5;
+  --font-main: 'Rubik', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Work Sans', 'Rubik', -apple-system, BlinkMacSystemFont, sans-serif;
   --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
   --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -86,15 +86,25 @@ button {
 }
 
 /* ==========================================================================
-   Header & Announcements (Clean White Theme)
+   Header & Announcements (Toqri Signature Green Bar)
    ========================================================================== */
 .announcement-bar {
-  background: #ffffff;
-  color: #475569;
+  background: #23a455;
+  color: #ffffff;
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.03em;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #1e8c48;
+}
+
+.announcement-bar a,
+.announcement-bar button {
+  color: #ffffff;
+}
+
+.announcement-bar a:hover,
+.announcement-bar button:hover {
+  opacity: 0.85;
 }
 
 .main-header {
@@ -217,19 +227,19 @@ button {
 }
 
 .nav-link:hover {
-  color: #0f172a;
-  background-color: #f8fafc;
+  color: #23a455;
+  background-color: #f0fdf4;
 }
 
 .nav-link.active {
-  color: #15803d;
+  color: #23a455;
   font-weight: 600;
   background-color: #f0fdf4;
   box-shadow: inset 0 0 0 1px #bbf7d0;
 }
 
 .deal-link {
-  color: #047857 !important;
+  color: #23a455 !important;
   font-weight: 600;
 }
 
@@ -304,32 +314,38 @@ button {
 }
 
 .btn-primary {
-  background: #0f172a;
+  background: #23a455;
   color: #ffffff;
+  font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.825rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   padding: 0.75rem 1.6rem;
-  border-radius: 0.5rem;
+  border-radius: 6px;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 10px rgba(35, 164, 85, 0.25);
   transition: var(--transition-smooth);
 }
 
 .btn-primary:hover {
-  background: #059669;
+  background: #1b8344;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+  box-shadow: 0 6px 16px rgba(35, 164, 85, 0.35);
 }
 
 .btn-outline {
-  border: 1.5px solid #cbd5e1;
-  color: #0f172a;
+  border: 1.5px solid #222222;
+  color: #222222;
+  font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.825rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   padding: 0.75rem 1.6rem;
-  border-radius: 0.5rem;
+  border-radius: 6px;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -338,8 +354,9 @@ button {
 }
 
 .btn-outline:hover {
-  background: #f8fafc;
-  border-color: #94a3b8;
+  background: #222222;
+  color: #ffffff;
+  border-color: #222222;
 }
 
 .btn-whatsapp {
@@ -348,7 +365,7 @@ button {
   font-weight: 600;
   font-size: 0.9375rem;
   padding: 0.75rem 1.75rem;
-  border-radius: 0.5rem;
+  border-radius: 6px;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -390,14 +407,14 @@ button {
 }
 
 /* ==========================================================================
-   Category Cards
+   Category Cards (Toqri Signature Circular Layout)
    ========================================================================== */
 .category-circle-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1rem;
+  padding: 1.25rem 0.75rem;
   border-radius: 1rem;
   transition: var(--transition-smooth);
   cursor: pointer;
@@ -407,33 +424,35 @@ button {
 
 .category-circle-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-soft);
-  border-color: #cbd5e1;
+  box-shadow: 0 10px 20px -5px rgba(35, 164, 85, 0.12);
+  border-color: #86efac;
 }
 
 .category-circle-img-wrap {
-  width: 100px;
-  height: 100px;
+  width: 105px;
+  height: 105px;
   border-radius: 50%;
-  background: #f8fafc;
+  background: #f0fdf4;
+  border: 2px solid #dcfce7;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
   overflow: hidden;
-  border: 2px solid #e2e8f0;
   transition: var(--transition-smooth);
 }
 
 .category-circle-card:hover .category-circle-img-wrap {
-  border-color: var(--primary-green);
-  transform: scale(1.05);
+  border-color: #23a455;
+  background: #e8f7ee;
+  transform: scale(1.06);
 }
 
 .category-circle-img-wrap img {
-  width: 80%;
-  height: 80%;
+  width: 78%;
+  height: 78%;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 /* ==========================================================================
@@ -479,12 +498,12 @@ button {
 }
 
 /* ==========================================================================
-   Product Card
+   Product Card (Toqri Clean White Architecture)
    ========================================================================== */
 .product-card {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.75rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -493,48 +512,51 @@ button {
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
-  border-color: #cbd5e1;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary-green);
 }
 
 .product-badge {
   position: absolute;
-  top: 0.85rem;
-  left: 0.85rem;
-  background: #ef4444;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: #23a455;
   color: #ffffff;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 700;
-  padding: 0.25rem 0.65rem;
-  border-radius: 9999px;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
   z-index: 10;
-  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .condition-badge {
   position: absolute;
-  top: 0.85rem;
-  right: 0.85rem;
-  background: #0284c7;
-  color: #ffffff;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.375rem;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.18rem 0.5rem;
+  border-radius: 4px;
   z-index: 10;
 }
 
 .product-img-wrap {
   width: 100%;
   aspect-ratio: 1 / 1;
-  background: #f8fafc;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1.25rem;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid #f8fafc;
 }
 
 .product-img-wrap img {
@@ -588,32 +610,33 @@ button {
 }
 
 .product-content {
-  padding: 1.25rem;
+  padding: 1.15rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .product-brand {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
   text-transform: uppercase;
-  color: #64748b;
+  color: #15803d;
   letter-spacing: 0.05em;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
 }
 
 .product-title {
-  font-size: 0.9375rem;
+  font-size: 0.925rem;
   font-weight: 600;
-  color: #1e293b;
-  line-height: 1.4;
-  margin-bottom: 0.5rem;
+  color: #222222;
+  font-family: var(--font-heading);
+  line-height: 1.35;
+  margin-bottom: 0.4rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  height: 2.8em;
+  height: 2.7em;
 }
 
 .price-container {
@@ -621,19 +644,21 @@ button {
   align-items: baseline;
   gap: 0.65rem;
   margin-top: auto;
-  padding-top: 0.75rem;
+  padding-top: 0.5rem;
 }
 
 .current-price {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 800;
-  color: var(--primary-green-hover);
+  color: #23a455;
+  font-family: var(--font-heading);
 }
 
 .original-price {
-  font-size: 0.875rem;
+  font-size: 0.825rem;
   color: #94a3b8;
   text-decoration: line-through;
+  font-weight: 500;
 }
 
 /* ==========================================================================
@@ -699,17 +724,24 @@ button {
 }
 
 .impact-stat-card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
   border-radius: 1rem;
   padding: 1.5rem;
   text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.impact-stat-card:hover {
+  transform: translateY(-3px);
+  border-color: #23a455;
 }
 
 .impact-num {
   font-size: 2.25rem;
   font-weight: 800;
-  color: #059669;
+  color: #23a455;
+  font-family: var(--font-heading);
   line-height: 1;
   margin-bottom: 0.5rem;
 }
@@ -1011,11 +1043,11 @@ button {
 }
 
 .mobile-cat-pill.active {
-  background: #15803d;
+  background: #23a455;
   color: #ffffff;
-  border-color: #15803d;
+  border-color: #23a455;
   font-weight: 600;
-  box-shadow: 0 2px 6px rgba(21, 128, 61, 0.25);
+  box-shadow: 0 2px 8px rgba(35, 164, 85, 0.25);
 }
 
 /* ==========================================================================
