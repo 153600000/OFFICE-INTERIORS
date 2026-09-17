@@ -407,10 +407,6 @@ function renderProducts(showWishlistOnly = false) {
 
     return `
       <div class="product-card group" id="card-${product.id}">
-        <button onclick="addToWishlist('${product.id}')" style="position:absolute; top:6px; right:6px; z-index:10; width:28px; height:28px; border-radius:50%; background:rgba(255,255,255,0.92); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; cursor:pointer; transition:var(--transition);" title="${isWishlisted ? 'Remove from Wishlist' : 'Add to Wishlist'}" aria-label="Wishlist">
-          <i class="${isWishlisted ? 'fas fa-heart' : 'far fa-heart'}" style="color:${isWishlisted ? '#ef4444' : '#6b7280'}; font-size:11px;"></i>
-        </button>
-
         <!-- Product Image (Click to view details) -->
         <div class="product-img-wrap" onclick="openQuickView('${product.id}')" style="cursor: pointer;">
           <img src="${product.image}" alt="${product.title}" loading="lazy" decoding="async" width="240" height="240" onerror="this.src='https://toqri.com/wp-content/uploads/2023/10/Aeron3-3-300x300.webp'">
