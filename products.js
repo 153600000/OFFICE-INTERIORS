@@ -327,8 +327,7 @@ const PRODUCTS_DATA = [
       "Backrest": "High Back with Headrest Integration",
       "Arms": "Height & Depth Adjustable",
       "Gas Lift": "Class-4 BIFMA Certified Gas Cylinder"
-    },
-    badge: "52% OFF"
+    }
   },
   {
     id: "prod-16",
@@ -430,8 +429,7 @@ const PRODUCTS_DATA = [
     specs: {
       "Fit": "Slides onto rear spine tracks of Aeron Size B",
       "Dual Cushioning": "Rotate 180 degrees for firm vs extra support"
-    },
-    badge: "52% OFF"
+    }
   },
   {
     id: "prod-21",

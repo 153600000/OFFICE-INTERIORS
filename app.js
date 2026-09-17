@@ -413,12 +413,6 @@ function renderProducts(showWishlistOnly = false) {
 
     return `
       <div class="product-card group" id="card-${product.id}">
-        <!-- Top Badges & Wishlist -->
-        <div style="position:absolute; top:8px; left:8px; z-index:10; display:flex; gap:4px; align-items:center;">
-          ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
-          ${savingsPercentage > 0 ? `<span style="background:#fef2f2; color:#dc2626; font-size:10px; font-weight:700; padding:2px 6px; border-radius:4px; border:1px solid #fee2e2;">-${savingsPercentage}%</span>` : ''}
-        </div>
-        
         <button onclick="addToWishlist('${product.id}')" style="position:absolute; top:8px; right:8px; z-index:10; width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,0.9); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; cursor:pointer; transition:var(--transition);" title="${isWishlisted ? 'Remove from Wishlist' : 'Add to Wishlist'}" aria-label="Wishlist">
           <i class="${isWishlisted ? 'fas fa-heart' : 'far fa-heart'}" style="color:${isWishlisted ? '#ef4444' : '#6b7280'}; font-size:13px;"></i>
         </button>
@@ -1242,7 +1236,6 @@ function openQuickView(productId) {
       <div class="flex items-baseline gap-3 mb-4">
         <span class="text-3xl font-extrabold text-emerald-700">₹${product.price.toLocaleString('en-IN')}</span>
         ${product.originalPrice ? `<span class="text-base text-slate-400 line-through">₹${product.originalPrice.toLocaleString('en-IN')}</span>` : ''}
-        ${product.badge ? `<span class="bg-red-100 text-red-700 text-xs font-bold px-2 py-0.5 rounded-full">${product.badge}</span>` : ''}
       </div>
 
       <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
