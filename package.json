@@ -1,0 +1,19 @@
+{
+  "name": "office-interiors-website",
+  "version": "1.0.0",
+  "description": "Toqri-inspired refurbished ergonomic office furniture e-commerce website for Office Interiors",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -l 3000",
+    "dev": "npx serve -l 3000"
+  },
+  "keywords": [
+    "office-interiors",
+    "herman-miller",
+    "refurbished-furniture",
+    "toqri",
+    "ergonomics"
+  ],
+  "author": "Office Interiors",
+  "license": "ISC"
+}

@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0">
+  <title>Office Interiors – Pre-Loved Commercial Furniture | Herman Miller, Steelcase, Desks</title>
+  <meta name="description" content="India's leading platform for certified refurbished ergonomic office furniture. Herman Miller Aeron, Mirra 2, Steelcase, Haworth, motorized standing desks, and storage pedestals at up to 70% off retail. Pan-India shipping.">
+  
+  <!-- Mobile PWA & iOS / Android App Capable -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Office Interiors">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+
+  <!-- Fast Loading Performance Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://toqri.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Work+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#23a455',
+              600: '#1b8344',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+            },
+            accent: {
+              orange: '#ea580c',
+              amber: '#f59e0b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-slate-700 antialiased pb-20 md:pb-0">
+
+  <!-- ==================== ANNOUNCEMENT TOP BAR ==================== -->
+  <div class="announcement-bar py-2">
+    <div class="container-custom flex flex-col sm:flex-row justify-between items-center gap-2 text-xs">
+      <div class="flex items-center gap-2.5">
+        <span class="inline-flex items-center gap-1.5 font-semibold text-emerald-700">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          CERTIFIED PRE-LOVED COMMERCIAL ASSETS
+        </span>
+        <span class="hidden md:inline text-slate-400">• Pan-India Insured White-Glove Dispatch</span>
+      </div>
+      <div class="flex items-center gap-4 sm:gap-6 text-slate-600 text-xs font-medium">
+        <a href="tel:+917760951238" class="hover:text-emerald-700 flex items-center gap-1.5 transition">
+          <i class="fas fa-phone-alt text-[11px] text-emerald-600"></i> +91 77609 51238
+        </a>
+        <span class="text-slate-200 hidden sm:inline">|</span>
+        <button onclick="openResellModal()" class="hover:text-amber-700 text-amber-600 font-semibold transition flex items-center gap-1.5">
+          <i class="fas fa-recycle text-xs"></i> Liquidate / Resell
+        </button>
+        <span class="text-slate-200 hidden sm:inline">|</span>
+        <span class="hidden sm:inline text-slate-500">
+          <i class="fas fa-shield-alt text-emerald-600 mr-1"></i> 1-Year Commercial Warranty
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN STICKY HEADER ==================== -->
+  <header id="mainHeader" class="main-header">
+    <!-- Top Row: Logo, Search, User Actions -->
+    <div class="container-custom py-3 border-b border-slate-100 flex items-center justify-between gap-4 sm:gap-6">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="logo-badge flex-shrink-0 group">
+        <img src="logo.jpeg" alt="Office Interiors Logo" class="logo-img group-hover:scale-105 transition duration-200" width="44" height="44">
+        <div class="flex flex-col">
+          <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 leading-none">
+            OFFICE<span class="text-emerald-600"> INTERIORS</span>
+          </span>
+          <span class="text-[9px] font-semibold text-slate-500 uppercase tracking-widest mt-0.5">
+            Comfort • Style • Productivity
+          </span>
+        </div>
+      </a>
+
+      <!-- Refined Responsive Search Bar (Desktop) -->
+      <div class="hidden lg:flex flex-1 max-w-xl mx-4">
+        <div class="search-input-group w-full">
+          <span class="pl-3.5 pr-2 text-slate-400 text-xs flex-shrink-0">
+            <i class="fas fa-search"></i>
+          </span>
+          <input type="text" id="searchInput" placeholder="Search Aeron, chairs, standing desks, storage..." autocomplete="off">
+          <select id="searchCategory" class="search-category-select flex-shrink-0" aria-label="Search Category">
+            <option value="all">All Categories</option>
+            <option value="chairs">Chairs</option>
+            <option value="desks">Desks</option>
+            <option value="storage">Storage</option>
+            <option value="accessories">Parts</option>
+          </select>
+          <button id="searchBtn" class="search-btn-icon flex-shrink-0" aria-label="Submit Search">
+            <i class="fas fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-2.5 sm:gap-4 flex-shrink-0">
+        <!-- Corporate Liquidation Action -->
+        <button onclick="openResellModal()" class="hidden xl:inline-flex items-center gap-1.5 text-xs font-semibold bg-amber-50 text-amber-900 border border-amber-200 hover:bg-amber-100 px-3.5 py-2 rounded-xl transition shadow-xs">
+          <i class="fas fa-building text-amber-600"></i>
+          <span>Bulk Liquidation</span>
+        </button>
+
+        <!-- Wishlist -->
+        <button id="wishlistToggleBtn" class="relative p-2.5 text-slate-600 hover:text-emerald-600 rounded-xl hover:bg-slate-100 transition" title="Wishlist" aria-label="View Wishlist">
+          <i class="far fa-heart text-lg"></i>
+          <span id="wishlistCountBadge" class="absolute top-1 right-1 bg-red-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Cart Button -->
+        <button id="cartDrawerBtn" class="flex items-center gap-2 bg-slate-900 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-xl shadow-xs transition" title="Shopping Cart" aria-label="View Shopping Cart">
+          <div class="relative">
+            <i class="fas fa-shopping-bag text-sm"></i>
+            <span id="cartCountBadge" class="absolute -top-1.5 -right-2 bg-emerald-500 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+          </div>
+          <span id="cartTotalHeader" class="text-xs font-bold tracking-tight hidden sm:inline ml-1">₹0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="lg:hidden p-2 text-slate-700 hover:text-emerald-600 rounded-lg hover:bg-slate-100 transition" aria-label="Toggle Navigation">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Search Bar (< lg) -->
+    <div class="lg:hidden px-3.5 py-2 bg-white border-b border-slate-100">
+      <div class="search-input-group w-full">
+        <span class="pl-3.5 pr-2 text-slate-400 text-xs flex-shrink-0"><i class="fas fa-search"></i></span>
+        <input type="text" id="mobileSearchInput" placeholder="Search Herman Miller, desks, chairs..." autocomplete="off">
+        <button id="mobileSearchClear" onclick="clearFilters()" class="pr-3 text-slate-400 hover:text-slate-600 hidden text-xs" aria-label="Clear Search">
+          <i class="fas fa-times-circle"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Swipeable Category Bar (Native Horizontal Scroll for iOS & Android) -->
+    <div class="lg:hidden overflow-x-auto no-scrollbar py-2 px-3 bg-slate-50/70 border-b border-slate-100 flex items-center gap-2 whitespace-nowrap text-xs font-medium">
+      <button onclick="filterCatalog('all')" class="mobile-cat-pill active" data-mobcat="all">All Items</button>
+      <button onclick="filterCatalog('chairs')" class="mobile-cat-pill" data-mobcat="chairs">Ergonomic Chairs</button>
+      <button onclick="filterCatalog('desks')" class="mobile-cat-pill" data-mobcat="desks">Standing Desks</button>
+      <button onclick="filterCatalog('storage')" class="mobile-cat-pill" data-mobcat="storage">Storage & Pedestals</button>
+      <button onclick="filterCatalog('accessories')" class="mobile-cat-pill" data-mobcat="accessories">Spares & Parts</button>
+      <a href="#dealSection" class="mobile-cat-pill !text-emerald-700 font-semibold !border-emerald-200">🔥 Deal of Week</a>
+    </div>
+
+    <!-- Bottom Row: Navigation Links (Clean Horizontal Desktop Alignment) -->
+    <nav class="nav-bar hidden lg:block">
+      <div class="container-custom flex items-center justify-center space-x-2 py-1">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#catalog" onclick="filterCatalog('all')" class="nav-link">All Products</a>
+        <a href="#catalog" onclick="filterCatalog('chairs')" class="nav-link">Ergonomic Chairs</a>
+        <a href="#catalog" onclick="filterCatalog('desks')" class="nav-link">Standing Desks</a>
+        <a href="#catalog" onclick="filterCatalog('storage')" class="nav-link">Pedestals & Storage</a>
+        <a href="#catalog" onclick="filterCatalog('accessories')" class="nav-link">Spares & Parts</a>
+        <a href="#dealSection" class="nav-link deal-link">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Deal of the Week</span>
+          <span class="deal-pill">17% OFF</span>
+        </a>
+        <a href="#sustainability" class="nav-link">Sustainability</a>
+        <a href="#reviews" class="nav-link">Customer Reviews</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== HERO SLIDER SECTION ==================== -->
+  <section id="hero" class="hero-slider-wrap relative">
+    <div class="container-custom relative z-10">
+
+      <!-- Slide 1 -->
+      <div class="hero-slide active" id="heroSlide1">
+        <div class="grid lg:grid-cols-12 gap-8 items-center min-h-[440px]">
+          <div class="lg:col-span-7">
+            <div class="hero-badge-pill">
+              <i class="fas fa-leaf"></i> RECYCLE. REUSE. RETHINK.
+            </div>
+            <h1 class="hero-title">
+              Pre-Loved Furniture, <span>Reimagined for You</span>
+            </h1>
+            <p class="hero-description">
+              Make a high-impact, sustainable switch with certified refurbished commercial furniture. Herman Miller, Haworth, Steelcase, and ergonomic standing desks at a fraction of retail price. Delivered pan-India.
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="#catalog" class="btn-primary">
+                <span>EXPLORE INVENTORY</span>
+                <i class="fas fa-arrow-right text-xs"></i>
+              </a>
+              <button onclick="openResellModal()" class="btn-outline">
+                <i class="fas fa-recycle text-emerald-400"></i>
+                <span>SELL / LIQUIDATE ASSETS</span>
+              </button>
+            </div>
+          </div>
+          <div class="lg:col-span-5 flex justify-center relative">
+            <div class="relative max-w-sm sm:max-w-md">
+              <img src="https://toqri.com/wp-content/uploads/2023/10/Aeron3-3-300x300.webp" alt="Herman Miller Aeron Refurbished" class="w-full h-auto object-contain drop-shadow-2xl animate-float">
+              <div class="absolute -bottom-4 right-2 bg-white/95 backdrop-blur text-slate-800 p-3 rounded-xl shadow-xl border border-emerald-100 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-slate-900">Grade A Refurbished</div>
+                  <div class="text-[11px] text-emerald-700 font-medium">100% Inspected & Serviced</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide" id="heroSlide2">
+        <div class="grid lg:grid-cols-12 gap-8 items-center min-h-[440px]">
+          <div class="lg:col-span-7">
+            <div class="hero-badge-pill">
+              <i class="fas fa-chart-line"></i> SMARTER SPACES, GREENER PLANET
+            </div>
+            <h1 class="hero-title">
+              Affordable Furniture That <span>Makes a Difference</span>
+            </h1>
+            <p class="hero-description">
+              Save big while saving the planet. Outfit your entire home office or startup headquarters with ergonomic seating and electric sit-stand desks that are good for your back—and even better for the Earth.
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="#catalog" onclick="filterCatalog('chairs')" class="btn-primary">
+                <span>EXPLORE CHAIRS</span>
+                <i class="fas fa-chair text-xs"></i>
+              </a>
+              <a href="#dealSection" class="btn-outline">
+                <i class="fas fa-bolt text-amber-400"></i>
+                <span>VIEW WEEKLY DEAL</span>
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-5 flex justify-center relative">
+            <div class="relative max-w-sm sm:max-w-md">
+              <img src="https://toqri.com/wp-content/uploads/2023/10/WhatsApp-Image-2025-11-21-at-11.05.56-AM-300x300.jpeg" alt="Height Adjustable Standing Desk" class="w-full h-auto object-contain drop-shadow-2xl">
+              <div class="absolute -top-2 left-2 bg-amber-500 text-slate-900 font-extrabold text-xs px-3 py-1.5 rounded-lg shadow-lg">
+                SAVE ₹5,500 TODAY
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Indicators -->
+      <div class="flex justify-center items-center gap-3 pt-6 pb-2">
+        <button onclick="setSlide(0)" id="slideDot0" class="w-10 h-2.5 rounded-full bg-slate-900 transition-all duration-300" aria-label="Slide 1"></button>
+        <button onclick="setSlide(1)" id="slideDot1" class="w-3 h-2.5 rounded-full bg-slate-200 hover:bg-slate-300 transition-all duration-300" aria-label="Slide 2"></button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== TRUST BADGES BAR ==================== -->
+  <section class="trust-bar">
+    <div class="container-custom">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-2">
+        <div class="trust-item">
+          <div class="trust-icon"><i class="fas fa-check-double"></i></div>
+          <div>
+            <h4 class="text-sm font-bold text-slate-900">Certified Quality</h4>
+            <p class="text-xs text-slate-500">Rigorous 18-point inspection</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><i class="fas fa-truck-fast"></i></div>
+          <div>
+            <h4 class="text-sm font-bold text-slate-900">Pan-India Delivery</h4>
+            <p class="text-xs text-slate-500">Secure wooden crate transit</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><i class="fas fa-shield-halved"></i></div>
+          <div>
+            <h4 class="text-sm font-bold text-slate-900">1-Year Warranty</h4>
+            <p class="text-xs text-slate-500">On mechanism & cylinders</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><i class="fas fa-seedling"></i></div>
+          <div>
+            <h4 class="text-sm font-bold text-slate-900">Eco-Friendly</h4>
+            <p class="text-xs text-slate-500">Zero landfill circular economy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BROWSE BY CATEGORY ==================== -->
+  <section class="py-12 bg-white border-b border-slate-100">
+    <div class="container-custom">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-600">Smart Workspaces</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Shop By Categories</h2>
+        </div>
+        <a href="#catalog" onclick="filterCatalog('all')" class="text-sm font-semibold text-emerald-600 hover:text-emerald-700 flex items-center gap-1 group">
+          View Full Catalog <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+        <!-- Cat 1 -->
+        <div onclick="filterCatalog('chairs')" class="category-circle-card group">
+          <div class="category-circle-img-wrap">
+            <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-4.webp" alt="Ergonomic Chairs" onerror="this.src='https://toqri.com/wp-content/uploads/2023/10/Aeron3-3-300x300.webp'">
+          </div>
+          <h3 class="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Ergonomic Chairs</h3>
+          <span class="text-xs text-slate-400 mt-0.5">14+ Models</span>
+        </div>
+
+        <!-- Cat 2 -->
+        <div onclick="filterCatalog('desks')" class="category-circle-card group">
+          <div class="category-circle-img-wrap">
+            <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-3.webp" alt="Height Adjustable Desks">
+          </div>
+          <h3 class="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Standing Desks</h3>
+          <span class="text-xs text-slate-400 mt-0.5">Electric & Solid Wood</span>
+        </div>
+
+        <!-- Cat 3 -->
+        <div onclick="filterCatalog('storage')" class="category-circle-card group">
+          <div class="category-circle-img-wrap">
+            <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-2.webp" alt="Pedestals & Storage">
+          </div>
+          <h3 class="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Storage Pedestals</h3>
+          <span class="text-xs text-slate-400 mt-0.5">Lockable Metal Units</span>
+        </div>
+
+        <!-- Cat 4 -->
+        <div onclick="filterCatalog('accessories')" class="category-circle-card group">
+          <div class="category-circle-img-wrap">
+            <img src="https://toqri.com/wp-content/uploads/2025/05/Accessories_new_1.webp" alt="Replacement Parts">
+          </div>
+          <h3 class="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Spares & Parts</h3>
+          <span class="text-xs text-slate-400 mt-0.5">Arm Pads & Lumbar</span>
+        </div>
+
+        <!-- Cat 5 -->
+        <div onclick="filterCatalog('chairs')" class="category-circle-card group">
+          <div class="category-circle-img-wrap">
+            <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design.webp" alt="Cafeteria Chairs">
+          </div>
+          <h3 class="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Cafeteria Seating</h3>
+          <span class="text-xs text-slate-400 mt-0.5">Breakout & Canteen</span>
+        </div>
+
+        <!-- Cat 6 -->
+        <div onclick="filterCatalog('desks')" class="category-circle-card group">
+          <div class="category-circle-img-wrap">
+            <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-5.webp" alt="Workstations & Tables">
+          </div>
+          <h3 class="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Office Tables</h3>
+          <span class="text-xs text-slate-400 mt-0.5">Boardroom & Modular</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DEAL OF THE WEEK SECTION ==================== -->
+  <section id="dealSection" class="py-12">
+    <div class="container-custom">
+      <div class="deal-section">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-md bg-white p-6 rounded-2xl shadow-md border border-emerald-100 flex items-center justify-center">
+              <span class="absolute top-4 left-4 bg-red-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">
+                17% OFF WEEKLY DEAL
+              </span>
+              <img id="dealImage" src="https://toqri.com/wp-content/uploads/2023/10/WhatsApp-Image-2025-11-21-at-11.05.56-AM-300x300.jpeg" alt="Deal of the week" class="max-h-72 object-contain hover:scale-105 transition duration-300">
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-emerald-700 mb-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+              Limited Time Special Offer
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight mb-3">
+              Solid Wood Top – Height Adjustable Desk T13-23D
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 mb-4">
+              Premium 120 x 60 CM Rubberwood finish desk equipped with 3 memory presets, digital display controller, whisper-quiet motor, and 80kg weight load. Elevation span from 62cm to 128cm for seamless sit-stand health.
+            </p>
+
+            <!-- Price & Savings -->
+            <div class="flex items-baseline gap-4 mb-6">
+              <span class="text-3xl sm:text-4xl font-extrabold text-emerald-700">₹26,500</span>
+              <span class="text-lg text-slate-400 line-through">₹32,000</span>
+              <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-md">Save ₹5,500</span>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="mb-6">
+              <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Offer Ends In:</div>
+              <div class="countdown-box">
+                <div class="countdown-unit">
+                  <div class="countdown-num" id="dealDays">03</div>
+                  <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-unit">
+                  <div class="countdown-num" id="dealHours">14</div>
+                  <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-unit">
+                  <div class="countdown-num" id="dealMins">42</div>
+                  <div class="countdown-label">Mins</div>
+                </div>
+                <div class="countdown-unit">
+                  <div class="countdown-num" id="dealSecs">18</div>
+                  <div class="countdown-label">Secs</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex flex-wrap items-center gap-3">
+              <button onclick="addToCart('prod-1')" class="btn-primary">
+                <i class="fas fa-shopping-bag text-xs"></i>
+                <span>Add To Cart</span>
+              </button>
+              <button onclick="buyViaWhatsAppItem('prod-1')" class="bg-[#25d366] hover:bg-[#1eb956] text-white font-bold py-3.5 px-5 rounded-xl shadow-md transition flex items-center gap-2 text-xs">
+                <i class="fab fa-whatsapp text-base"></i>
+                <span>Order via WhatsApp</span>
+              </button>
+              <button onclick="openQuickView('prod-1')" class="btn-outline !text-slate-800 !border-slate-300 hover:!bg-slate-100">
+                <i class="fas fa-sliders text-xs"></i>
+                <span>Specifications</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SHOP BY TOP BRANDS ==================== -->
+  <section class="py-10 bg-white border-y border-slate-100">
+    <div class="container-custom text-center">
+      <span class="text-xs font-bold uppercase tracking-widest text-emerald-600">Trusted Global Manufacturers</span>
+      <h2 class="text-2xl font-extrabold text-slate-900 mt-1 mb-6">Shop By Top Brands</h2>
+      
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4" id="brandsContainer">
+        <!-- Rendered by JS or default pills -->
+        <button onclick="searchBrand('Herman Miller')" class="brand-pill flex flex-col items-center">
+          <span class="text-base font-extrabold text-slate-800">Herman Miller</span>
+          <span class="text-[11px] text-emerald-600 font-semibold mt-1">Aeron • Mirra • Celle</span>
+        </button>
+        <button onclick="searchBrand('Steelcase')" class="brand-pill flex flex-col items-center">
+          <span class="text-base font-extrabold text-slate-800">Steelcase</span>
+          <span class="text-[11px] text-emerald-600 font-semibold mt-1">Leap V2 • Gesture</span>
+        </button>
+        <button onclick="searchBrand('Haworth')" class="brand-pill flex flex-col items-center">
+          <span class="text-base font-extrabold text-slate-800">Haworth</span>
+          <span class="text-[11px] text-emerald-600 font-semibold mt-1">Aloha • Fern • Zody</span>
+        </button>
+        <button onclick="searchBrand('Humanscale')" class="brand-pill flex flex-col items-center">
+          <span class="text-base font-extrabold text-slate-800">Humanscale</span>
+          <span class="text-[11px] text-emerald-600 font-semibold mt-1">Freedom Headrest</span>
+        </button>
+        <button onclick="searchBrand('Featherlite')" class="brand-pill flex flex-col items-center">
+          <span class="text-base font-extrabold text-slate-800">Featherlite</span>
+          <span class="text-[11px] text-emerald-600 font-semibold mt-1">Contact MB • Pedestals</span>
+        </button>
+        <button onclick="searchBrand('Knoll')" class="brand-pill flex flex-col items-center">
+          <span class="text-base font-extrabold text-slate-800">Knoll</span>
+          <span class="text-[11px] text-emerald-600 font-semibold mt-1">Generation • Life</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRODUCT CATALOG SECTION ==================== -->
+  <section id="catalog" class="py-14 bg-white border-t border-slate-100">
+    <div class="container-custom">
+      
+      <!-- Catalog Header & Filter Tabs -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-600">Pre-Loved Inventory</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Featured & Latest Arrivals</h2>
+          <p class="text-sm text-slate-500 mt-1">100% genuine office assets tested, sanitized, and backed by warranty.</p>
+        </div>
+
+        <!-- Filter Pill Tabs -->
+        <div class="flex flex-wrap gap-2" id="catalogFilters">
+          <button onclick="filterCatalog('all')" class="filter-tab-btn active" data-cat="all">All Items</button>
+          <button onclick="filterCatalog('chairs')" class="filter-tab-btn" data-cat="chairs">Ergonomic Chairs</button>
+          <button onclick="filterCatalog('desks')" class="filter-tab-btn" data-cat="desks">Standing Desks</button>
+          <button onclick="filterCatalog('storage')" class="filter-tab-btn" data-cat="storage">Storage & Drawers</button>
+          <button onclick="filterCatalog('accessories')" class="filter-tab-btn" data-cat="accessories">Spares & Parts</button>
+        </div>
+      </div>
+
+      <!-- Active Filter Status & Item Count -->
+      <div class="flex justify-between items-center text-xs text-slate-500 mb-4 pb-2 border-b border-slate-200">
+        <div>Showing <span id="displayedCount" class="font-bold text-slate-800">0</span> certified products</div>
+        <div class="flex items-center gap-2">
+          <span>Sort By:</span>
+          <select id="sortBySelect" onchange="applySorting()" class="bg-white border border-slate-300 rounded px-2 py-1 text-xs text-slate-700 outline-none">
+            <option value="featured">Featured / Best Value</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Products Grid (2 columns on mobile, 3 on tablet, 4 on desktop) -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6" id="productsGrid">
+        <!-- Products will be rendered dynamically by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SUSTAINABILITY & WHY IT MATTERS ==================== -->
+  <section id="sustainability" class="py-16 bg-white border-t border-slate-100">
+    <div class="container-custom">
+      <div class="sustainability-banner">
+        <div class="max-w-3xl mb-12">
+          <div class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 border border-emerald-200 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+            🌍 WHY IT MATTERS
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight mb-4">
+            Every Purchase Helps The Planet
+          </h2>
+          <p class="text-base text-slate-600 leading-relaxed">
+            Small choices lead to big changes. Choosing refurbished furniture means less manufacturing waste, fewer natural resources stripped, and a significantly lighter carbon footprint. Each piece you buy supports a circular economy—giving furniture a second life and our planet a greener tomorrow.
+          </p>
+        </div>
+
+        <!-- Metric Counter Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
+          <div class="impact-stat-card">
+            <div class="impact-num">1,850+</div>
+            <div class="text-sm font-bold text-slate-900">Chairs Diverted</div>
+            <div class="text-xs text-slate-500 mt-1">Kept out of landfills</div>
+          </div>
+          <div class="impact-stat-card">
+            <div class="impact-num">94,000 kg</div>
+            <div class="text-sm font-bold text-slate-900">CO₂ Emissions Saved</div>
+            <div class="text-xs text-slate-500 mt-1">Equivalent to 4,200 trees</div>
+          </div>
+          <div class="impact-stat-card">
+            <div class="impact-num">4.5M L</div>
+            <div class="text-sm font-bold text-slate-900">Water Conserved</div>
+            <div class="text-xs text-slate-500 mt-1">From unmanufactured steel & plastic</div>
+          </div>
+          <div class="impact-stat-card">
+            <div class="impact-num">₹3.8+ Cr</div>
+            <div class="text-sm font-bold text-slate-900">Client Savings</div>
+            <div class="text-xs text-slate-500 mt-1">Delivered back to customers</div>
+          </div>
+        </div>
+
+        <!-- 4 Pillars of Value -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 border-t border-slate-200">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100 flex items-center justify-center text-lg flex-shrink-0">
+              <i class="fas fa-recycle"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Sustainable Choice</h4>
+              <p class="text-xs text-slate-500 mt-1">Supports UN Sustainable Development Goals (SDG 12 & 13).</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100 flex items-center justify-center text-lg flex-shrink-0">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Affordable Luxury</h4>
+              <p class="text-xs text-slate-500 mt-1">World-class Herman Miller engineering at entry-level prices.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100 flex items-center justify-center text-lg flex-shrink-0">
+              <i class="fas fa-truck-ramp-box"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Pan-India Freight</h4>
+              <p class="text-xs text-slate-500 mt-1">Heavy duty multi-layer packing delivered anywhere in India.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100 flex items-center justify-center text-lg flex-shrink-0">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Trusted Warranty</h4>
+              <p class="text-xs text-slate-500 mt-1">Complete peace of mind with replacement parts and support.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LIQUIDATION & RESELL SECTION (CLEAN WHITE THEME) ==================== -->
+  <section class="py-14 bg-white border-t border-slate-100">
+    <div class="container-custom">
+      <div class="bg-slate-50 border border-slate-200/90 rounded-3xl p-8 sm:p-12">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8">
+            <span class="bg-amber-100 text-amber-900 border border-amber-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              LOOKING TO LIQUIDATE?
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-3">
+              Turn Old Assets Into Instant Value
+            </h2>
+            <p class="text-base text-slate-600 leading-relaxed max-w-2xl font-normal">
+              Got unused office furniture lying around? We help IT firms, startups, and individuals repurpose their furniture responsibly. Let us circulate your goods to where they’re needed most—minimizing corporate waste and maximizing returns.
+            </p>
+          </div>
+          <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
+            <button onclick="openResellModal()" class="bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm px-6 py-3.5 rounded-xl shadow-sm transition flex items-center justify-center gap-2 text-center">
+              <i class="fas fa-file-invoice-dollar text-amber-400 text-base"></i>
+              <span>Resell My Furniture</span>
+            </button>
+            <a href="https://wa.me/917760951238?text=Hi%20Office%20Interiors%2C%20we%20have%20bulk%20office%20furniture%20to%20liquidate." target="_blank" class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-semibold text-sm px-6 py-3.5 rounded-xl shadow-sm transition flex items-center justify-center gap-2 text-center">
+              <i class="fab fa-whatsapp text-emerald-600 text-base"></i>
+              <span>Bulk Liquidation Enquiry</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CUSTOMER REVIEWS (GOOGLE RATINGS) ==================== -->
+  <section id="reviews" class="py-16 bg-white border-t border-slate-100">
+    <div class="container-custom">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-10">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <div class="flex text-amber-400 text-sm">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="text-xs font-bold text-slate-600">4.9 / 5.0 on Google Reviews</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">What Our Clients Say</h2>
+        </div>
+        <a href="https://wa.me/917760951238?text=I'd%20like%20to%20share%20a%20review%20or%20view%20more%20customer%20setups." target="_blank" class="text-sm font-semibold text-emerald-600 hover:text-emerald-700 flex items-center gap-1">
+          <span>Read All 180+ Reviews</span>
+          <i class="fas fa-external-link-alt text-xs"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="reviewsContainer">
+        <!-- Rendered by JS from REVIEWS_DATA -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHATSAPP COMMUNITY CARD (WHITE THEME) ==================== -->
+  <section class="py-12 bg-white border-t border-slate-100">
+    <div class="container-custom">
+      <div class="bg-slate-50 rounded-2xl p-8 sm:p-10 border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-5">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center text-2xl flex-shrink-0">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div>
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-900">Join Office Interiors Stock Alerts</h3>
+            <p class="text-sm text-slate-600 mt-1 max-w-xl">
+              Get instant notifications about new Herman Miller Aeron shipments, price drops, and corporate liquidation lots.
+            </p>
+          </div>
+        </div>
+        <a href="https://chat.whatsapp.com/sample-community-link" target="_blank" class="bg-slate-900 hover:bg-emerald-600 text-white font-semibold px-6 py-3.5 rounded-xl shadow-sm transition flex-shrink-0 flex items-center gap-2 text-sm">
+          <span>Join Stock Alerts</span>
+          <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BLOG INSIGHTS SECTION ==================== -->
+  <section class="py-14 bg-white border-t border-slate-100">
+    <div class="container-custom">
+      <div class="flex justify-between items-end mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-600">Knowledge & Insights</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Our Latest Blog</h2>
+        </div>
+        <a href="#catalog" class="text-sm font-semibold text-emerald-600 hover:text-emerald-700">View All Articles</a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="blogsContainer">
+        <!-- Rendered by JS from BLOG_DATA -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMPREHENSIVE FOOTER (CLEAN WHITE THEME) ==================== -->
+  <footer class="bg-slate-50 text-slate-600 pt-16 pb-10 border-t border-slate-200">
+    <div class="container-custom">
+      
+      <!-- Top Shipping Highlight -->
+      <div class="bg-white rounded-2xl p-6 mb-12 border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center text-xl flex-shrink-0">
+            <i class="fas fa-box-open"></i>
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-slate-900">Pan-India Insured White-Glove Dispatch</h4>
+            <p class="text-xs text-slate-500 mt-0.5">Every chair is packed in customized multi-layered cardboard and protective bubble wrap.</p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <a href="tel:+917760951238" class="text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 px-4 py-2.5 rounded-lg transition">
+            <i class="fas fa-phone mr-1.5 text-emerald-600"></i> Call Sales Hub
+          </a>
+          <a href="https://wa.me/917760951238" target="_blank" class="text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-lg transition">
+            <i class="fab fa-whatsapp mr-1.5"></i> Chat on WhatsApp (+91 77609 51238)
+          </a>
+        </div>
+      </div>
+
+      <!-- Main Footer Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        
+        <!-- Col 1: About & Logo -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="logo.jpeg" alt="Office Interiors" class="w-10 h-10 rounded-full object-cover border border-emerald-500">
+            <span class="text-lg font-extrabold text-slate-900">OFFICE <span class="text-emerald-600">INTERIORS</span></span>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed mb-4 max-w-sm">
+            Office Interiors is India's dedicated platform for eco-conscious, certified commercial office furniture. We inspect, service, and deliver premium seating and sit-stand solutions across India.
+          </p>
+          <div class="text-xs text-slate-500 space-y-1.5">
+            <div><strong class="text-slate-800">Bangalore Hub:</strong> Electronic City & Indiranagar Warehouse Hub, Bengaluru, KA 560100</div>
+            <div><strong class="text-slate-800">Hotline:</strong> +91 77609 51238 / +91 80 4567 8900</div>
+            <div><strong class="text-slate-800">Email:</strong> support@officeinteriors.in</div>
+            <div><strong class="text-slate-800">Working Hours:</strong> Mon – Sat: 9:30 AM – 7:30 PM</div>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#hero" class="text-slate-600 hover:text-emerald-600 transition">Home Page</a></li>
+            <li><a href="#catalog" onclick="filterCatalog('all')" class="text-slate-600 hover:text-emerald-600 transition">All Products</a></li>
+            <li><a href="#dealSection" class="text-slate-600 hover:text-emerald-600 transition">Deal Of The Week</a></li>
+            <li><a href="javascript:void(0)" onclick="openResellModal()" class="text-slate-600 hover:text-emerald-600 transition">Sell Your Furniture</a></li>
+            <li><a href="#sustainability" class="text-slate-600 hover:text-emerald-600 transition">Why Refurbished?</a></li>
+            <li><a href="#reviews" class="text-slate-600 hover:text-emerald-600 transition">Customer Testimonials</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Categories -->
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">Categories</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#catalog" onclick="filterCatalog('chairs')" class="text-slate-600 hover:text-emerald-600 transition">Ergonomic Mesh Chairs</a></li>
+            <li><a href="#catalog" onclick="filterCatalog('desks')" class="text-slate-600 hover:text-emerald-600 transition">Electric Standing Desks</a></li>
+            <li><a href="#catalog" onclick="filterCatalog('storage')" class="text-slate-600 hover:text-emerald-600 transition">Metal Pedestals & Drawers</a></li>
+            <li><a href="#catalog" onclick="filterCatalog('accessories')" class="text-slate-600 hover:text-emerald-600 transition">Replacement Arm Pads</a></li>
+            <li><a href="#catalog" onclick="filterCatalog('accessories')" class="text-slate-600 hover:text-emerald-600 transition">Aeron PostureFit Kits</a></li>
+            <li><a href="#catalog" onclick="filterCatalog('chairs')" class="text-slate-600 hover:text-emerald-600 transition">Cafeteria & Lounge Chairs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Top Brands & Trust -->
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">Top Brands</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="javascript:void(0)" onclick="searchBrand('Herman Miller')" class="text-slate-600 hover:text-emerald-600 transition">Herman Miller Refurbished</a></li>
+            <li><a href="javascript:void(0)" onclick="searchBrand('Steelcase')" class="text-slate-600 hover:text-emerald-600 transition">Steelcase Leap & Series 1</a></li>
+            <li><a href="javascript:void(0)" onclick="searchBrand('Haworth')" class="text-slate-600 hover:text-emerald-600 transition">Haworth Aloha & Zody</a></li>
+            <li><a href="javascript:void(0)" onclick="searchBrand('Humanscale')" class="text-slate-600 hover:text-emerald-600 transition">Humanscale Freedom</a></li>
+            <li><a href="javascript:void(0)" onclick="searchBrand('Featherlite')" class="text-slate-600 hover:text-emerald-600 transition">Featherlite Seating</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Payments & Copyright -->
+      <div class="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div>
+          © 2026 Office Interiors. All Rights Reserved. Eco-friendly circular workspace solutions.
+        </div>
+        <div class="flex items-center gap-4 text-lg text-slate-400">
+          <i class="fab fa-cc-visa" title="Visa"></i>
+          <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+          <i class="fas fa-money-check-alt" title="UPI & Netbanking"></i>
+          <i class="fas fa-shield-alt text-emerald-600" title="100% Secure Checkout"></i>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== CART SLIDE-OVER DRAWER ==================== -->
+  <div id="cartBackdrop" class="drawer-backdrop" onclick="toggleCartDrawer()"></div>
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <div class="flex items-center gap-2">
+        <i class="fas fa-shopping-bag text-emerald-600 text-lg"></i>
+        <h3 class="text-base font-bold text-slate-900">Your Shopping Cart</h3>
+        <span id="cartDrawerCountPill" class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-0.5 rounded-full">0</span>
+      </div>
+      <button onclick="toggleCartDrawer()" class="p-2 text-slate-400 hover:text-slate-700" aria-label="Close Cart">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Tracker -->
+    <div class="px-6 py-3 bg-emerald-50/70 border-b border-emerald-100">
+      <div class="flex justify-between items-center text-xs font-semibold text-emerald-800">
+        <span id="shippingProgressText">Add ₹5,000 more for FREE Bangalore delivery!</span>
+        <span class="text-emerald-600"><i class="fas fa-truck text-xs"></i></span>
+      </div>
+      <div class="free-shipping-bar">
+        <div id="shippingProgressBar" class="free-shipping-progress" style="width: 50%;"></div>
+      </div>
+    </div>
+
+    <!-- Items List -->
+    <div id="cartItemsList" class="cart-items-list space-y-4">
+      <!-- Injected by app.js -->
+    </div>
+
+    <!-- Cart Footer -->
+    <div class="cart-footer space-y-3">
+      <div class="flex justify-between text-sm text-slate-600">
+        <span>Estimated Subtotal:</span>
+        <span id="cartSubtotalAmount" class="font-bold text-slate-900">₹0</span>
+      </div>
+      <div class="flex justify-between text-xs text-emerald-700 font-medium">
+        <span>GST & Transit Insurance:</span>
+        <span>Included at checkout</span>
+      </div>
+
+      <!-- WhatsApp Multi-Tab Order Placement CTA -->
+      <button onclick="openOrderPlacementModal()" class="w-full bg-[#25d366] hover:bg-[#1eb956] text-white font-extrabold py-3.5 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2.5 text-sm">
+        <i class="fab fa-whatsapp text-lg"></i>
+        <span>Complete Order on WhatsApp</span>
+      </button>
+
+      <button onclick="checkoutViaWhatsAppQuick()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-2.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-xs">
+        <i class="fas fa-bolt text-amber-400"></i>
+        <span>1-Click WhatsApp Dispatch (+91 77609 51238)</span>
+      </button>
+
+      <p class="text-[11px] text-center text-slate-400">
+        100% Insured pan-India dispatch. Live inspection video sent on WhatsApp.
+      </p>
+    </div>
+  </aside>
+
+  <!-- ==================== WHATSAPP ORDER PLACEMENT MODAL (WITH FILLING TABS) ==================== -->
+  <div id="orderModalBackdrop" class="modal-backdrop" onclick="closeOrderModal(event)">
+    <div class="modal-content-box p-6 sm:p-8 max-w-2xl" id="orderModalBox" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeOrderModal()" aria-label="Close Order Form">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="flex items-center gap-3.5 mb-5 border-b border-slate-100 pb-4">
+        <div class="w-12 h-12 rounded-2xl bg-[#25d366] text-white flex items-center justify-center text-2xl flex-shrink-0 shadow-sm">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <div>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-tight">Place Order via WhatsApp</h3>
+          <p class="text-xs text-slate-500 mt-0.5">
+            Dedicated Dispatch Desk: <strong class="text-emerald-700 font-bold">+91 77609 51238</strong> • Insured Freight
+          </p>
+        </div>
+      </div>
+
+      <!-- Stepper / Tabs Bar -->
+      <div class="flex items-center justify-between gap-1 sm:gap-2 mb-6 border-b border-slate-100 pb-3" id="orderTabsHeader">
+        <button type="button" onclick="switchOrderTab(1)" class="order-tab-btn active" id="tabBtn1">
+          <span class="order-tab-num">1</span>
+          <span class="order-tab-text">Customer Details</span>
+        </button>
+        <span class="text-slate-300 text-xs hidden sm:inline">━━</span>
+        <button type="button" onclick="switchOrderTab(2)" class="order-tab-btn" id="tabBtn2">
+          <span class="order-tab-num">2</span>
+          <span class="order-tab-text">Delivery Address</span>
+        </button>
+        <span class="text-slate-300 text-xs hidden sm:inline">━━</span>
+        <button type="button" onclick="switchOrderTab(3)" class="order-tab-btn" id="tabBtn3">
+          <span class="order-tab-num">3</span>
+          <span class="order-tab-text">Payment & Confirm</span>
+        </button>
+      </div>
+
+      <!-- Order Form with Filling Tabs -->
+      <form id="orderPlacementForm" onsubmit="handleOrderSubmit(event)">
+
+        <!-- TAB 1: Customer Contact Info -->
+        <div class="order-tab-pane active" id="orderTabPane1">
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">
+                Full Name <span class="text-red-500">*</span>
+              </label>
+              <input type="text" id="orderFullName" required placeholder="e.g. Rahul Sharma" class="w-full border border-slate-300 rounded-xl p-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">
+                  WhatsApp Mobile Number <span class="text-red-500">*</span>
+                </label>
+                <div class="relative">
+                  <span class="absolute left-3.5 top-3 text-xs font-semibold text-slate-500">+91</span>
+                  <input type="tel" id="orderPhone" required placeholder="77609 51238" maxlength="15" class="w-full pl-12 border border-slate-300 rounded-xl p-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
+                </div>
+                <span class="text-[10px] text-slate-400 mt-1 block">Your order summary and live dispatch video will be shared here.</span>
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">
+                  Email Address <span class="text-slate-400 font-normal">(For invoice copy)</span>
+                </label>
+                <input type="email" id="orderEmail" placeholder="e.g. rahul@company.com" class="w-full border border-slate-300 rounded-xl p-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
+              </div>
+            </div>
+
+            <div class="pt-3 flex justify-end">
+              <button type="button" onclick="validateAndNextTab(1)" class="btn-primary text-xs !py-3 !px-6">
+                <span>Next: Delivery Address</span>
+                <i class="fas fa-arrow-right text-xs ml-1.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: Delivery Address & Company -->
+        <div class="order-tab-pane" id="orderTabPane2">
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">
+                Delivery Street Address <span class="text-red-500">*</span>
+              </label>
+              <textarea id="orderAddress" required rows="2" placeholder="House / Flat / Office Suite, Building Name, Street / Layout..." class="w-full border border-slate-300 rounded-xl p-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition"></textarea>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">
+                  City <span class="text-red-500">*</span>
+                </label>
+                <input type="text" id="orderCity" required placeholder="e.g. Bangalore" class="w-full border border-slate-300 rounded-xl p-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">
+                  State <span class="text-red-500">*</span>
+                </label>
+                <input type="text" id="orderState" required placeholder="e.g. Karnataka" class="w-full border border-slate-300 rounded-xl p-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">
+                  Pincode <span class="text-red-500">*</span>
+                </label>
+                <input type="text" id="orderPincode" required placeholder="e.g. 560100" maxlength="6" class="w-full border border-slate-300 rounded-xl p-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <div>
+                <label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">
+                  Company / Organization <span class="text-slate-400 font-normal">(Optional)</span>
+                </label>
+                <input type="text" id="orderCompany" placeholder="e.g. Vertex Tech Private Limited" class="w-full border border-slate-300 rounded-xl p-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">
+                  GSTIN <span class="text-slate-400 font-normal">(Optional for 18% ITC)</span>
+                </label>
+                <input type="text" id="orderGST" placeholder="29AAAAA0000A1Z5" maxlength="15" class="w-full border border-slate-300 rounded-xl p-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition uppercase">
+              </div>
+            </div>
+
+            <div class="pt-3 flex justify-between items-center">
+              <button type="button" onclick="switchOrderTab(1)" class="btn-outline text-xs !py-3 !px-4">
+                <i class="fas fa-arrow-left text-xs mr-1.5"></i> Back
+              </button>
+              <button type="button" onclick="validateAndNextTab(2)" class="btn-primary text-xs !py-3 !px-6">
+                <span>Next: Payment & Review</span>
+                <i class="fas fa-arrow-right text-xs ml-1.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: Payment Preference & Final Review -->
+        <div class="order-tab-pane" id="orderTabPane3">
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-700 mb-2">
+                Preferred Payment Method <span class="text-red-500">*</span>
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <label class="payment-option-card">
+                  <input type="radio" name="orderPayment" value="UPI (GPay / PhonePe / Paytm)" checked class="accent-emerald-600">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900">UPI / GPay / PhonePe</div>
+                    <div class="text-[11px] text-slate-500">Instant QR code dispatch on WhatsApp</div>
+                  </div>
+                </label>
+
+                <label class="payment-option-card">
+                  <input type="radio" name="orderPayment" value="Credit / Debit Card (Online Gateway Link)" class="accent-emerald-600">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900">Credit / Debit Card</div>
+                    <div class="text-[11px] text-slate-500">Secure link via Razorpay / Pine Labs</div>
+                  </div>
+                </label>
+
+                <label class="payment-option-card">
+                  <input type="radio" name="orderPayment" value="Bank Wire (NEFT / RTGS / IMPS)" class="accent-emerald-600">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900">Bank Transfer / NEFT</div>
+                    <div class="text-[11px] text-slate-500">Official Current Account with GST Invoice</div>
+                  </div>
+                </label>
+
+                <label class="payment-option-card">
+                  <input type="radio" name="orderPayment" value="Pay on Delivery / Inspection (Bangalore Hub Only)" class="accent-emerald-600">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900">Pay on Inspection</div>
+                    <div class="text-[11px] text-slate-500">Available across Bangalore metro areas</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">
+                Delivery Instructions / Notes <span class="text-slate-400 font-normal">(Optional)</span>
+              </label>
+              <input type="text" id="orderNotes" placeholder="e.g. Deliver between 10am-4pm, 3rd floor with freight lift" class="w-full border border-slate-300 rounded-xl p-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
+            </div>
+
+            <!-- Live Order Summary Box -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2.5">
+              <div class="flex items-center justify-between text-xs font-bold text-slate-700 border-b border-slate-200 pb-2">
+                <span>Items in Order (<span id="orderSummaryItemCount">0</span>)</span>
+                <span>Subtotal</span>
+              </div>
+              <div id="orderModalItemsPreview" class="max-h-36 overflow-y-auto space-y-2 py-1 text-xs">
+                <!-- Injected by app.js -->
+              </div>
+              <div class="border-t border-slate-200 pt-2 space-y-1 text-xs">
+                <div class="flex justify-between text-slate-600">
+                  <span>Pan-India Transit & Freight:</span>
+                  <span class="text-emerald-700 font-bold">FREE (100% Insured)</span>
+                </div>
+                <div class="flex justify-between text-slate-600">
+                  <span>Commercial Warranty:</span>
+                  <span class="text-slate-800 font-semibold">1-Year Full Coverage</span>
+                </div>
+                <div class="flex justify-between text-base font-extrabold text-slate-900 pt-1 border-t border-slate-200">
+                  <span>Total Amount Payable:</span>
+                  <span id="orderModalGrandTotal" class="text-emerald-700">₹0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-3 flex justify-between items-center gap-3">
+              <button type="button" onclick="switchOrderTab(2)" class="btn-outline text-xs !py-3 !px-4">
+                <i class="fas fa-arrow-left text-xs mr-1.5"></i> Back
+              </button>
+
+              <button type="submit" class="flex-1 bg-[#25d366] hover:bg-[#1eb956] text-white font-extrabold py-3.5 px-6 rounded-xl shadow-md transition flex items-center justify-center gap-2.5 text-sm">
+                <i class="fab fa-whatsapp text-lg"></i>
+                <span>Submit Order to WhatsApp (+91 77609 51238)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Celebratory Success Pane (Shown after order dispatch) -->
+      <div id="orderSuccessPane" class="hidden text-center py-8">
+        <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4 text-3xl animate-bounce">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h3 class="text-2xl font-extrabold text-slate-900">Order Dispatched to WhatsApp!</h3>
+        <p class="text-sm text-slate-600 mt-1 max-w-md mx-auto">
+          Your order manifest has been sent to our verified WhatsApp desk at <strong class="text-emerald-700 font-bold">+91 77609 51238</strong>.
+        </p>
+
+        <div class="my-6 bg-slate-50 border border-slate-200 rounded-xl p-4 max-w-sm mx-auto text-left text-xs space-y-1.5">
+          <div class="flex justify-between"><span class="text-slate-500">Order Reference:</span> <strong id="successOrderId" class="text-slate-900 font-mono">#OI-77609-0000</strong></div>
+          <div class="flex justify-between"><span class="text-slate-500">Order Value:</span> <strong id="successOrderTotal" class="text-emerald-700 font-bold">₹0</strong></div>
+          <div class="flex justify-between"><span class="text-slate-500">Status:</span> <span class="bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded">Awaiting WhatsApp Confirmation</span></div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a id="successWhatsAppLink" href="https://wa.me/917760951238" target="_blank" class="bg-[#25d366] hover:bg-[#1eb956] text-white font-bold py-3 px-6 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-sm">
+            <i class="fab fa-whatsapp text-lg"></i>
+            <span>Open in WhatsApp (+91 77609 51238)</span>
+          </a>
+          <button onclick="closeOrderModal()" class="btn-outline text-xs !py-3 !px-5">
+            Continue Browsing
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== QUICK VIEW MODAL ==================== -->
+  <div id="quickViewBackdrop" class="modal-backdrop" onclick="closeQuickView(event)">
+    <div class="modal-content-box p-6 sm:p-8" id="quickViewModalBox" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeQuickView()" aria-label="Close Modal">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="grid md:grid-cols-12 gap-8 items-start" id="quickViewDetails">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== RESELL / LIQUIDATION MODAL ==================== -->
+  <div id="resellBackdrop" class="modal-backdrop" onclick="closeResellModal(event)">
+    <div class="modal-content-box p-6 sm:p-8 max-w-xl" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeResellModal()" aria-label="Close Modal">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mx-auto mb-3 text-xl">
+          <i class="fas fa-recycle"></i>
+        </div>
+        <h3 class="text-2xl font-extrabold text-slate-900">Resell Your Furniture</h3>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">
+          Share your details below and our valuation specialist will get back within 2 hours with an upfront offer or pickup estimate.
+        </p>
+      </div>
+
+      <form id="resellForm" onsubmit="handleResellSubmit(event)" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Your Name *</label>
+            <input type="text" id="resellName" required placeholder="e.g. Rahul Sharma" class="w-full border border-slate-300 rounded-lg p-2.5 text-sm outline-none focus:border-emerald-500">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">WhatsApp / Phone *</label>
+            <input type="tel" id="resellPhone" required placeholder="+91 77609 51238" class="w-full border border-slate-300 rounded-lg p-2.5 text-sm outline-none focus:border-emerald-500">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Company / Organization</label>
+            <input type="text" id="resellCompany" placeholder="Individual or Company Name" class="w-full border border-slate-300 rounded-lg p-2.5 text-sm outline-none focus:border-emerald-500">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">City / Location *</label>
+            <input type="text" id="resellCity" required placeholder="e.g. Bangalore, Hyderabad, Pune" class="w-full border border-slate-300 rounded-lg p-2.5 text-sm outline-none focus:border-emerald-500">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Furniture Type *</label>
+            <select id="resellCategory" required class="w-full border border-slate-300 rounded-lg p-2.5 text-sm outline-none focus:border-emerald-500">
+              <option value="Ergonomic Chairs">Ergonomic Chairs (Aeron, Haworth, etc.)</option>
+              <option value="Height Adjustable Desks">Motorized Standing Desks</option>
+              <option value="Workstations & Partitions">Office Cubicles & Workstations</option>
+              <option value="Pedestals & Storage">Metal Filing Cabinets / Pedestals</option>
+              <option value="Full Office Floor Liquidation">Full Floor / Bulk Liquidation (50+ Items)</option>
+              <option value="Other">Other Office Assets</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Approx. Quantity</label>
+            <input type="number" id="resellQty" placeholder="e.g. 5, 25, 100" min="1" class="w-full border border-slate-300 rounded-lg p-2.5 text-sm outline-none focus:border-emerald-500">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Brand & Condition Notes</label>
+          <textarea id="resellNotes" rows="3" placeholder="Mention brands (Herman Miller, Steelcase, etc.), age of items, and current condition..." class="w-full border border-slate-300 rounded-lg p-2.5 text-sm outline-none focus:border-emerald-500"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+          <i class="fas fa-paper-plane"></i>
+          <span>Submit for Instant Valuation</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div id="mobileDrawerBackdrop" class="drawer-backdrop" onclick="toggleMobileMenu()"></div>
+  <aside id="mobileDrawer" class="cart-drawer !max-w-xs">
+    <div class="cart-header">
+      <div class="flex items-center gap-2">
+        <img src="logo.jpeg" alt="Logo" class="w-8 h-8 rounded-full">
+        <span class="font-bold text-slate-900 text-sm">Office Interiors</span>
+      </div>
+      <button onclick="toggleMobileMenu()" class="p-2 text-slate-500">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="p-4 space-y-3 overflow-y-auto">
+      <a href="#hero" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 border-b border-slate-100">Home</a>
+      <a href="#catalog" onclick="filterCatalog('all'); toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 border-b border-slate-100">All Products</a>
+      <a href="#catalog" onclick="filterCatalog('chairs'); toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 border-b border-slate-100">Ergonomic Chairs</a>
+      <a href="#catalog" onclick="filterCatalog('desks'); toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 border-b border-slate-100">Standing Desks</a>
+      <a href="#catalog" onclick="filterCatalog('storage'); toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 border-b border-slate-100">Storage & Pedestals</a>
+      <a href="#catalog" onclick="filterCatalog('accessories'); toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 border-b border-slate-100">Replacement Parts</a>
+      <a href="#dealSection" onclick="toggleMobileMenu()" class="block py-2 text-sm font-bold text-emerald-700 border-b border-slate-100">Deal of the Week</a>
+      <a href="#sustainability" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 border-b border-slate-100">Why Refurbished?</a>
+      <a href="#reviews" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 border-b border-slate-100">Customer Reviews</a>
+      
+      <div class="pt-4">
+        <button onclick="openResellModal(); toggleMobileMenu()" class="w-full bg-amber-500 text-white font-bold py-2.5 rounded-lg text-xs uppercase tracking-wider">
+          Resell Your Furniture
+        </button>
+      </div>
+    </div>
+  </aside>
+
+
+
+  <!-- ==================== MOBILE APP BOTTOM NAVIGATION BAR (iOS & Android) ==================== -->
+  <nav class="mobile-bottom-nav md:hidden" id="mobileBottomNav" aria-label="Mobile Bottom Navigation">
+    <a href="#hero" class="mobile-nav-item active" id="mobNavHome" aria-label="Home">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="#catalog" onclick="filterCatalog('all')" class="mobile-nav-item" id="mobNavShop" aria-label="Shop Catalog">
+      <i class="fas fa-th-large"></i>
+      <span>Shop</span>
+    </a>
+    <button onclick="focusMobileSearch()" class="mobile-nav-item" id="mobNavSearch" aria-label="Search Catalog">
+      <i class="fas fa-search"></i>
+      <span>Search</span>
+    </button>
+    <button onclick="filterWishlistOnly()" class="mobile-nav-item relative" id="mobNavWishlist" aria-label="Wishlist">
+      <i class="far fa-heart"></i>
+      <span id="mobWishlistBadge" class="mobile-nav-badge bg-red-500">0</span>
+      <span>Wishlist</span>
+    </button>
+    <button onclick="toggleCartDrawer()" class="mobile-nav-item relative" id="mobNavCart" aria-label="Shopping Cart">
+      <i class="fas fa-shopping-bag"></i>
+      <span id="mobCartBadge" class="mobile-nav-badge bg-emerald-500">0</span>
+      <span>Cart</span>
+    </button>
+  </nav>
+
+  <!-- ==================== TOAST NOTIFICATION CONTAINER ==================== -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
