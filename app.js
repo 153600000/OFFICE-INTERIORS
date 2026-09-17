@@ -655,6 +655,8 @@ function updateCartUI() {
   if (countPill) countPill.textContent = totalItems;
   const mobBadge = document.getElementById('mobCartBadge');
   if (mobBadge) mobBadge.textContent = totalItems;
+  const drawerCart = document.getElementById('drawerCartCount');
+  if (drawerCart) drawerCart.textContent = totalItems;
   if (totalHeader) totalHeader.textContent = '₹' + totalPrice.toLocaleString('en-IN');
   if (subtotalEl) subtotalEl.textContent = '₹' + totalPrice.toLocaleString('en-IN');
 
@@ -1014,15 +1016,15 @@ function renderWishlistDrawer() {
   if (wishlist.length === 0) {
     itemsContainer.innerHTML = `
       <div class="py-16 text-center text-slate-400">
-        <div class="w-16 h-16 rounded-full bg-red-50 text-red-400 flex items-center justify-center mx-auto mb-3 text-2xl">
-          <i class="far fa-heart"></i>
+        <div class="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-3 text-2xl">
+          <i class="fas fa-bookmark"></i>
         </div>
-        <p class="font-bold text-slate-800 text-sm">Your wishlist is currently empty</p>
+        <p class="font-bold text-slate-800 text-sm">No saved items yet</p>
         <p class="text-xs text-slate-400 mt-1 max-w-xs mx-auto">
-          Save your favorite Herman Miller, Steelcase, or standing desks to compare and track availability.
+          Tap "Save for later" on any product in the catalog to keep items saved here.
         </p>
         <button onclick="toggleWishlistDrawer(); filterCatalog('all');" class="mt-4 btn-primary text-xs">
-          Explore Ergonomic Catalog
+          <i class="fas fa-arrow-left mr-1"></i> Back to Products
         </button>
       </div>
     `;
@@ -1041,14 +1043,11 @@ function renderWishlistDrawer() {
           ${item.originalPrice ? `<span class="text-[10px] text-slate-400 line-through">₹${item.originalPrice.toLocaleString('en-IN')}</span>` : ''}
         </div>
         <div class="flex items-center gap-2 mt-2">
-          <button onclick="addToCart('${item.id}'); removeFromWishlist('${item.id}');" class="text-[11px] font-bold text-slate-900 bg-slate-100 hover:bg-emerald-600 hover:text-white px-2 py-1 rounded transition flex items-center gap-1">
+          <button onclick="addToCart('${item.id}'); removeFromWishlist('${item.id}');" class="text-[11px] font-bold text-slate-900 bg-slate-100 hover:bg-emerald-600 hover:text-white px-2.5 py-1 rounded transition flex items-center gap-1">
             <i class="fas fa-shopping-bag text-[10px]"></i> Move to Cart
           </button>
-          <button onclick="buyViaWhatsAppItem('${item.id}')" class="text-[11px] font-bold text-[#25d366] hover:underline flex items-center gap-0.5">
-            <i class="fab fa-whatsapp"></i> Buy
-          </button>
-          <button onclick="removeFromWishlist('${item.id}')" class="text-[11px] text-red-400 hover:text-red-600 ml-auto" title="Remove">
-            <i class="fas fa-trash-alt"></i>
+          <button onclick="removeFromWishlist('${item.id}')" class="text-[11px] text-slate-500 hover:text-red-600 ml-auto flex items-center gap-1" title="Remove">
+            <i class="fas fa-trash-alt text-[10px]"></i> Remove
           </button>
         </div>
       </div>
@@ -1156,6 +1155,8 @@ function updateWishlistUI() {
   if (mobBadge) mobBadge.textContent = wishlist.length;
   const pill = document.getElementById('wishlistDrawerCountPill');
   if (pill) pill.textContent = wishlist.length;
+  const drawerSaved = document.getElementById('drawerSavedCount');
+  if (drawerSaved) drawerSaved.textContent = wishlist.length;
 }
 
 // ==========================================
@@ -1196,27 +1197,30 @@ function openQuickView(productId) {
     `;
   }
 
+  const savings = product.originalPrice ? product.originalPrice - product.price : 0;
+
   container.innerHTML = `
     <!-- Image Gallery Col -->
     <div class="md:col-span-6 flex flex-col items-center">
-      <div class="w-full aspect-square bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-center p-6 relative">
-        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">
-          ${product.condition || 'Refurbished'}
+      <div class="w-full h-52 sm:h-72 bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-center p-3 relative">
+        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-2xs">
+          ${product.condition || 'Certified Grade A'}
         </span>
-        <img src="${product.image}" alt="${product.title}" class="max-h-72 object-contain" onerror="this.src='https://toqri.com/wp-content/uploads/2023/10/Aeron3-3-300x300.webp'">
+        <img src="${product.image}" alt="${product.title}" class="h-full max-h-48 sm:max-h-64 object-contain" onerror="this.src='https://toqri.com/wp-content/uploads/2023/10/Aeron3-3-300x300.webp'">
       </div>
-      <div class="flex items-center gap-4 text-xs text-slate-500 mt-4">
+      <div class="flex items-center justify-center flex-wrap gap-3 text-xs text-slate-500 mt-2.5">
         <span><i class="fas fa-truck text-emerald-600 mr-1"></i> Pan-India Shipping</span>
         <span><i class="fas fa-shield-alt text-emerald-600 mr-1"></i> 1-Year Warranty</span>
+        <span><i class="fas fa-check-circle text-emerald-600 mr-1"></i> 18-Pt Quality Check</span>
       </div>
     </div>
 
     <!-- Product Info Col -->
     <div class="md:col-span-6">
-      <div class="text-xs font-bold uppercase tracking-wider text-emerald-600 mb-1">${product.brand}</div>
-      <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-tight mb-2">${product.title}</h3>
+      <div class="text-[11px] font-bold uppercase tracking-wider text-emerald-600 mb-0.5">${product.brand}</div>
+      <h3 class="text-lg sm:text-2xl font-extrabold text-slate-900 leading-snug mb-1.5">${product.title}</h3>
       
-      <div class="flex items-center gap-2 mb-3">
+      <div class="flex items-center gap-2 mb-2">
         <div class="flex text-amber-400 text-xs">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -1227,43 +1231,59 @@ function openQuickView(productId) {
         <span class="text-xs text-slate-500 font-semibold">${product.rating.toFixed(1)} (${product.reviewCount} customer reviews)</span>
       </div>
 
-      <div class="flex items-baseline gap-3 mb-4">
-        <span class="text-3xl font-extrabold text-emerald-700">₹${product.price.toLocaleString('en-IN')}</span>
-        ${product.originalPrice ? `<span class="text-base text-slate-400 line-through">₹${product.originalPrice.toLocaleString('en-IN')}</span>` : ''}
+      <!-- Price and Savings -->
+      <div class="flex items-baseline gap-2.5 mb-3">
+        <span class="text-2xl sm:text-3xl font-extrabold text-emerald-700">₹${product.price.toLocaleString('en-IN')}</span>
+        ${product.originalPrice ? `<span class="text-sm text-slate-400 line-through">₹${product.originalPrice.toLocaleString('en-IN')}</span>` : ''}
+        ${savings ? `<span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">Save ₹${savings.toLocaleString('en-IN')}</span>` : ''}
       </div>
 
-      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-        ${product.description}
-      </p>
+      <!-- Quantity + Immediate Actions (Easy to reach on mobile without scrolling) -->
+      <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 mb-4">
+        <div class="flex items-center justify-between gap-3 mb-2.5">
+          <span class="text-xs font-bold text-slate-700 uppercase">Quantity:</span>
+          <div class="flex items-center border border-slate-300 bg-white rounded-lg overflow-hidden shadow-2xs">
+            <button type="button" onclick="adjustQuickViewQty(-1)" class="px-3 py-1 text-sm font-bold text-slate-600 hover:bg-slate-100 transition">-</button>
+            <input type="text" id="quickViewQtyInput" value="1" readonly class="w-10 text-center text-xs font-bold text-slate-900 border-x border-slate-200 py-1">
+            <button type="button" onclick="adjustQuickViewQty(1)" class="px-3 py-1 text-sm font-bold text-slate-600 hover:bg-slate-100 transition">+</button>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <button onclick="addToCart('${product.id}', currentQuickViewQty); closeQuickView();" class="btn-primary flex-1 justify-center py-2.5 text-xs sm:text-sm font-bold" aria-label="Add To Cart">
+            <i class="fas fa-shopping-cart text-xs mr-1"></i> Add To Cart
+          </button>
+          <button id="quickViewSaveBtn" onclick="toggleQuickViewSave('${product.id}')" class="btn-outline flex-1 justify-center py-2.5 text-xs sm:text-sm font-bold flex items-center gap-1.5" style="${isWishlisted ? 'border-color:#fca5a5; background:#fef2f2; color:#dc2626;' : ''}" aria-label="Save for later">
+            <i class="${isWishlisted ? 'fas fa-bookmark text-red-600' : 'far fa-bookmark'} text-xs"></i>
+            <span>${isWishlisted ? 'Saved' : 'Save for later'}</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="mb-4">
+        <h4 class="text-xs font-bold uppercase text-slate-700 tracking-wider mb-1">About This Product</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">${product.description}</p>
+      </div>
 
       ${specsHtml}
-
-      <!-- Interactive Quantity Stepper & Wishlist Action -->
-      <div class="flex items-center gap-3 my-4 p-3 bg-slate-50 rounded-xl border border-slate-200">
-        <span class="text-xs font-bold text-slate-700 uppercase">Quantity:</span>
-        <div class="flex items-center border border-slate-300 bg-white rounded-lg overflow-hidden shadow-2xs">
-          <button type="button" onclick="adjustQuickViewQty(-1)" class="px-3 py-1 text-sm font-bold text-slate-600 hover:bg-slate-100 transition">-</button>
-          <input type="text" id="quickViewQtyInput" value="1" readonly class="w-10 text-center text-xs font-bold text-slate-900 border-x border-slate-200 py-1">
-          <button type="button" onclick="adjustQuickViewQty(1)" class="px-3 py-1 text-sm font-bold text-slate-600 hover:bg-slate-100 transition">+</button>
-        </div>
-        <button onclick="addToWishlist('${product.id}')" class="ml-auto p-2 text-slate-400 hover:text-red-500 rounded-lg hover:bg-white border border-transparent hover:border-slate-200 transition" title="Toggle Wishlist" aria-label="Toggle Wishlist">
-          <i class="${isWishlisted ? 'fas fa-heart text-red-500' : 'far fa-heart text-slate-600'} text-base"></i>
-        </button>
-      </div>
-
-      <div class="mt-4 flex flex-wrap gap-3">
-        <button onclick="addToCart('${product.id}', currentQuickViewQty); closeQuickView();" class="btn-primary flex-1 justify-center">
-          <i class="fas fa-shopping-cart"></i> Add To Cart
-        </button>
-        <button onclick="addToWishlist('${product.id}');" class="btn-outline flex-1 justify-center" style="display:flex; align-items:center; gap:6px;">
-          <i class="${isWishlisted ? 'fas fa-bookmark text-emerald-600' : 'far fa-bookmark'}"></i> ${isWishlisted ? 'Saved for Later' : 'Save for Later'}
-        </button>
-      </div>
     </div>
   `;
 
   setBodyScrollLock(true);
   document.getElementById('quickViewBackdrop')?.classList.add('open');
+}
+
+function toggleQuickViewSave(productId) {
+  addToWishlist(productId);
+  const isNowSaved = wishlist.includes(productId);
+  const btn = document.getElementById('quickViewSaveBtn');
+  if (btn) {
+    btn.innerHTML = `<i class="${isNowSaved ? 'fas fa-bookmark text-red-600' : 'far fa-bookmark'} text-xs"></i> <span>${isNowSaved ? 'Saved' : 'Save for later'}</span>`;
+    btn.style.borderColor = isNowSaved ? '#fca5a5' : '';
+    btn.style.background = isNowSaved ? '#fef2f2' : '';
+    btn.style.color = isNowSaved ? '#dc2626' : '';
+  }
 }
 
 function closeQuickView(event) {

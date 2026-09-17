@@ -243,22 +243,57 @@ img { display: block; max-width: 100%; }
   font-weight: 700;
 }
 
-/* Wishlist Button */
-.toqri-icon-btn {
+/* Saved & Cart Nav Buttons */
+.toqri-nav-btn {
   position: relative;
   background: transparent;
-  border: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.45rem;
   color: #374151;
-  font-size: 1.45rem;
-  padding: 0.25rem;
-  transition: color 0.15s ease;
+  font-size: 1.25rem;
+  padding: 0.35rem 0.65rem;
+  transition: all 0.15s ease;
 }
-.toqri-icon-btn:hover {
+.toqri-nav-btn:hover {
+  background: #f1f5f9;
   color: #23a455;
+}
+.toqri-nav-btn-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+.toqri-nav-btn:hover .toqri-nav-btn-label {
+  color: #23a455;
+}
+
+/* Cart & Modal Back Buttons */
+.cart-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #334155;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+.cart-back-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+.cart-back-btn:active {
+  transform: scale(0.96);
 }
 
 /* Badges */
@@ -1116,10 +1151,11 @@ img { display: block; max-width: 100%; }
   .modal-backdrop { align-items: flex-end; padding: 0; }
   .modal-content-box {
     width: 100%; max-width: 100%;
-    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    border-radius: 20px 20px 0 0;
     transform: translateY(100%);
-    max-height: 92vh;
-    padding-bottom: max(1.5rem, env(safe-area-inset-bottom, 1.5rem));
+    max-height: 94vh;
+    padding: 1rem 1rem max(1.5rem, env(safe-area-inset-bottom, 1.5rem)) !important;
+    -webkit-overflow-scrolling: touch;
   }
   .modal-backdrop.open .modal-content-box { transform: translateY(0); }
   .cart-drawer { max-width: 100%; }
