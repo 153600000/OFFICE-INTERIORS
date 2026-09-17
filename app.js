@@ -439,7 +439,7 @@ function renderProducts(showWishlistOnly = false) {
               <span>Add</span>
             </button>
             <button onclick="addToWishlist('${product.id}')" style="flex:1.15; justify-content:center; padding:6px 6px; font-size:11px; border-radius:5px; font-weight:600; display:flex; align-items:center; gap:4px; cursor:pointer; transition:all 0.2s; border:1px solid ${isWishlisted ? '#fca5a5' : '#cbd5e1'}; background:${isWishlisted ? '#fef2f2' : '#ffffff'}; color:${isWishlisted ? '#dc2626' : '#334155'};" title="${isWishlisted ? 'Saved' : 'Save for later'}" aria-label="Save for later">
-              <i class="${isWishlisted ? 'fas fa-bookmark' : 'far fa-bookmark'}" style="font-size:10.5px; color:${isWishlisted ? '#dc2626' : '#64748b'};"></i>
+              <i class="${isWishlisted ? 'fas fa-heart text-rose-500' : 'far fa-heart text-slate-500'}" style="font-size:10.5px;"></i>
               <span style="white-space:nowrap;">${isWishlisted ? 'Saved' : 'Save for later'}</span>
             </button>
           </div>
@@ -1012,8 +1012,8 @@ function renderWishlistDrawer() {
   if (wishlist.length === 0) {
     itemsContainer.innerHTML = `
       <div class="py-16 text-center text-slate-400">
-        <div class="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-3 text-2xl">
-          <i class="fas fa-bookmark"></i>
+        <div class="w-16 h-16 rounded-full bg-rose-50 text-rose-500 flex items-center justify-center mx-auto mb-3 text-2xl">
+          <i class="fas fa-heart"></i>
         </div>
         <p class="font-bold text-slate-800 text-sm">No saved items yet</p>
         <p class="text-xs text-slate-400 mt-1 max-w-xs mx-auto">
@@ -1250,7 +1250,7 @@ function openQuickView(productId) {
             <i class="fas fa-shopping-cart text-xs mr-1"></i> Add To Cart
           </button>
           <button id="quickViewSaveBtn" onclick="toggleQuickViewSave('${product.id}')" class="btn-outline flex-1 justify-center py-2.5 text-xs sm:text-sm font-bold flex items-center gap-1.5" style="${isWishlisted ? 'border-color:#fca5a5; background:#fef2f2; color:#dc2626;' : ''}" aria-label="Save for later">
-            <i class="${isWishlisted ? 'fas fa-bookmark text-red-600' : 'far fa-bookmark'} text-xs"></i>
+            <i class="${isWishlisted ? 'fas fa-heart text-rose-500' : 'far fa-heart text-slate-500'} text-xs"></i>
             <span>${isWishlisted ? 'Saved' : 'Save for later'}</span>
           </button>
         </div>
@@ -1275,7 +1275,7 @@ function toggleQuickViewSave(productId) {
   const isNowSaved = wishlist.includes(productId);
   const btn = document.getElementById('quickViewSaveBtn');
   if (btn) {
-    btn.innerHTML = `<i class="${isNowSaved ? 'fas fa-bookmark text-red-600' : 'far fa-bookmark'} text-xs"></i> <span>${isNowSaved ? 'Saved' : 'Save for later'}</span>`;
+    btn.innerHTML = `<i class="${isNowSaved ? 'fas fa-heart text-rose-500' : 'far fa-heart text-slate-500'} text-xs"></i> <span>${isNowSaved ? 'Saved' : 'Save for later'}</span>`;
     btn.style.borderColor = isNowSaved ? '#fca5a5' : '';
     btn.style.background = isNowSaved ? '#fef2f2' : '';
     btn.style.color = isNowSaved ? '#dc2626' : '';
