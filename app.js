@@ -378,36 +378,29 @@ function renderProducts(showWishlistOnly = false) {
 
     return `
       <div class="product-card group" id="card-${product.id}">
-        <!-- Badges -->
-        <div class="flex items-center gap-1 absolute top-2.5 left-2.5 z-10">
+        <!-- Top Badges & Wishlist -->
+        <div style="position:absolute; top:8px; left:8px; z-index:10; display:flex; gap:4px; align-items:center;">
           ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
-          ${savingsPercentage > 0 ? `<span class="bg-emerald-50 text-emerald-800 text-[10px] font-bold px-1.5 py-0.5 rounded border border-emerald-200 shadow-2xs">Save ${savingsPercentage}%</span>` : ''}
+          ${savingsPercentage > 0 ? `<span style="background:#fef2f2; color:#dc2626; font-size:10px; font-weight:700; padding:2px 6px; border-radius:4px; border:1px solid #fee2e2;">-${savingsPercentage}%</span>` : ''}
         </div>
-        ${product.condition ? `<span class="condition-badge">${product.condition}</span>` : ''}
+        
+        <button onclick="addToWishlist('${product.id}')" style="position:absolute; top:8px; right:8px; z-index:10; width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,0.9); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; cursor:pointer; transition:var(--transition);" title="${isWishlisted ? 'Remove from Wishlist' : 'Add to Wishlist'}" aria-label="Wishlist">
+          <i class="${isWishlisted ? 'fas fa-heart' : 'far fa-heart'}" style="color:${isWishlisted ? '#ef4444' : '#6b7280'}; font-size:13px;"></i>
+        </button>
 
-        <!-- Image Container (Touch-friendly & fast lazy loading) -->
+        <!-- Product Image (Click to view details) -->
         <div class="product-img-wrap" onclick="openQuickView('${product.id}')" style="cursor: pointer;">
           <img src="${product.image}" alt="${product.title}" loading="lazy" decoding="async" width="280" height="280" onerror="this.src='https://toqri.com/wp-content/uploads/2023/10/Aeron3-3-300x300.webp'">
-          
-          <!-- Quick Action Buttons -->
-          <div class="product-actions-overlay" onclick="event.stopPropagation()">
-            <button onclick="addToWishlist('${product.id}')" class="btn-action-icon ${isWishlisted ? 'text-red-500 !border-red-400' : ''}" title="${isWishlisted ? 'Remove Wishlist' : 'Add to Wishlist'}" aria-label="Toggle Wishlist">
-              <i class="${isWishlisted ? 'fas fa-heart text-red-500' : 'far fa-heart'}"></i>
-            </button>
-            <button onclick="openQuickView('${product.id}')" class="btn-action-icon" title="Quick View" aria-label="Quick View">
-              <i class="fas fa-eye"></i>
-            </button>
-          </div>
         </div>
 
-        <!-- Content -->
+        <!-- Product Details -->
         <div class="product-content">
-          <div class="flex items-center justify-between mb-1">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
             <span class="product-brand">${product.brand}</span>
-            <div class="flex items-center gap-1 text-[11px] text-amber-500 font-bold">
-              <i class="fas fa-star"></i>
+            <div style="display:flex; align-items:center; gap:3px; font-size:11px; font-weight:700; color:#f59e0b;">
+              <i class="fas fa-star" style="font-size:10px;"></i>
               <span>${product.rating.toFixed(1)}</span>
-              <span class="text-slate-400 font-normal hidden sm:inline">(${product.reviewCount})</span>
+              <span style="color:#9ca3af; font-weight:400;">(${product.reviewCount})</span>
             </div>
           </div>
 
@@ -415,40 +408,20 @@ function renderProducts(showWishlistOnly = false) {
             <a href="javascript:void(0)" onclick="openQuickView('${product.id}')">${product.title}</a>
           </h3>
 
-          <!-- Color Swatches & Grade Tag -->
-          <div class="flex items-center gap-1.5 my-1 text-[10px] text-slate-400">
-            <span class="inline-block w-2 h-2 rounded-full bg-slate-800 cursor-pointer hover:scale-125 transition" title="Graphite Edition"></span>
-            <span class="inline-block w-2 h-2 rounded-full bg-slate-400 cursor-pointer hover:scale-125 transition" title="Carbon Mineral"></span>
-            <span class="inline-block w-2 h-2 rounded-full bg-emerald-600 cursor-pointer hover:scale-125 transition" title="Certified Refurbished"></span>
-            <span class="text-[10px] text-slate-500 font-medium ml-1">18-Pt Certified</span>
-          </div>
-
-          <p class="text-xs text-slate-500 line-clamp-2 mb-2 hidden sm:block">
-            ${product.subtitle || product.description.slice(0, 80) + '...'}
-          </p>
-
           <div class="price-container">
             <span class="current-price">${formattedPrice}</span>
             ${formattedOriginal ? `<span class="original-price">${formattedOriginal}</span>` : ''}
           </div>
 
-          <!-- Trust Subtext Guarantee -->
-          <div class="flex items-center justify-between text-[10px] text-slate-400 mt-1.5 pt-1 border-t border-slate-50">
-            <span><i class="fas fa-truck-fast text-emerald-600"></i> Wooden Crate Transit</span>
-            <span><i class="fas fa-shield-alt text-emerald-600"></i> 1-Yr Warranty</span>
-          </div>
-
-          <!-- Responsive Action Buttons (Touch-friendly for iOS & Android, Desktop Optimized) -->
-          <div class="flex items-center gap-1.5 sm:gap-2 mt-2 pt-2 border-t border-slate-100">
-            <button onclick="addToCart('${product.id}')" class="flex-1 bg-slate-900 hover:bg-emerald-700 active:bg-slate-800 text-white text-[11px] sm:text-xs font-semibold py-2 sm:py-2.5 px-2 rounded-lg transition flex items-center justify-center gap-1 shadow-xs" aria-label="Add to Cart">
-              <i class="fas fa-shopping-bag text-[10px] sm:text-[11px]"></i> <span>Add to Cart</span>
+          <!-- Actions: Add to Cart + WhatsApp -->
+          <div style="display:flex; gap:6px; margin-top:10px; padding-top:10px; border-top:1px solid var(--border-light);">
+            <button onclick="addToCart('${product.id}')" class="btn-primary" style="flex:1; justify-content:center; padding:8px 12px; font-size:12px; border-radius:6px;" aria-label="Add to Cart">
+              <i class="fas fa-shopping-bag" style="font-size:11px;"></i>
+              <span>Add to Cart</span>
             </button>
-            <button onclick="buyViaWhatsAppItem('${product.id}')" class="w-8 h-8 sm:w-auto sm:px-3 flex-shrink-0 bg-[#25d366] hover:bg-[#1eb956] active:scale-95 text-white rounded-lg flex items-center justify-center gap-1.5 transition shadow-xs text-xs font-semibold" title="Order on WhatsApp" aria-label="Order on WhatsApp">
-              <i class="fab fa-whatsapp text-sm sm:text-base"></i>
+            <button onclick="buyViaWhatsAppItem('${product.id}')" style="background:#25d366; color:#fff; padding:8px 12px; border-radius:6px; font-size:12px; font-weight:600; display:flex; align-items:center; gap:4px; border:none; cursor:pointer; transition:var(--transition);" title="Order on WhatsApp" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp" style="font-size:14px;"></i>
               <span class="hidden sm:inline">WhatsApp</span>
-            </button>
-            <button onclick="openQuickView('${product.id}')" class="w-8 h-8 flex-shrink-0 bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 rounded-lg flex items-center justify-center transition" title="Technical Specs" aria-label="Technical Specs">
-              <i class="fas fa-eye text-xs"></i>
             </button>
           </div>
         </div>
