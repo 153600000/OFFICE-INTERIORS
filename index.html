@@ -144,8 +144,12 @@
     </div>
   </header>
 
-  <!-- ==================== HERO SLIDER SECTION (MATCHES TOQRI REFERENCE EXACTLY) ==================== -->
+  <!-- ==================== HERO SLIDER SECTION (ATTRACTIVE GRAPHIC MOTION SLIDES) ==================== -->
   <section id="hero" class="toqri-hero-wrap">
+
+    <!-- Graphic Motion Background Accents -->
+    <div class="hero-bg-glow"></div>
+    <div class="hero-bg-ring"></div>
 
     <!-- Left Navigation Arrow (Mint Green Circle) -->
     <button onclick="prevHeroSlide()" class="toqri-hero-arrow toqri-hero-prev" aria-label="Previous Slide">
@@ -159,13 +163,15 @@
 
     <div class="container-custom">
 
-      <!-- Slide 1 (Matches User's Screenshot Exactly) -->
+      <!-- Slide 1: Modern Refurbished Workspace & Ergonomic Mesh Setup -->
       <div class="hero-slide active" id="heroSlide1">
-        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[460px] py-8 lg:py-12">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[480px] py-8 lg:py-12">
           
           <!-- Left Text Content -->
           <div class="lg:col-span-6 xl:col-span-6">
-            <span class="toqri-hero-eyebrow">RECYCLE. REUSE. RETHINK.</span>
+            <span class="toqri-hero-eyebrow">
+              <i class="fas fa-leaf text-emerald-600"></i> RECYCLE. REUSE. RETHINK.
+            </span>
             
             <h1 class="toqri-hero-title">
               Pre-Loved Furniture,<br>Reimagined for You
@@ -175,50 +181,162 @@
               Make a sustainable switch with affordable, high-quality used furniture. Delivered pan India. Eco-friendly living starts right here.
             </p>
 
-            <div>
+            <div class="flex items-center flex-wrap gap-3">
               <a href="#catalog" onclick="filterCatalog('all')" class="toqri-hero-btn">
-                SHOP NOW
+                SHOP NOW <i class="fas fa-arrow-right text-xs"></i>
+              </a>
+              <a href="#catalog" onclick="filterCatalog('chairs')" class="toqri-hero-btn-outline">
+                EXPLORE CHAIRS
               </a>
             </div>
           </div>
 
-          <!-- Right Image (Wooden Desk, Monitor, Lamp, Plant, Ergonomic Mesh Chair) -->
+          <!-- Right Image Stage with Floating Graphic Motion Badges -->
           <div class="lg:col-span-6 xl:col-span-6 flex justify-center lg:justify-end">
-            <div class="relative w-full max-w-2xl">
-              <img src="https://toqri.com/wp-content/uploads/2025/05/Banner-Toqri-1.png" alt="Pre-Loved Furniture, Reimagined for You" class="w-full h-auto object-contain max-h-[440px] mx-auto">
+            <div class="hero-img-stage">
+              <img src="https://toqri.com/wp-content/uploads/2025/05/Banner-Toqri-1.png" alt="Pre-Loved Workspace Furniture Reimagined" class="hero-img-main">
+              
+              <!-- Floating Graphic Motion Badge 1 -->
+              <div class="hero-floating-badge hero-badge-1">
+                <div class="hero-badge-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <div>
+                  <div class="hero-badge-title">18-Point Certified</div>
+                  <div class="hero-badge-desc">1-Year Warranty Included</div>
+                </div>
+              </div>
+
+              <!-- Floating Graphic Motion Badge 2 -->
+              <div class="hero-floating-badge hero-badge-2">
+                <div class="hero-badge-icon amber">
+                  <i class="fas fa-percent"></i>
+                </div>
+                <div>
+                  <div class="hero-badge-title">Up to 70% Off</div>
+                  <div class="hero-badge-desc">Premium Corporate Brands</div>
+                </div>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
 
-      <!-- Slide 2 -->
+      <!-- Slide 2: Smart Standing Desks & Workstation Setups -->
       <div class="hero-slide" id="heroSlide2">
-        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[460px] py-8 lg:py-12">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[480px] py-8 lg:py-12">
           
           <!-- Left Text Content -->
           <div class="lg:col-span-6 xl:col-span-6">
-            <span class="toqri-hero-eyebrow">SMARTER SPACES, GREENER PLANET</span>
+            <span class="toqri-hero-eyebrow">
+              <i class="fas fa-bolt text-amber-500"></i> MOTORIZED ELEVATION
+            </span>
             
             <h1 class="toqri-hero-title">
-              Affordable Furniture,<br>That Makes a Difference
+              Height Adjustable Desks,<br>Engineered for Health
             </h1>
 
             <p class="toqri-hero-desc">
-              Save big while saving the planet. Shop refurbished furniture that’s good for your home—and even better for the Earth.
+              Switch effortlessly from sit to stand with whisper-quiet motorized frames, digital memory presets, and solid wood rubberwood tops.
             </p>
 
-            <div>
-              <a href="#catalog" onclick="filterCatalog('all')" class="toqri-hero-btn">
-                SHOP NOW
+            <div class="flex items-center flex-wrap gap-3">
+              <a href="#catalog" onclick="filterCatalog('desks')" class="toqri-hero-btn">
+                SHOP STANDING DESKS <i class="fas fa-arrow-right text-xs"></i>
+              </a>
+              <a href="#dealSection" class="toqri-hero-btn-outline">
+                VIEW DEALS
               </a>
             </div>
           </div>
 
-          <!-- Right Image (Workspace Setup 2) -->
+          <!-- Right Image Stage with Floating Graphic Motion Badges -->
           <div class="lg:col-span-6 xl:col-span-6 flex justify-center lg:justify-end">
-            <div class="relative w-full max-w-2xl">
-              <img src="https://toqri.com/wp-content/uploads/2025/05/Toqri-banner_image_2.png" alt="Affordable Furniture That Makes a Difference" class="w-full h-auto object-contain max-h-[440px] mx-auto">
+            <div class="hero-img-stage">
+              <img src="https://toqri.com/wp-content/uploads/2025/05/Toqri-banner_image_2.png" alt="Motorized Standing Desks and Modern Workspace" class="hero-img-main">
+
+              <!-- Floating Graphic Motion Badge 1 -->
+              <div class="hero-floating-badge hero-badge-1">
+                <div class="hero-badge-icon blue">
+                  <i class="fas fa-arrows-alt-v"></i>
+                </div>
+                <div>
+                  <div class="hero-badge-title">Dual-Motor Lift</div>
+                  <div class="hero-badge-desc">Smooth 62cm - 128cm Height</div>
+                </div>
+              </div>
+
+              <!-- Floating Graphic Motion Badge 2 -->
+              <div class="hero-floating-badge hero-badge-2">
+                <div class="hero-badge-icon">
+                  <i class="fas fa-truck-fast"></i>
+                </div>
+                <div>
+                  <div class="hero-badge-title">Pan-India Dispatch</div>
+                  <div class="hero-badge-desc">Zero-Damage Insured Transit</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Slide 3: Herman Miller Aeron Seating Benchmark -->
+      <div class="hero-slide" id="heroSlide3">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[480px] py-8 lg:py-12">
+          
+          <!-- Left Text Content -->
+          <div class="lg:col-span-6 xl:col-span-6">
+            <span class="toqri-hero-eyebrow">
+              <i class="fas fa-award text-emerald-600"></i> THE BENCHMARK OF COMFORT
+            </span>
+            
+            <h1 class="toqri-hero-title">
+              Pinnacle Ergonomics,<br>Fraction of the Cost
+            </h1>
+
+            <p class="toqri-hero-desc">
+              Experience the world-renowned Herman Miller Aeron, Mirra 2, and Humanscale Freedom chairs. Thoroughly sanitized, lubricated, and certified Grade A.
+            </p>
+
+            <div class="flex items-center flex-wrap gap-3">
+              <a href="#catalog" onclick="filterCatalog('chairs')" class="toqri-hero-btn">
+                EXPLORE AERON SEATS <i class="fas fa-arrow-right text-xs"></i>
+              </a>
+              <a href="#catalog" onclick="filterCatalog('all')" class="toqri-hero-btn-outline">
+                ALL PRODUCTS
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Image Stage with Floating Graphic Motion Badges -->
+          <div class="lg:col-span-6 xl:col-span-6 flex justify-center lg:justify-end">
+            <div class="hero-img-stage">
+              <img src="https://toqri.com/wp-content/uploads/2023/10/Aeron3-3-300x300.webp" alt="Herman Miller Aeron Ergonomic Chair" class="hero-img-main" style="max-height: 400px; transform: scale(1.08);">
+
+              <!-- Floating Graphic Motion Badge 1 -->
+              <div class="hero-floating-badge hero-badge-1">
+                <div class="hero-badge-icon">
+                  <i class="fas fa-chair"></i>
+                </div>
+                <div>
+                  <div class="hero-badge-title">Pellicle Mesh Back</div>
+                  <div class="hero-badge-desc">Full Spinal PostureFit</div>
+                </div>
+              </div>
+
+              <!-- Floating Graphic Motion Badge 2 -->
+              <div class="hero-floating-badge hero-badge-2">
+                <div class="hero-badge-icon amber">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div>
+                  <div class="hero-badge-title">4.9/5 Rating</div>
+                  <div class="hero-badge-desc">2,400+ Happy Workspaces</div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -226,6 +344,14 @@
       </div>
 
     </div>
+
+    <!-- Slide Indicator Dots with Dynamic Motion -->
+    <div class="hero-dots-wrap">
+      <button class="hero-dot active" onclick="setSlide(0)" id="slideDot0" aria-label="Slide 1"></button>
+      <button class="hero-dot" onclick="setSlide(1)" id="slideDot1" aria-label="Slide 2"></button>
+      <button class="hero-dot" onclick="setSlide(2)" id="slideDot2" aria-label="Slide 3"></button>
+    </div>
+
   </section>
 
   <!-- ==================== TRUST FEATURES STRIP ==================== -->

@@ -70,17 +70,11 @@ function initHeroSlider() {
       s.classList.toggle('active', idx === index);
     });
 
-    const dot0 = document.getElementById('slideDot0');
-    const dot1 = document.getElementById('slideDot1');
-    if (dot0 && dot1) {
-      if (index === 0) {
-        dot0.className = 'w-10 h-2.5 rounded-full bg-emerald-400 transition-all duration-300';
-        dot1.className = 'w-3 h-2.5 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300';
-      } else {
-        dot0.className = 'w-3 h-2.5 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300';
-        dot1.className = 'w-10 h-2.5 rounded-full bg-emerald-400 transition-all duration-300';
-      }
-    }
+    // Update dot indicators
+    const dots = document.querySelectorAll('.hero-dot');
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === index);
+    });
     heroSlideIndex = index;
   }
 
