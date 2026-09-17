@@ -13,8 +13,10 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="format-detection" content="telephone=no">
 
-  <!-- Favicon -->
+  <!-- Favicon & PWA Icons for iOS / Android -->
   <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  <link rel="apple-touch-icon" href="logo.jpeg">
+  <link rel="manifest" href="manifest.json">
 
   <!-- Fast Loading Performance Preconnects -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -899,6 +901,7 @@
   <!-- ==================== WHATSAPP ORDER PLACEMENT MODAL (WITH FILLING TABS) ==================== -->
   <div id="orderModalBackdrop" class="modal-backdrop" onclick="closeOrderModal(event)">
     <div class="modal-content-box p-6 sm:p-8 max-w-2xl" id="orderModalBox" onclick="event.stopPropagation()">
+      <div class="sheet-drag-handle sm:hidden"></div>
       <button class="modal-close-btn" onclick="closeOrderModal()" aria-label="Close Order Form">
         <i class="fas fa-times"></i>
       </button>
@@ -1155,6 +1158,7 @@
   <!-- ==================== QUICK VIEW MODAL ==================== -->
   <div id="quickViewBackdrop" class="modal-backdrop" onclick="closeQuickView(event)">
     <div class="modal-content-box p-6 sm:p-8" id="quickViewModalBox" onclick="event.stopPropagation()">
+      <div class="sheet-drag-handle sm:hidden"></div>
       <button class="modal-close-btn" onclick="closeQuickView()" aria-label="Close Modal">
         <i class="fas fa-times"></i>
       </button>
@@ -1168,6 +1172,7 @@
   <!-- ==================== RESELL / LIQUIDATION MODAL ==================== -->
   <div id="resellBackdrop" class="modal-backdrop" onclick="closeResellModal(event)">
     <div class="modal-content-box p-6 sm:p-8 max-w-xl" onclick="event.stopPropagation()">
+      <div class="sheet-drag-handle sm:hidden"></div>
       <button class="modal-close-btn" onclick="closeResellModal()" aria-label="Close Modal">
         <i class="fas fa-times"></i>
       </button>
@@ -1269,13 +1274,19 @@
 
 
 
+  <!-- ==================== MOBILE FLOATING WHATSAPP BUTTON (iOS & Android) ==================== -->
+  <a href="https://wa.me/917760951238?text=Hi%20Office%20Interiors%2C%20I%20want%20to%20place%20an%20order%20or%20inquire." target="_blank" class="mobile-whatsapp-fab md:hidden" aria-label="Order on WhatsApp">
+    <i class="fab fa-whatsapp text-lg text-white"></i>
+    <span class="mobile-whatsapp-fab-text">WhatsApp Order</span>
+  </a>
+
   <!-- ==================== MOBILE APP BOTTOM NAVIGATION BAR (iOS & Android) ==================== -->
   <nav class="mobile-bottom-nav md:hidden" id="mobileBottomNav" aria-label="Mobile Bottom Navigation">
-    <a href="#hero" class="mobile-nav-item active" id="mobNavHome" aria-label="Home">
+    <a href="#hero" onclick="setMobileBottomNavActive('mobNavHome')" class="mobile-nav-item active" id="mobNavHome" aria-label="Home">
       <i class="fas fa-home"></i>
       <span>Home</span>
     </a>
-    <a href="#catalog" onclick="filterCatalog('all')" class="mobile-nav-item" id="mobNavShop" aria-label="Shop Catalog">
+    <a href="#catalog" onclick="filterCatalog('all'); setMobileBottomNavActive('mobNavShop')" class="mobile-nav-item" id="mobNavShop" aria-label="Shop Catalog">
       <i class="fas fa-th-large"></i>
       <span>Shop</span>
     </a>
@@ -1288,7 +1299,7 @@
       <span id="mobWishlistBadge" class="mobile-nav-badge bg-red-500">0</span>
       <span>Wishlist</span>
     </button>
-    <button onclick="toggleCartDrawer()" class="mobile-nav-item relative" id="mobNavCart" aria-label="Shopping Cart">
+    <button onclick="toggleCartDrawer(); setMobileBottomNavActive('mobNavCart')" class="mobile-nav-item relative" id="mobNavCart" aria-label="Shopping Cart">
       <i class="fas fa-shopping-bag"></i>
       <span id="mobCartBadge" class="mobile-nav-badge bg-emerald-500">0</span>
       <span>Cart</span>

@@ -165,7 +165,16 @@ function initSearch() {
   }
 }
 
+function setMobileBottomNavActive(activeId) {
+  const items = ['mobNavHome', 'mobNavShop', 'mobNavSearch', 'mobNavWishlist', 'mobNavCart'];
+  items.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('active', id === activeId);
+  });
+}
+
 function focusMobileSearch() {
+  setMobileBottomNavActive('mobNavSearch');
   const mInput = document.getElementById('mobileSearchInput');
   if (mInput) {
     mInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -176,6 +185,7 @@ function focusMobileSearch() {
 }
 
 function filterWishlistOnly() {
+  setMobileBottomNavActive('mobNavWishlist');
   if (wishlist.length === 0) {
     showToast('Your wishlist is empty. Tap the heart on any product to save items!', 'info');
     return;
@@ -351,13 +361,17 @@ function renderProducts(showWishlistOnly = false) {
             ${formattedOriginal ? `<span class="original-price">${formattedOriginal}</span>` : ''}
           </div>
 
-          <!-- Responsive Action Buttons (Clean & Full-Width on Mobile, Dual on Desktop) -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 mt-3 pt-2.5 border-t border-slate-100">
-            <button onclick="addToCart('${product.id}')" class="w-full bg-slate-900 hover:bg-emerald-700 text-white text-[11px] sm:text-xs font-semibold py-2 sm:py-2.5 px-2 rounded-lg transition flex items-center justify-center gap-1.5 shadow-xs" aria-label="Add to Cart">
+          <!-- Responsive Action Buttons (Touch-friendly for iOS & Android, Desktop Optimized) -->
+          <div class="flex items-center gap-1.5 sm:gap-2 mt-2.5 pt-2 border-t border-slate-100">
+            <button onclick="addToCart('${product.id}')" class="flex-1 bg-slate-900 hover:bg-emerald-700 active:bg-slate-800 text-white text-[11px] sm:text-xs font-semibold py-2 sm:py-2.5 px-2 rounded-lg transition flex items-center justify-center gap-1 shadow-xs" aria-label="Add to Cart">
               <i class="fas fa-shopping-bag text-[10px] sm:text-[11px]"></i> <span>Add to Cart</span>
             </button>
-            <button onclick="openQuickView('${product.id}')" class="hidden sm:flex w-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold py-2.5 px-2 rounded-lg transition items-center justify-center gap-1.5" aria-label="Quick View">
-              <i class="fas fa-eye text-[11px] text-slate-500"></i> <span>Quick View</span>
+            <button onclick="buyViaWhatsAppItem('${product.id}')" class="w-8 h-8 sm:w-auto sm:px-3 flex-shrink-0 bg-[#25d366] hover:bg-[#1eb956] active:scale-95 text-white rounded-lg flex items-center justify-center gap-1.5 transition shadow-xs text-xs font-semibold" title="Order on WhatsApp" aria-label="Order on WhatsApp">
+              <i class="fab fa-whatsapp text-sm sm:text-base"></i>
+              <span class="hidden sm:inline">WhatsApp</span>
+            </button>
+            <button onclick="openQuickView('${product.id}')" class="w-8 h-8 flex-shrink-0 bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 rounded-lg flex items-center justify-center transition" title="Technical Specs" aria-label="Technical Specs">
+              <i class="fas fa-eye text-xs"></i>
             </button>
           </div>
         </div>
