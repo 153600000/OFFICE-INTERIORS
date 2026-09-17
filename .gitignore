@@ -4,3 +4,4 @@ Thumbs.db
 *.log
 
 push-to-github.bat
+.vercel

@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // 1. Hero Slider
 // ==========================================
 function initHeroSlider() {
-  const slides = document.querySelectorAll('.hero-slide');
+  const slides = document.querySelectorAll('.ai-hero-slide, .hero-slide');
   if (!slides.length) return;
 
   function showSlide(index) {
@@ -413,23 +413,23 @@ function renderProducts(showWishlistOnly = false) {
 
     return `
       <div class="product-card group" id="card-${product.id}">
-        <button onclick="addToWishlist('${product.id}')" style="position:absolute; top:8px; right:8px; z-index:10; width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,0.9); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; cursor:pointer; transition:var(--transition);" title="${isWishlisted ? 'Remove from Wishlist' : 'Add to Wishlist'}" aria-label="Wishlist">
-          <i class="${isWishlisted ? 'fas fa-heart' : 'far fa-heart'}" style="color:${isWishlisted ? '#ef4444' : '#6b7280'}; font-size:13px;"></i>
+        <button onclick="addToWishlist('${product.id}')" style="position:absolute; top:6px; right:6px; z-index:10; width:28px; height:28px; border-radius:50%; background:rgba(255,255,255,0.92); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; cursor:pointer; transition:var(--transition);" title="${isWishlisted ? 'Remove from Wishlist' : 'Add to Wishlist'}" aria-label="Wishlist">
+          <i class="${isWishlisted ? 'fas fa-heart' : 'far fa-heart'}" style="color:${isWishlisted ? '#ef4444' : '#6b7280'}; font-size:11px;"></i>
         </button>
 
         <!-- Product Image (Click to view details) -->
         <div class="product-img-wrap" onclick="openQuickView('${product.id}')" style="cursor: pointer;">
-          <img src="${product.image}" alt="${product.title}" loading="lazy" decoding="async" width="280" height="280" onerror="this.src='https://toqri.com/wp-content/uploads/2023/10/Aeron3-3-300x300.webp'">
+          <img src="${product.image}" alt="${product.title}" loading="lazy" decoding="async" width="240" height="240" onerror="this.src='https://toqri.com/wp-content/uploads/2023/10/Aeron3-3-300x300.webp'">
         </div>
 
         <!-- Product Details -->
         <div class="product-content">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3px;">
             <span class="product-brand">${product.brand}</span>
-            <div style="display:flex; align-items:center; gap:3px; font-size:11px; font-weight:700; color:#f59e0b;">
-              <i class="fas fa-star" style="font-size:10px;"></i>
+            <div style="display:flex; align-items:center; gap:2px; font-size:10.5px; font-weight:700; color:#f59e0b;">
+              <i class="fas fa-star" style="font-size:9px;"></i>
               <span>${product.rating.toFixed(1)}</span>
-              <span style="color:#9ca3af; font-weight:400;">(${product.reviewCount})</span>
+              <span style="color:#9ca3af; font-weight:400; font-size:10px;">(${product.reviewCount})</span>
             </div>
           </div>
 
@@ -443,13 +443,13 @@ function renderProducts(showWishlistOnly = false) {
           </div>
 
           <!-- Actions: Add to Cart + WhatsApp -->
-          <div style="display:flex; gap:6px; margin-top:10px; padding-top:10px; border-top:1px solid var(--border-light);">
-            <button onclick="addToCart('${product.id}')" class="btn-primary" style="flex:1; justify-content:center; padding:8px 12px; font-size:12px; border-radius:6px;" aria-label="Add to Cart">
-              <i class="fas fa-shopping-bag" style="font-size:11px;"></i>
-              <span>Add to Cart</span>
+          <div style="display:flex; gap:4px; margin-top:6px; padding-top:6px; border-top:1px solid var(--border-light);">
+            <button onclick="addToCart('${product.id}')" class="btn-primary" style="flex:1; justify-content:center; padding:6px 8px; font-size:11.5px; border-radius:5px;" aria-label="Add to Cart">
+              <i class="fas fa-shopping-bag" style="font-size:10px;"></i>
+              <span>Add</span>
             </button>
-            <button onclick="buyViaWhatsAppItem('${product.id}')" style="background:#25d366; color:#fff; padding:8px 12px; border-radius:6px; font-size:12px; font-weight:600; display:flex; align-items:center; gap:4px; border:none; cursor:pointer; transition:var(--transition);" title="Order on WhatsApp" aria-label="WhatsApp">
-              <i class="fab fa-whatsapp" style="font-size:14px;"></i>
+            <button onclick="buyViaWhatsAppItem('${product.id}')" style="background:#25d366; color:#fff; padding:6px 9px; border-radius:5px; font-size:11.5px; font-weight:600; display:flex; align-items:center; gap:3px; border:none; cursor:pointer; transition:var(--transition);" title="Order on WhatsApp" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp" style="font-size:13px;"></i>
               <span class="hidden sm:inline">WhatsApp</span>
             </button>
           </div>
