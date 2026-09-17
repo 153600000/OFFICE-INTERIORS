@@ -179,6 +179,15 @@ function initSearch() {
         mobileSearchInput.value = e.target.value;
       }
     });
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        currentSearch = searchInput.value.trim().toLowerCase();
+        renderProducts();
+        const catalogEl = document.getElementById('catalog');
+        if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   }
 
   if (mobileSearchInput) {
@@ -190,6 +199,15 @@ function initSearch() {
       }
       if (mobileSearchClear) {
         mobileSearchClear.classList.toggle('hidden', val.length === 0);
+      }
+    });
+    mobileSearchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        currentSearch = mobileSearchInput.value.trim().toLowerCase();
+        renderProducts();
+        const catalogEl = document.getElementById('catalog');
+        if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
       }
     });
   }
@@ -208,6 +226,17 @@ function initSearch() {
       if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
     });
   }
+}
+
+function openAccountModal() {
+  setBodyScrollLock(true);
+  document.getElementById('accountModalBackdrop')?.classList.add('open');
+}
+
+function closeAccountModal(event) {
+  if (event && event.target !== event.currentTarget) return;
+  document.getElementById('accountModalBackdrop')?.classList.remove('open');
+  setBodyScrollLock(false);
 }
 
 function setMobileBottomNavActive(activeId) {

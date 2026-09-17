@@ -67,108 +67,247 @@ img { display: block; max-width: 100%; }
 }
 
 /* ======================================================================
-   TOP ANNOUNCEMENT BAR
+   TOP ANNOUNCEMENT BAR (MATCHES REFERENCE EXACTLY)
    ====================================================================== */
 .announcement-bar {
-  background: var(--green);
-  color: #fff;
+  background: #23a455;
+  color: #ffffff;
   font-size: 0.8125rem;
   font-weight: 500;
-  padding: 0.5rem 0;
+  padding: 0.45rem 1rem;
+  text-align: center;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
 }
-.announcement-bar a,
-.announcement-bar button { color: #fff; opacity: 0.9; }
-.announcement-bar a:hover,
-.announcement-bar button:hover { opacity: 1; text-decoration: underline; }
+.announcement-text {
+  margin: 0 auto;
+}
 
 /* ======================================================================
-   HEADER
+   MAIN HEADER (MATCHES TOQRI REFERENCE EXACTLY)
    ====================================================================== */
 .main-header {
-  background: #fff;
-  border-bottom: 1px solid var(--border);
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
   position: sticky;
   top: 0;
   z-index: 50;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s ease;
 }
 .main-header.scrolled {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Logo */
-.logo-badge {
+.toqri-nav-row {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Brand Identity */
+.toqri-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
   flex-shrink: 0;
 }
-.logo-img {
-  width: 40px;
-  height: 40px;
+.toqri-logo-img {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--green);
+  border: 2px solid #23a455;
+  flex-shrink: 0;
+}
+.toqri-brand-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #23a455;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.toqri-brand-title .brand-tld {
+  color: #111827;
+  font-weight: 700;
+}
+.toqri-brand-sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #23a455;
+  line-height: 1;
+  margin-top: 0.25rem;
+  letter-spacing: 0.01em;
 }
 
-/* Search Bar */
-.search-input-group {
+/* Search Box */
+.toqri-search-wrap {
   flex: 1;
-  max-width: 520px;
+  max-width: 620px;
+  margin: 0 1rem;
+}
+.toqri-search-box {
+  position: relative;
   display: flex;
   align-items: center;
-  background: var(--bg-gray);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  transition: var(--transition);
+  width: 100%;
+  background: #ffffff;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
-.search-input-group:focus-within {
-  border-color: var(--green);
-  background: #fff;
-  box-shadow: 0 0 0 3px rgba(26,158,79,0.1);
+.toqri-search-box:focus-within {
+  border-color: #23a455;
+  box-shadow: 0 0 0 3px rgba(35, 164, 85, 0.12);
 }
-.search-input-group input {
-  flex: 1;
+.toqri-search-input {
+  width: 100%;
+  height: 44px;
+  padding: 0 44px 0 16px;
   border: none;
   background: transparent;
   outline: none;
   font-size: 0.875rem;
-  color: var(--text-primary);
-  padding: 0.6rem 0.875rem;
-  min-width: 0;
+  color: #1f2937;
 }
-.search-input-group input::placeholder { color: var(--text-muted); }
-.search-category-select {
+.toqri-search-input::placeholder {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+.toqri-search-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 44px;
+  background: transparent;
   border: none;
-  border-left: 1px solid var(--border);
-  background: #fff;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  padding: 0.6rem 0.75rem;
-  outline: none;
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: var(--transition);
-}
-.search-btn-icon {
-  background: var(--green);
-  color: #fff;
-  width: 38px;
-  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  font-size: 0.875rem;
-  transition: var(--transition);
-  margin-right: 0;
+  color: #4b5563;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.15s ease;
 }
-.search-btn-icon:hover { background: var(--green-dark); }
+.toqri-search-btn:hover {
+  color: #23a455;
+}
 
-/* Desktop Nav */
-.nav-bar { background: #fff; border-top: 1px solid var(--border-light); }
+/* Actions Group */
+.toqri-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Account Link */
+.toqri-account-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s ease;
+}
+.toqri-account-link:hover .toqri-account-icon,
+.toqri-account-link:hover .toqri-account-main {
+  color: #23a455;
+}
+.toqri-account-icon {
+  font-size: 1.55rem;
+  color: #374151;
+}
+.toqri-account-labels {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  text-align: left;
+}
+.toqri-account-sub {
+  font-size: 0.7rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+.toqri-account-main {
+  font-size: 0.8125rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+/* Wishlist Button */
+.toqri-icon-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #374151;
+  font-size: 1.45rem;
+  padding: 0.25rem;
+  transition: color 0.15s ease;
+}
+.toqri-icon-btn:hover {
+  color: #23a455;
+}
+
+/* Badges */
+.toqri-badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: #23a455;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+  border: 2px solid #ffffff;
+}
+
+/* Cart Button */
+.toqri-cart-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  transition: color 0.15s ease;
+}
+.toqri-cart-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #374151;
+  font-size: 1.4rem;
+}
+.toqri-cart-btn:hover .toqri-cart-icon-wrap,
+.toqri-cart-btn:hover .toqri-cart-total {
+  color: #23a455;
+}
+.toqri-cart-total {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1f2937;
+  transition: color 0.15s ease;
+}
 
 .nav-link {
   font-size: 0.8375rem;
@@ -1025,12 +1164,34 @@ img { display: block; max-width: 100%; }
 
   .announcement-bar {
     font-size: 0.72rem;
-    padding: 0.35rem 0;
+    padding: 0.35rem 0.5rem;
   }
 
-  .logo-img {
-    width: 34px;
-    height: 34px;
+  .toqri-nav-row {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    gap: 0.75rem;
+  }
+
+  .toqri-logo-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .toqri-brand-title {
+    font-size: 1.15rem;
+  }
+
+  .toqri-brand-sub {
+    font-size: 0.65rem;
+  }
+
+  .toqri-actions {
+    gap: 0.85rem;
+  }
+
+  .toqri-cart-total {
+    font-size: 0.8rem;
   }
 
   .hero-slider-wrap {

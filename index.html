@@ -63,109 +63,85 @@
 </head>
 <body>
 
-  <!-- ANNOUNCEMENT BAR -->
+  <!-- ==================== TOP ANNOUNCEMENT BAR (MATCHES REFERENCE EXACTLY) ==================== -->
   <div class="announcement-bar">
-    <div class="container-custom flex justify-between items-center text-xs">
-      <span class="truncate font-medium">Certified Refurbished Furniture · Pan-India Delivery</span>
-      <div class="flex items-center gap-3 text-xs flex-shrink-0 ml-2">
-        <a href="tel:+917760951238" class="flex items-center gap-1 font-semibold hover:underline">
-          <i class="fas fa-phone-alt text-[10px]"></i> <span class="hidden sm:inline">+91 77609 51238</span><span class="sm:hidden">Call Us</span>
-        </a>
-        <span class="opacity-35 hidden sm:inline">|</span>
-        <button onclick="openResellModal()" class="hidden sm:flex items-center gap-1 text-amber-200 font-semibold hover:underline">
-          <i class="fas fa-recycle text-[11px]"></i> Sell Furniture
-        </button>
-        <span class="opacity-35 hidden sm:inline">|</span>
-        <span class="hidden sm:inline opacity-90"><i class="fas fa-shield-alt mr-1"></i>1-Yr Warranty</span>
-      </div>
+    <div class="container-custom">
+      <p class="announcement-text">
+        Buy Premium Imported Ergonomic office Chair and Standing desks only @ officeinteriors.in
+      </p>
     </div>
   </div>
 
-  <!-- HEADER -->
+  <!-- ==================== MAIN HEADER (MATCHES REFERENCE EXACTLY) ==================== -->
   <header id="mainHeader" class="main-header">
+    <div class="container-custom toqri-nav-row">
 
-    <!-- Top row: logo, search, actions -->
-    <div class="container-custom" style="display:flex; align-items:center; gap:0.75rem; padding-top:0.6rem; padding-bottom:0.6rem;">
-
-      <!-- Logo -->
-      <a href="#" class="logo-badge" style="flex-shrink:0;">
-        <img src="logo.jpeg" alt="Office Interiors" class="logo-img" width="38" height="38">
+      <!-- Left: Company Logo & Brand -->
+      <a href="#" class="toqri-brand" aria-label="Office Interiors Home">
+        <img src="logo.jpeg" alt="Office Interiors" class="toqri-logo-img">
         <div>
-          <div style="font-family:var(--font-heading); font-size:1.15rem; font-weight:800; color:var(--text-primary); line-height:1; letter-spacing:-0.02em;">
-            OFFICE<span style="color:var(--green);"> INTERIORS</span>
-          </div>
-          <div class="hidden sm:block" style="font-size:0.62rem; font-weight:500; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.05em; margin-top:0.1rem;">
-            Refurbished · Certified · Delivered
-          </div>
+          <div class="toqri-brand-title">officeinteriors<span class="brand-tld">.in</span></div>
+          <div class="toqri-brand-sub">Sustainable Furniture</div>
         </div>
       </a>
 
-      <!-- Search (desktop) -->
-      <div class="hidden lg:flex" style="flex:1; max-width:500px; margin:0 1rem;">
-        <div class="search-input-group" style="width:100%;">
-          <span style="padding:0 0.625rem 0 0.875rem; color:var(--text-muted); font-size:0.875rem; flex-shrink:0;"><i class="fas fa-search"></i></span>
-          <input type="text" id="searchInput" placeholder="Search chairs, desks, Herman Miller..." autocomplete="off">
-          <select id="searchCategory" class="search-category-select" aria-label="Category">
-            <option value="all">All</option>
-            <option value="chairs">Chairs</option>
-            <option value="desks">Desks</option>
-            <option value="storage">Storage</option>
-            <option value="accessories">Parts</option>
-          </select>
-          <button id="searchBtn" class="search-btn-icon" aria-label="Search">
-            <i class="fas fa-search" style="font-size:0.8rem;"></i>
+      <!-- Center: Search products... with search icon on right -->
+      <div class="toqri-search-wrap hidden md:block">
+        <div class="toqri-search-box">
+          <input type="text" id="searchInput" class="toqri-search-input" placeholder="Search products..." autocomplete="off" aria-label="Search products">
+          <button type="button" id="searchBtn" class="toqri-search-btn" aria-label="Search">
+            <i class="fas fa-search"></i>
           </button>
         </div>
       </div>
 
-      <!-- Right actions -->
-      <div style="display:flex; align-items:center; gap:0.5rem; flex-shrink:0; margin-left:auto;">
+      <!-- Right: User Account, Wishlist, Cart with Total -->
+      <div class="toqri-actions">
 
-        <!-- Sell furniture (desktop only) -->
-        <button onclick="openResellModal()" class="hidden xl:inline-flex" style="align-items:center; gap:0.375rem; font-size:0.8rem; font-weight:600; color:#92400e; background:#fef3c7; border:1px solid #fde68a; padding:0.45rem 0.875rem; border-radius:var(--radius-sm); cursor:pointer; transition:var(--transition);">
-          <i class="fas fa-recycle" style="font-size:0.75rem;"></i> Sell Furniture
+        <!-- User / Account -->
+        <button type="button" onclick="openAccountModal()" class="toqri-account-link" title="Sign In / Account" aria-label="Account">
+          <i class="far fa-user toqri-account-icon"></i>
+          <div class="toqri-account-labels hidden sm:flex">
+            <span class="toqri-account-sub">Sign In</span>
+            <span class="toqri-account-main">Account</span>
+          </div>
         </button>
 
-        <!-- Wishlist (desktop/tablet) -->
-        <button id="wishlistToggleBtn" onclick="toggleWishlistDrawer()" title="Wishlist" aria-label="Wishlist" class="hidden sm:flex"
-          style="position:relative; width:38px; height:38px; align-items:center; justify-content:center; border-radius:var(--radius-sm); color:var(--text-secondary); font-size:1.1rem; transition:var(--transition); background:transparent; border:none;">
+        <!-- Wishlist -->
+        <button type="button" id="wishlistToggleBtn" onclick="toggleWishlistDrawer()" class="toqri-icon-btn" title="Wishlist" aria-label="Wishlist">
           <i class="far fa-heart"></i>
-          <span id="wishlistCountBadge"
-            style="position:absolute; top:2px; right:2px; background:#ef4444; color:#fff; font-size:0.6rem; font-weight:800; width:16px; height:16px; border-radius:50%; display:flex; align-items:center; justify-content:center; border:1.5px solid #fff;">0</span>
+          <span id="wishlistCountBadge" class="toqri-badge">0</span>
         </button>
 
-        <!-- Cart -->
-        <button id="cartDrawerBtn" title="Cart" aria-label="Cart"
-          style="display:flex; align-items:center; gap:0.4rem; background:var(--text-primary); color:#fff; font-size:0.8125rem; font-weight:600; padding:0.45rem 0.8rem; border-radius:var(--radius-sm); border:none; cursor:pointer; transition:var(--transition);">
-          <span style="position:relative;">
-            <i class="fas fa-shopping-bag" style="font-size:0.9rem;"></i>
-            <span id="cartCountBadge"
-              style="position:absolute; top:-6px; right:-8px; background:var(--green); color:#fff; font-size:0.6rem; font-weight:800; width:16px; height:16px; border-radius:50%; display:flex; align-items:center; justify-content:center; border:1.5px solid var(--text-primary);">0</span>
-          </span>
-          <span id="cartTotalHeader" class="hidden sm:inline" style="font-weight:700; font-size:0.8rem;">₹0</span>
+        <!-- Cart with Price -->
+        <button type="button" id="cartDrawerBtn" onclick="toggleCartDrawer()" class="toqri-cart-btn" title="Shopping Cart" aria-label="Shopping Cart">
+          <div class="toqri-cart-icon-wrap">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCountBadge" class="toqri-badge">0</span>
+          </div>
+          <span id="cartTotalHeader" class="toqri-cart-total">₹0</span>
         </button>
 
-        <!-- Mobile menu button -->
-        <button id="mobileMenuBtn" class="lg:hidden" aria-label="Menu"
-          style="width:38px; height:38px; display:flex; align-items:center; justify-content:center; border-radius:var(--radius-sm); color:var(--text-secondary); font-size:1.15rem; background:transparent; border:none; cursor:pointer;">
-          <i class="fas fa-bars"></i>
+        <!-- Mobile Menu Hamburger (Small screens) -->
+        <button type="button" id="mobileMenuBtn" onclick="toggleMobileMenu()" class="toqri-icon-btn md:hidden" aria-label="Menu">
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Search Row (Clean full-width input on small devices) -->
+    <div class="md:hidden px-3.5 pb-2.5 pt-0.5">
+      <div class="toqri-search-box">
+        <input type="text" id="mobileSearchInput" class="toqri-search-input !h-9 text-sm" placeholder="Search products..." autocomplete="off" aria-label="Search products">
+        <button type="button" class="toqri-search-btn !w-9" aria-label="Search" onclick="document.getElementById('searchBtn').click()">
+          <i class="fas fa-search text-xs"></i>
+        </button>
+        <button id="mobileSearchClear" onclick="clearFilters()" class="toqri-search-btn !w-9 !right-9 text-slate-400 hidden" aria-label="Clear">
+          <i class="fas fa-times text-xs"></i>
         </button>
       </div>
     </div>
-
-    <!-- Mobile search -->
-    <div class="lg:hidden" style="padding:0.4rem 0.875rem 0.6rem 0.875rem; border-top:1px solid var(--border-light);">
-      <div class="search-input-group" style="width:100%;">
-        <span style="padding:0 0.5rem 0 0.75rem; color:var(--text-muted); font-size:0.875rem; flex-shrink:0;"><i class="fas fa-search"></i></span>
-        <input type="text" id="mobileSearchInput" placeholder="Search Aeron, chairs, standing desks..." autocomplete="off">
-        <button id="mobileSearchClear" onclick="clearFilters()" style="padding:0 0.75rem; color:var(--text-muted); display:none;" aria-label="Clear">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-    </div>
-
-
-
   </header>
 
   <!-- ==================== HERO SLIDER SECTION ==================== -->
@@ -1382,6 +1358,44 @@
           <span>Submit for Instant Valuation</span>
         </button>
       </form>
+    </div>
+  </div>
+
+  <!-- ==================== SIGN IN / ACCOUNT MODAL ==================== -->
+  <div id="accountModalBackdrop" class="modal-backdrop" onclick="closeAccountModal(event)">
+    <div class="modal-content-box p-6 sm:p-8 max-w-md" onclick="event.stopPropagation()">
+      <div class="sheet-drag-handle sm:hidden"></div>
+      <button class="modal-close-btn" onclick="closeAccountModal()" aria-label="Close Account Modal">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <img src="logo.jpeg" alt="Logo" class="w-14 h-14 rounded-full mx-auto mb-3 border-2 border-[#23a455] shadow-sm object-cover">
+        <h3 class="text-xl font-extrabold text-slate-900">Sign In to Your Account</h3>
+        <p class="text-xs text-slate-500 mt-1">Instant order tracking, dispatch videos & GST invoices</p>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">Registered Mobile Number</label>
+          <div class="relative">
+            <span class="absolute left-3.5 top-3 text-xs font-semibold text-slate-500">+91</span>
+            <input type="tel" id="accountPhone" placeholder="77609 51238" maxlength="10" class="w-full pl-12 border border-slate-300 rounded-xl p-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
+          </div>
+        </div>
+
+        <a href="https://wa.me/917760951238?text=Hi%20Office%20Interiors%2C%20I%20want%20to%20track%20my%20order%20or%20view%20my%20account." target="_blank" class="w-full bg-[#25d366] hover:bg-[#20ba59] text-white font-bold py-3.5 px-4 rounded-xl shadow-sm transition flex items-center justify-center gap-2 text-sm text-center">
+          <i class="fab fa-whatsapp text-lg"></i>
+          <span>Continue with WhatsApp</span>
+        </a>
+
+        <div class="text-center pt-3 border-t border-slate-100">
+          <p class="text-xs text-slate-500">Need direct customer support?</p>
+          <a href="tel:+917760951238" class="text-xs font-bold text-emerald-700 hover:underline mt-1 inline-block">
+            📞 +91 77609 51238 (Mon - Sat, 10 AM - 7 PM)
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 
