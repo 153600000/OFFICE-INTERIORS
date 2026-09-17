@@ -442,15 +442,15 @@ function renderProducts(showWishlistOnly = false) {
             ${formattedOriginal ? `<span class="original-price">${formattedOriginal}</span>` : ''}
           </div>
 
-          <!-- Actions: Add to Cart + WhatsApp -->
-          <div style="display:flex; gap:4px; margin-top:6px; padding-top:6px; border-top:1px solid var(--border-light);">
+          <!-- Actions: Add to Cart + Save for Later -->
+          <div style="display:flex; gap:5px; margin-top:6px; padding-top:6px; border-top:1px solid var(--border-light);">
             <button onclick="addToCart('${product.id}')" class="btn-primary" style="flex:1; justify-content:center; padding:6px 8px; font-size:11.5px; border-radius:5px;" aria-label="Add to Cart">
               <i class="fas fa-shopping-bag" style="font-size:10px;"></i>
               <span>Add</span>
             </button>
-            <button onclick="buyViaWhatsAppItem('${product.id}')" style="background:#25d366; color:#fff; padding:6px 9px; border-radius:5px; font-size:11.5px; font-weight:600; display:flex; align-items:center; gap:3px; border:none; cursor:pointer; transition:var(--transition);" title="Order on WhatsApp" aria-label="WhatsApp">
-              <i class="fab fa-whatsapp" style="font-size:13px;"></i>
-              <span class="hidden sm:inline">WhatsApp</span>
+            <button onclick="addToWishlist('${product.id}')" style="flex:1.15; justify-content:center; padding:6px 6px; font-size:11px; border-radius:5px; font-weight:600; display:flex; align-items:center; gap:4px; cursor:pointer; transition:all 0.2s; border:1px solid ${isWishlisted ? '#fca5a5' : '#cbd5e1'}; background:${isWishlisted ? '#fef2f2' : '#ffffff'}; color:${isWishlisted ? '#dc2626' : '#334155'};" title="${isWishlisted ? 'Saved' : 'Save for later'}" aria-label="Save for later">
+              <i class="${isWishlisted ? 'fas fa-bookmark' : 'far fa-bookmark'}" style="font-size:10.5px; color:${isWishlisted ? '#dc2626' : '#64748b'};"></i>
+              <span style="white-space:nowrap;">${isWishlisted ? 'Saved' : 'Save for later'}</span>
             </button>
           </div>
         </div>
@@ -1141,10 +1141,10 @@ function addToWishlist(productId) {
   const index = wishlist.indexOf(productId);
   if (index === -1) {
     wishlist.push(productId);
-    showToast('Item saved to Wishlist!', 'success');
+    showToast('Saved for later!', 'success');
   } else {
     wishlist.splice(index, 1);
-    showToast('Item removed from Wishlist', 'info');
+    showToast('Removed from saved items', 'info');
   }
 
   localStorage.setItem('oi_wishlist', JSON.stringify(wishlist));
@@ -1261,8 +1261,8 @@ function openQuickView(productId) {
         <button onclick="addToCart('${product.id}', currentQuickViewQty); closeQuickView();" class="btn-primary flex-1 justify-center">
           <i class="fas fa-shopping-cart"></i> Add To Cart
         </button>
-        <button onclick="buyViaWhatsAppItem('${product.id}', currentQuickViewQty)" class="btn-whatsapp flex-1 justify-center">
-          <i class="fab fa-whatsapp"></i> Buy via WhatsApp
+        <button onclick="addToWishlist('${product.id}');" class="btn-outline flex-1 justify-center" style="display:flex; align-items:center; gap:6px;">
+          <i class="${isWishlisted ? 'fas fa-bookmark text-emerald-600' : 'far fa-bookmark'}"></i> ${isWishlisted ? 'Saved for Later' : 'Save for Later'}
         </button>
       </div>
     </div>
