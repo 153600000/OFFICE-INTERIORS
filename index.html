@@ -228,130 +228,166 @@
     </div>
   </section>
 
-  <!-- TRUST BAR -->
+  <!-- ==================== TRUST FEATURES STRIP ==================== -->
   <section class="trust-bar">
     <div class="container-custom">
-      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:1.25rem 2rem; padding:0.5rem 0;">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 py-2">
         <div class="trust-item">
-          <div class="trust-icon"><i class="fas fa-check-double"></i></div>
+          <div class="trust-icon"><i class="fas fa-shield-alt"></i></div>
           <div>
-            <h4 style="font-size:0.875rem; font-weight:700; margin-bottom:0.125rem;">Certified Quality</h4>
-            <p style="font-size:0.75rem; color:var(--text-muted);">18-point inspection process</p>
+            <h4 class="text-xs sm:text-sm font-bold text-slate-900">1-Year Warranty</h4>
+            <p class="text-[11px] sm:text-xs text-slate-500">Mechanisms & cylinders covered</p>
           </div>
         </div>
         <div class="trust-item">
           <div class="trust-icon"><i class="fas fa-truck"></i></div>
           <div>
-            <h4 style="font-size:0.875rem; font-weight:700; margin-bottom:0.125rem;">Pan-India Delivery</h4>
-            <p style="font-size:0.75rem; color:var(--text-muted);">Insured & secure packaging</p>
+            <h4 class="text-xs sm:text-sm font-bold text-slate-900">Pan-India Delivery</h4>
+            <p class="text-[11px] sm:text-xs text-slate-500">Insured multi-layer packaging</p>
           </div>
         </div>
         <div class="trust-item">
-          <div class="trust-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="trust-icon"><i class="fas fa-check-double"></i></div>
           <div>
-            <h4 style="font-size:0.875rem; font-weight:700; margin-bottom:0.125rem;">1-Year Warranty</h4>
-            <p style="font-size:0.75rem; color:var(--text-muted);">Mechanisms & cylinders</p>
+            <h4 class="text-xs sm:text-sm font-bold text-slate-900">18-Point Certified</h4>
+            <p class="text-[11px] sm:text-xs text-slate-500">Rigorously tested & sanitized</p>
           </div>
         </div>
         <div class="trust-item">
-          <div class="trust-icon"><i class="fas fa-leaf"></i></div>
+          <div class="trust-icon"><i class="fas fa-tags"></i></div>
           <div>
-            <h4 style="font-size:0.875rem; font-weight:700; margin-bottom:0.125rem;">Eco-Friendly</h4>
-            <p style="font-size:0.75rem; color:var(--text-muted);">Circular economy, zero landfill</p>
+            <h4 class="text-xs sm:text-sm font-bold text-slate-900">Up to 70% Off</h4>
+            <p class="text-[11px] sm:text-xs text-slate-500">Certified Grade-A refurbished</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CLIENTS BAR -->
-  <section style="background:var(--bg-gray); border-bottom:1px solid var(--border); padding:1.25rem 0;">
-    <div class="container-custom" style="text-align:center;">
-      <p style="font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.875rem;">Trusted by businesses across India</p>
-      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:1.5rem 3rem;">
-        <span style="font-size:0.9rem; font-weight:700; color:#9ca3af;">Razorpay</span>
-        <span style="font-size:0.9rem; font-weight:700; color:#9ca3af;">Zerodha</span>
-        <span style="font-size:0.9rem; font-weight:700; color:#9ca3af;">Swiggy</span>
-        <span style="font-size:0.9rem; font-weight:700; color:#9ca3af;">CRED</span>
-        <span style="font-size:0.9rem; font-weight:700; color:#9ca3af;">Flipkart</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== BROWSE BY CATEGORY ==================== -->
+  <!-- ==================== SHOP BY CATEGORY ==================== -->
   <section class="py-8 sm:py-12 bg-white border-b border-slate-100">
     <div class="container-custom">
-      <div class="flex items-center justify-between mb-4 sm:mb-8">
+      <div class="flex items-center justify-between mb-6 sm:mb-8">
         <div>
-          <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900">Shop By Category</h2>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">Shop By Category</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Certified ergonomic workspace solutions</p>
         </div>
-        <a href="#catalog" onclick="filterCatalog('all')" class="text-xs sm:text-sm font-semibold text-emerald-600 hover:text-emerald-700 flex items-center gap-1 group">
-          View All <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition"></i>
+        <a href="#catalog" onclick="filterCatalog('all')" class="text-xs sm:text-sm font-bold text-[#23a455] hover:underline flex items-center gap-1">
+          <span>View All Products</span>
+          <i class="fas fa-arrow-right text-xs"></i>
         </a>
       </div>
 
-      <div class="category-scroll-mobile sm:grid sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4">
-        <!-- Cat 1 -->
-        <div onclick="filterCatalog('chairs')" class="category-circle-card group">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+        <div onclick="filterCatalog('chairs')" class="category-circle-card group cursor-pointer text-center">
           <div class="category-circle-img-wrap">
             <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-4.webp" alt="Ergonomic Chairs" onerror="this.src='https://toqri.com/wp-content/uploads/2023/10/Aeron3-3-300x300.webp'">
           </div>
-          <h3 class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Chairs</h3>
-          <span class="text-[10px] sm:text-xs text-slate-400 mt-0.5">14+ Models</span>
+          <h3 class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#23a455] transition mt-2.5">Ergonomic Chairs</h3>
+          <span class="text-[11px] text-slate-400">14+ Models</span>
         </div>
 
-        <!-- Cat 2 -->
-        <div onclick="filterCatalog('desks')" class="category-circle-card group">
+        <div onclick="filterCatalog('desks')" class="category-circle-card group cursor-pointer text-center">
           <div class="category-circle-img-wrap">
-            <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-3.webp" alt="Height Adjustable Desks">
+            <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-3.webp" alt="Standing Desks">
           </div>
-          <h3 class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Standing Desks</h3>
-          <span class="text-[10px] sm:text-xs text-slate-400 mt-0.5">Electric</span>
+          <h3 class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#23a455] transition mt-2.5">Standing Desks</h3>
+          <span class="text-[11px] text-slate-400">Motorized Desks</span>
         </div>
 
-        <!-- Cat 3 -->
-        <div onclick="filterCatalog('storage')" class="category-circle-card group">
+        <div onclick="filterCatalog('storage')" class="category-circle-card group cursor-pointer text-center">
           <div class="category-circle-img-wrap">
-            <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-2.webp" alt="Pedestals & Storage">
+            <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-2.webp" alt="Storage & Pedestals">
           </div>
-          <h3 class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Storage</h3>
-          <span class="text-[10px] sm:text-xs text-slate-400 mt-0.5">Pedestals</span>
+          <h3 class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#23a455] transition mt-2.5">Storage & Pedestals</h3>
+          <span class="text-[11px] text-slate-400">Filing Cabinets</span>
         </div>
 
-        <!-- Cat 4 -->
-        <div onclick="filterCatalog('accessories')" class="category-circle-card group">
+        <div onclick="filterCatalog('accessories')" class="category-circle-card group cursor-pointer text-center">
           <div class="category-circle-img-wrap">
             <img src="https://toqri.com/wp-content/uploads/2025/05/Accessories_new_1.webp" alt="Replacement Parts">
           </div>
-          <h3 class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Spares</h3>
-          <span class="text-[10px] sm:text-xs text-slate-400 mt-0.5">Pads & Parts</span>
-        </div>
-
-        <!-- Cat 5 -->
-        <div onclick="filterCatalog('chairs')" class="category-circle-card group">
-          <div class="category-circle-img-wrap">
-            <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design.webp" alt="Cafeteria Chairs">
-          </div>
-          <h3 class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Cafeteria</h3>
-          <span class="text-[10px] sm:text-xs text-slate-400 mt-0.5">Seating</span>
-        </div>
-
-        <!-- Cat 6 -->
-        <div onclick="filterCatalog('desks')" class="category-circle-card group">
-          <div class="category-circle-img-wrap">
-            <img src="https://toqri.com/wp-content/uploads/2025/04/Untitled-design-5.webp" alt="Workstations & Tables">
-          </div>
-          <h3 class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition">Tables</h3>
-          <span class="text-[10px] sm:text-xs text-slate-400 mt-0.5">Modular</span>
+          <h3 class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#23a455] transition mt-2.5">Spares & Accessories</h3>
+          <span class="text-[11px] text-slate-400">Pads & Cylinders</span>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ==================== PRODUCT CATALOG SECTION ==================== -->
+  <section id="catalog" class="py-10 sm:py-14 bg-white">
+    <div class="container-custom">
+      
+      <!-- Catalog Header & Filter Tabs -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Featured Products</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Grade-A certified pre-loved furniture backed by 1-year warranty.</p>
+        </div>
 
+        <!-- Filter Pill Tabs -->
+        <div class="flex flex-wrap gap-2" id="catalogFilters">
+          <button onclick="filterCatalog('all')" class="filter-tab-btn active" data-cat="all">All Items</button>
+          <button onclick="filterCatalog('chairs')" class="filter-tab-btn" data-cat="chairs">Ergonomic Chairs</button>
+          <button onclick="filterCatalog('desks')" class="filter-tab-btn" data-cat="desks">Standing Desks</button>
+          <button onclick="filterCatalog('storage')" class="filter-tab-btn" data-cat="storage">Storage</button>
+          <button onclick="filterCatalog('accessories')" class="filter-tab-btn" data-cat="accessories">Spares</button>
+        </div>
+      </div>
+
+      <!-- Budget & Price Filters Bar -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 mb-5 bg-slate-50 p-2.5 sm:p-3 rounded-xl border border-slate-200">
+        <div class="price-filter-bar flex items-center gap-1.5 sm:gap-2">
+          <span class="text-xs font-bold text-slate-600 uppercase tracking-wider mr-1 flex-shrink-0">
+            <i class="fas fa-filter text-emerald-600 mr-1"></i> Budget:
+          </span>
+          <button onclick="filterPriceRange('all')" class="price-filter-pill active" data-range="all">All</button>
+          <button onclick="filterPriceRange('under-15k')" class="price-filter-pill" data-range="under-15k">Under ₹15k</button>
+          <button onclick="filterPriceRange('15k-35k')" class="price-filter-pill" data-range="15k-35k">₹15k – ₹35k</button>
+          <button onclick="filterPriceRange('above-35k')" class="price-filter-pill" data-range="above-35k">₹35k+ Luxury</button>
+        </div>
+
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <button onclick="toggleGradeAFilter()" id="gradeAToggleBtn" class="w-full sm:w-auto text-xs font-semibold text-slate-700 hover:text-emerald-700 bg-white border border-slate-200 px-3 py-1.5 rounded-lg transition flex items-center justify-center gap-1.5 shadow-2xs">
+            <i class="far fa-check-circle text-slate-400" id="gradeACheckIcon"></i>
+            <span>Grade A Certified Only</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Active Filters Display Bar -->
+      <div id="activeFiltersContainer" class="hidden flex flex-wrap items-center gap-2 mb-4 pb-3 border-b border-slate-100 text-xs">
+        <span class="text-slate-400 font-medium">Active Filters:</span>
+        <div id="activeFilterTags" class="flex flex-wrap items-center gap-1.5"></div>
+        <button onclick="clearFilters()" class="text-red-500 hover:text-red-700 font-bold ml-2 underline text-[11px]">
+          Clear All
+        </button>
+      </div>
+
+      <!-- Active Filter Status & Item Count -->
+      <div class="flex justify-between items-center text-xs text-slate-500 mb-4 pb-2 border-b border-slate-200">
+        <div>Showing <span id="displayedCount" class="font-bold text-slate-800">0</span> products</div>
+        <div class="flex items-center gap-2">
+          <span>Sort By:</span>
+          <select id="sortBySelect" onchange="applySorting()" class="bg-white border border-slate-300 rounded px-2 py-1 text-xs text-slate-700 outline-none">
+            <option value="featured">Featured / Best Value</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Products Grid (4 columns on desktop, 2 on mobile) -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6" id="productsGrid">
+        <!-- Rendered by app.js -->
+      </div>
+
+    </div>
+  </section>
 
   <!-- ==================== DEAL OF THE WEEK SECTION ==================== -->
-  <section id="dealSection" class="py-8 sm:py-12">
+  <section id="dealSection" class="py-10 sm:py-14 bg-slate-50/60 border-t border-slate-100">
     <div class="container-custom">
       <div class="deal-section">
         <div class="grid lg:grid-cols-12 gap-6 sm:gap-8 items-center">
@@ -366,20 +402,20 @@
           </div>
 
           <div class="lg:col-span-7">
-            <div class="flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-emerald-700 mb-2">
+            <div class="flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#23a455] mb-2">
               <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
               Limited Time Special Offer
             </div>
             <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-2 sm:mb-3">
               Solid Wood Top – Height Adjustable Desk T13-23D
             </h2>
-            <p class="text-xs sm:text-base text-slate-600 mb-4">
-              Premium 120 x 60 CM Rubberwood finish desk equipped with 3 memory presets, digital display controller, whisper-quiet motor, and 80kg weight load. Elevation span from 62cm to 128cm for seamless sit-stand health.
+            <p class="text-xs sm:text-base text-slate-600 mb-4 leading-relaxed">
+              Premium 120 x 60 CM Rubberwood finish desk equipped with 3 memory presets, digital display controller, whisper-quiet motor, and 80kg weight load. Elevation span from 62cm to 128cm.
             </p>
 
             <!-- Price & Savings -->
             <div class="flex items-baseline gap-3 sm:gap-4 mb-4 sm:mb-6">
-              <span class="text-2xl sm:text-4xl font-extrabold text-emerald-700">₹26,500</span>
+              <span class="text-2xl sm:text-4xl font-extrabold text-[#23a455]">₹26,500</span>
               <span class="text-base sm:text-lg text-slate-400 line-through">₹32,000</span>
               <span class="bg-emerald-100 text-emerald-800 text-[11px] sm:text-xs font-bold px-2 py-0.5 rounded-md">Save ₹5,500</span>
             </div>
@@ -430,336 +466,10 @@
     </div>
   </section>
 
-  <!-- ==================== SHOP BY TOP BRANDS ==================== -->
-  <section class="py-10 bg-white border-y border-slate-100">
-    <div class="container-custom text-center">
-      <span class="text-xs font-bold uppercase tracking-widest text-emerald-600">Trusted Global Manufacturers</span>
-      <h2 class="text-2xl font-extrabold text-slate-900 mt-1 mb-6">Shop By Top Brands</h2>
-      
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4" id="brandsContainer">
-        <!-- Rendered by JS or default pills -->
-        <button onclick="searchBrand('Herman Miller')" class="brand-pill flex flex-col items-center">
-          <span class="text-base font-extrabold text-slate-800">Herman Miller</span>
-          <span class="text-[11px] text-emerald-600 font-semibold mt-1">Aeron • Mirra • Celle</span>
-        </button>
-        <button onclick="searchBrand('Steelcase')" class="brand-pill flex flex-col items-center">
-          <span class="text-base font-extrabold text-slate-800">Steelcase</span>
-          <span class="text-[11px] text-emerald-600 font-semibold mt-1">Leap V2 • Gesture</span>
-        </button>
-        <button onclick="searchBrand('Haworth')" class="brand-pill flex flex-col items-center">
-          <span class="text-base font-extrabold text-slate-800">Haworth</span>
-          <span class="text-[11px] text-emerald-600 font-semibold mt-1">Aloha • Fern • Zody</span>
-        </button>
-        <button onclick="searchBrand('Humanscale')" class="brand-pill flex flex-col items-center">
-          <span class="text-base font-extrabold text-slate-800">Humanscale</span>
-          <span class="text-[11px] text-emerald-600 font-semibold mt-1">Freedom Headrest</span>
-        </button>
-        <button onclick="searchBrand('Featherlite')" class="brand-pill flex flex-col items-center">
-          <span class="text-base font-extrabold text-slate-800">Featherlite</span>
-          <span class="text-[11px] text-emerald-600 font-semibold mt-1">Contact MB • Pedestals</span>
-        </button>
-        <button onclick="searchBrand('Knoll')" class="brand-pill flex flex-col items-center">
-          <span class="text-base font-extrabold text-slate-800">Knoll</span>
-          <span class="text-[11px] text-emerald-600 font-semibold mt-1">Generation • Life</span>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== PRODUCT CATALOG SECTION ==================== -->
-  <section id="catalog" class="py-14 bg-white border-t border-slate-100">
-    <div class="container-custom">
-      
-      <!-- Catalog Header & Filter Tabs -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
-        <div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">All Products</h2>
-          <p class="text-sm text-slate-500 mt-1">Inspected, serviced, and backed by warranty.</p>
-        </div>
-
-        <!-- Filter Pill Tabs -->
-        <div class="flex flex-wrap gap-2" id="catalogFilters">
-          <button onclick="filterCatalog('all')" class="filter-tab-btn active" data-cat="all">All Items</button>
-          <button onclick="filterCatalog('chairs')" class="filter-tab-btn" data-cat="chairs">Ergonomic Chairs</button>
-          <button onclick="filterCatalog('desks')" class="filter-tab-btn" data-cat="desks">Standing Desks</button>
-          <button onclick="filterCatalog('storage')" class="filter-tab-btn" data-cat="storage">Storage & Drawers</button>
-          <button onclick="filterCatalog('accessories')" class="filter-tab-btn" data-cat="accessories">Spares & Parts</button>
-        </div>
-      </div>
-
-      <!-- Budget & Price Filters Bar -->
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 mb-5 bg-slate-50/80 p-2.5 sm:p-3 rounded-2xl border border-slate-200">
-        <div class="price-filter-bar flex items-center gap-1.5 sm:gap-2">
-          <span class="text-xs font-bold text-slate-600 uppercase tracking-wider mr-1 flex-shrink-0">
-            <i class="fas fa-filter text-emerald-600 mr-1"></i> Budget:
-          </span>
-          <button onclick="filterPriceRange('all')" class="price-filter-pill active" data-range="all">All</button>
-          <button onclick="filterPriceRange('under-15k')" class="price-filter-pill" data-range="under-15k">Under ₹15k</button>
-          <button onclick="filterPriceRange('15k-35k')" class="price-filter-pill" data-range="15k-35k">₹15k – ₹35k</button>
-          <button onclick="filterPriceRange('above-35k')" class="price-filter-pill" data-range="above-35k">₹35k+ Luxury</button>
-        </div>
-
-        <div class="flex items-center gap-2 flex-shrink-0">
-          <button onclick="toggleGradeAFilter()" id="gradeAToggleBtn" class="w-full sm:w-auto text-xs font-semibold text-slate-700 hover:text-emerald-700 bg-white border border-slate-200 px-3 py-1.5 rounded-xl transition flex items-center justify-center gap-1.5 shadow-2xs">
-            <i class="far fa-check-circle text-slate-400" id="gradeACheckIcon"></i>
-            <span>Grade A Certified Only</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Active Filters Display Bar -->
-      <div id="activeFiltersContainer" class="hidden flex flex-wrap items-center gap-2 mb-4 pb-3 border-b border-slate-100 text-xs">
-        <span class="text-slate-400 font-medium">Active Filters:</span>
-        <div id="activeFilterTags" class="flex flex-wrap items-center gap-1.5"></div>
-        <button onclick="clearFilters()" class="text-red-500 hover:text-red-700 font-bold ml-2 underline text-[11px]">
-          Clear All
-        </button>
-      </div>
-
-      <!-- Active Filter Status & Item Count -->
-      <div class="flex justify-between items-center text-xs text-slate-500 mb-4 pb-2 border-b border-slate-200">
-        <div>Showing <span id="displayedCount" class="font-bold text-slate-800">0</span> certified products</div>
-        <div class="flex items-center gap-2">
-          <span>Sort By:</span>
-          <select id="sortBySelect" onchange="applySorting()" class="bg-white border border-slate-300 rounded px-2 py-1 text-xs text-slate-700 outline-none">
-            <option value="featured">Featured / Best Value</option>
-            <option value="price-low">Price: Low to High</option>
-            <option value="price-high">Price: High to Low</option>
-            <option value="rating">Top Rated</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Products Grid (2 columns on mobile, 3 on tablet, 4 on desktop) -->
-      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-6" id="productsGrid">
-        <!-- Products will be rendered dynamically by app.js -->
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== EXECUTIVE CHAIR COMPARISON MATRIX ==================== -->
-  <section class="py-12 sm:py-16 bg-white border-t border-slate-100">
-    <div class="container-custom">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-10">
-        <div>
-          <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 mt-2 tracking-tight">
-            Compare Top Chairs
-          </h2>
-          <p class="text-xs sm:text-sm text-slate-500 mt-1">Side-by-side comparison of our top 3 certified ergonomic chairs.</p>
-        </div>
-        <a href="https://wa.me/917760951238?text=Hi%20Office%20Interiors%2C%20can%20you%20help%20me%20choose%20the%20best%20chair%20for%20my%20setup%3F" target="_blank" class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-4 py-2.5 rounded-xl hover:bg-emerald-100 transition inline-flex items-center gap-2">
-          <i class="fab fa-whatsapp text-sm text-emerald-600"></i>
-          <span>Help me choose a chair</span>
-        </a>
-      </div>
-
-      <div class="md:hidden flex items-center gap-1.5 text-xs text-slate-400 mb-2 font-medium">
-        <i class="fas fa-arrows-left-right text-emerald-600 text-[11px]"></i>
-        <span>Swipe table horizontally to compare</span>
-      </div>
-
-      <div class="overflow-x-auto border border-slate-200 rounded-2xl shadow-xs">
-        <table class="w-full text-left text-xs sm:text-sm border-collapse min-w-[620px]">
-          <thead>
-            <tr class="bg-slate-50 text-slate-900 border-b border-slate-200">
-              <th class="p-4 sm:p-5 font-bold uppercase text-[11px] text-slate-500">Key Specification</th>
-              <th class="p-4 sm:p-5 font-extrabold text-slate-900 bg-emerald-50/50 border-x border-emerald-100">
-                <div class="flex items-center justify-between gap-2">
-                  <span>Herman Miller Aeron</span>
-                  <span class="text-[10px] bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-full">#1 BESTSELLER</span>
-                </div>
-              </th>
-              <th class="p-4 sm:p-5 font-extrabold text-slate-900">Herman Miller Mirra 2</th>
-              <th class="p-4 sm:p-5 font-extrabold text-slate-900">Haworth Aloha</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr>
-              <td class="p-4 sm:p-5 font-semibold text-slate-500">Seating Suspension</td>
-              <td class="p-4 sm:p-5 font-bold text-slate-900 bg-emerald-50/30 border-x border-emerald-100">Pellicle 8Z Breathable Mesh</td>
-              <td class="p-4 sm:p-5">Butterfly Hybrid Suspension</td>
-              <td class="p-4 sm:p-5">3D High-Density Breathable Mesh</td>
-            </tr>
-            <tr>
-              <td class="p-4 sm:p-5 font-semibold text-slate-500">Spinal Technology</td>
-              <td class="p-4 sm:p-5 font-bold text-slate-900 bg-emerald-50/30 border-x border-emerald-100">PostureFit SL Dual Sacral Pads</td>
-              <td class="p-4 sm:p-5">Harmonic Spine Responsive Leaf</td>
-              <td class="p-4 sm:p-5">Integrated Lumbar Spine Band</td>
-            </tr>
-            <tr>
-              <td class="p-4 sm:p-5 font-semibold text-slate-500">Daily Focus Capacity</td>
-              <td class="p-4 sm:p-5 font-bold text-slate-900 bg-emerald-50/30 border-x border-emerald-100">12+ Continuous Hours</td>
-              <td class="p-4 sm:p-5">10–12 Hours Active Posture</td>
-              <td class="p-4 sm:p-5">8–10 Hours Continuous</td>
-            </tr>
-            <tr>
-              <td class="p-4 sm:p-5 font-semibold text-slate-500">Forward Seat Tilt</td>
-              <td class="p-4 sm:p-5 font-bold text-emerald-700 bg-emerald-50/30 border-x border-emerald-100"><i class="fas fa-check text-emerald-600 mr-1"></i> Included (5° Forward Pitch)</td>
-              <td class="p-4 sm:p-5 text-emerald-700 font-semibold"><i class="fas fa-check text-emerald-600 mr-1"></i> Harmonic Multi-Angle</td>
-              <td class="p-4 sm:p-5 text-slate-400">Neutral Only</td>
-            </tr>
-            <tr>
-              <td class="p-4 sm:p-5 font-semibold text-slate-500">Commercial Warranty</td>
-              <td class="p-4 sm:p-5 font-bold text-slate-900 bg-emerald-50/30 border-x border-emerald-100">1-Year Full Mechanism Warranty</td>
-              <td class="p-4 sm:p-5 font-semibold">1-Year Full Commercial Warranty</td>
-              <td class="p-4 sm:p-5 font-semibold">1-Year Full Commercial Warranty</td>
-            </tr>
-            <tr class="bg-slate-50/50">
-              <td class="p-4 sm:p-5 font-bold text-slate-900">Certified Refurbished Price</td>
-              <td class="p-4 sm:p-5 bg-emerald-50/60 border-x border-emerald-100">
-                <div class="text-lg sm:text-xl font-extrabold text-emerald-700">₹48,380</div>
-                <div class="text-[11px] text-slate-400 line-through">Retail MRP ₹1,25,000 (Save 61%)</div>
-              </td>
-              <td class="p-4 sm:p-5">
-                <div class="text-lg sm:text-xl font-extrabold text-slate-900">₹30,000</div>
-                <div class="text-[11px] text-slate-400 line-through">Retail MRP ₹1,10,000 (Save 73%)</div>
-              </td>
-              <td class="p-4 sm:p-5">
-                <div class="text-lg sm:text-xl font-extrabold text-slate-900">₹6,000</div>
-                <div class="text-[11px] text-slate-400 line-through">Retail MRP ₹32,000 (Save 81%)</div>
-              </td>
-            </tr>
-            <tr>
-              <td class="p-4 sm:p-5"></td>
-              <td class="p-4 sm:p-5 bg-emerald-50/30 border-x border-emerald-100">
-                <button onclick="buyViaWhatsAppItem('prod-2')" class="w-full bg-[#25d366] hover:bg-[#1eb956] text-white font-bold py-2.5 px-3 rounded-xl transition flex items-center justify-center gap-1.5 text-xs shadow-xs">
-                  <i class="fab fa-whatsapp"></i> Order Aeron
-                </button>
-              </td>
-              <td class="p-4 sm:p-5">
-                <button onclick="buyViaWhatsAppItem('prod-4')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-3 rounded-xl transition flex items-center justify-center gap-1.5 text-xs">
-                  <i class="fab fa-whatsapp text-emerald-400"></i> Order Mirra 2
-                </button>
-              </td>
-              <td class="p-4 sm:p-5">
-                <button onclick="buyViaWhatsAppItem('prod-6')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-3 rounded-xl transition flex items-center justify-center gap-1.5 text-xs">
-                  <i class="fab fa-whatsapp text-emerald-400"></i> Order Aloha
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== SUSTAINABILITY & WHY IT MATTERS ==================== -->
-  <section id="sustainability" class="py-16 bg-white border-t border-slate-100">
-    <div class="container-custom">
-      <div class="sustainability-banner">
-        <div class="max-w-3xl mb-12">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight mb-4">
-            Good for Your Office. Good for the Planet.
-          </h2>
-          <p class="text-base text-slate-600 leading-relaxed">
-            Buying refurbished means less waste and a lower carbon footprint. Every piece gets a second life instead of going to a landfill.
-          </p>
-        </div>
-
-        <!-- Metric Counter Grid -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
-          <div class="impact-stat-card">
-            <div class="impact-num">1,850+</div>
-            <div class="text-sm font-bold text-slate-900">Chairs Diverted</div>
-            <div class="text-xs text-slate-500 mt-1">Kept out of landfills</div>
-          </div>
-          <div class="impact-stat-card">
-            <div class="impact-num">94,000 kg</div>
-            <div class="text-sm font-bold text-slate-900">CO₂ Emissions Saved</div>
-            <div class="text-xs text-slate-500 mt-1">Equivalent to 4,200 trees</div>
-          </div>
-          <div class="impact-stat-card">
-            <div class="impact-num">4.5M L</div>
-            <div class="text-sm font-bold text-slate-900">Water Conserved</div>
-            <div class="text-xs text-slate-500 mt-1">From unmanufactured steel & plastic</div>
-          </div>
-          <div class="impact-stat-card">
-            <div class="impact-num">₹3.8+ Cr</div>
-            <div class="text-sm font-bold text-slate-900">Client Savings</div>
-            <div class="text-xs text-slate-500 mt-1">Delivered back to customers</div>
-          </div>
-        </div>
-
-        <!-- 4 Pillars of Value -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 border-t border-slate-200">
-          <div class="flex items-start gap-3">
-            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100 flex items-center justify-center text-lg flex-shrink-0">
-              <i class="fas fa-recycle"></i>
-            </div>
-            <div>
-              <h4 class="text-sm font-bold text-slate-900">Sustainable Choice</h4>
-              <p class="text-xs text-slate-500 mt-1">Supports UN Sustainable Development Goals (SDG 12 & 13).</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100 flex items-center justify-center text-lg flex-shrink-0">
-              <i class="fas fa-wallet"></i>
-            </div>
-            <div>
-              <h4 class="text-sm font-bold text-slate-900">Affordable Luxury</h4>
-              <p class="text-xs text-slate-500 mt-1">World-class Herman Miller engineering at entry-level prices.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100 flex items-center justify-center text-lg flex-shrink-0">
-              <i class="fas fa-truck-ramp-box"></i>
-            </div>
-            <div>
-              <h4 class="text-sm font-bold text-slate-900">Pan-India Freight</h4>
-              <p class="text-xs text-slate-500 mt-1">Heavy duty multi-layer packing delivered anywhere in India.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100 flex items-center justify-center text-lg flex-shrink-0">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <div>
-              <h4 class="text-sm font-bold text-slate-900">Trusted Warranty</h4>
-              <p class="text-xs text-slate-500 mt-1">Complete peace of mind with replacement parts and support.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== LIQUIDATION & RESELL SECTION (CLEAN WHITE THEME) ==================== -->
-  <section class="py-14 bg-white border-t border-slate-100">
-    <div class="container-custom">
-      <div class="bg-slate-50 border border-slate-200/90 rounded-3xl p-8 sm:p-12">
-        <div class="grid lg:grid-cols-12 gap-8 items-center">
-          <div class="lg:col-span-8">
-            <span class="bg-amber-100 text-amber-900 border border-amber-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-              SELL YOUR FURNITURE
-            </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-3">
-              Selling Office Furniture?
-            </h2>
-            <p class="text-base text-slate-600 leading-relaxed max-w-2xl font-normal">
-              We buy used office chairs, desks, and storage from offices, startups, and individuals across India. Quick assessment, fair price, and pickup arranged.
-            </p>
-          </div>
-          <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
-            <button onclick="openResellModal()" class="bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm px-6 py-3.5 rounded-xl shadow-sm transition flex items-center justify-center gap-2 text-center">
-              <i class="fas fa-file-invoice-dollar text-amber-400 text-base"></i>
-              <span>Resell My Furniture</span>
-            </button>
-            <a href="https://wa.me/917760951238?text=Hi%20Office%20Interiors%2C%20we%20have%20bulk%20office%20furniture%20to%20liquidate." target="_blank" class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-semibold text-sm px-6 py-3.5 rounded-xl shadow-sm transition flex items-center justify-center gap-2 text-center">
-              <i class="fab fa-whatsapp text-emerald-600 text-base"></i>
-              <span>Bulk Liquidation Enquiry</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ==================== CUSTOMER REVIEWS (GOOGLE RATINGS) ==================== -->
-  <section id="reviews" class="py-16 bg-white border-t border-slate-100">
+  <section id="reviews" class="py-12 sm:py-16 bg-white border-t border-slate-100">
     <div class="container-custom">
-      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-10">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-8">
         <div>
           <div class="flex items-center gap-2 mb-1">
             <div class="flex text-amber-400 text-sm">
@@ -773,53 +483,43 @@
           </div>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">What Our Clients Say</h2>
         </div>
-        <a href="https://wa.me/917760951238?text=I'd%20like%20to%20share%20a%20review%20or%20view%20more%20customer%20setups." target="_blank" class="text-sm font-semibold text-emerald-600 hover:text-emerald-700 flex items-center gap-1">
+        <a href="https://wa.me/917760951238?text=I'd%20like%20to%20view%20more%20customer%20setup%20photos%20and%20reviews." target="_blank" class="text-xs sm:text-sm font-semibold text-[#23a455] hover:underline flex items-center gap-1">
           <span>Read All 180+ Reviews</span>
           <i class="fas fa-external-link-alt text-xs"></i>
         </a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="reviewsContainer">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" id="reviewsContainer">
         <!-- Rendered by JS from REVIEWS_DATA -->
       </div>
     </div>
   </section>
 
-  <!-- ==================== WHATSAPP COMMUNITY CARD (WHITE THEME) ==================== -->
-  <section class="py-12 bg-white border-t border-slate-100">
+  <!-- ==================== LIQUIDATION & RESELL BANNER ==================== -->
+  <section class="py-10 bg-slate-50 border-t border-slate-200/80">
     <div class="container-custom">
-      <div class="bg-slate-50 rounded-2xl p-8 sm:p-10 border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-5">
-          <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center text-2xl flex-shrink-0">
-            <i class="fab fa-whatsapp"></i>
-          </div>
-          <div>
-            <h3 class="text-xl sm:text-2xl font-bold text-slate-900">Join Office Interiors Stock Alerts</h3>
-            <p class="text-sm text-slate-600 mt-1 max-w-xl">
-              Get instant notifications about new Herman Miller Aeron shipments, price drops, and corporate liquidation lots.
-            </p>
-          </div>
-        </div>
-        <a href="https://wa.me/917760951238?text=Hi%20Office%20Interiors%2C%20please%20add%20me%20to%20your%20WhatsApp%20Stock%20Arrival%20Alerts%20group." target="_blank" class="bg-slate-900 hover:bg-emerald-600 text-white font-semibold px-6 py-3.5 rounded-xl shadow-sm transition flex-shrink-0 flex items-center gap-2 text-sm">
-          <span>Join Stock Alerts (+91 77609 51238)</span>
-          <i class="fas fa-arrow-right text-xs"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== BLOG INSIGHTS SECTION ==================== -->
-  <section class="py-14 bg-white border-t border-slate-100">
-    <div class="container-custom">
-      <div class="flex justify-between items-end mb-8">
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
         <div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">From Our Blog</h2>
+          <span class="bg-amber-100 text-amber-900 text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+            SELL TO US
+          </span>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-2">
+            Selling Pre-Owned Office Furniture?
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl">
+            We buy premium ergonomic chairs and motorized desks from startups, MNCs, and individuals with instant valuation and pickup across India.
+          </p>
         </div>
-        <a href="#catalog" class="text-sm font-semibold text-emerald-600 hover:text-emerald-700">View All Articles</a>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="blogsContainer">
-        <!-- Rendered by JS from BLOG_DATA -->
+        <div class="flex flex-col sm:flex-row gap-2.5 flex-shrink-0 w-full md:w-auto">
+          <button onclick="openResellModal()" class="bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs px-5 py-3 rounded-xl transition text-center flex items-center justify-center gap-1.5">
+            <i class="fas fa-file-invoice-dollar text-amber-400"></i>
+            <span>Resell My Furniture</span>
+          </button>
+          <a href="https://wa.me/917760951238?text=Hi%20Office%20Interiors%2C%20we%20have%20office%20furniture%20to%20liquidate." target="_blank" class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-semibold text-xs px-5 py-3 rounded-xl transition text-center flex items-center justify-center gap-1.5">
+            <i class="fab fa-whatsapp text-emerald-600"></i>
+            <span>Bulk Liquidation</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
