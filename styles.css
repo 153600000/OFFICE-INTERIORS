@@ -196,6 +196,20 @@ img { display: block; max-width: 100%; }
 }
 
 /* Mobile pills */
+.mobile-cat-bar {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  overflow-x: auto;
+  border-top: 1px solid var(--border-light);
+}
+@media (min-width: 1024px) {
+  .mobile-cat-bar,
+  .mobile-search-bar {
+    display: none !important;
+  }
+}
+
 .mobile-cat-pill {
   flex-shrink: 0;
   padding: 0.3rem 0.875rem;
@@ -222,11 +236,11 @@ img { display: block; max-width: 100%; }
   background: var(--bg);
   border-bottom: 1px solid var(--border);
   overflow: hidden;
-  min-height: 460px;
+  min-height: 420px;
 }
 .hero-slide {
   display: none;
-  padding: 3.5rem 0;
+  padding: 1.75rem 0 2rem 0;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
