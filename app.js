@@ -246,15 +246,10 @@ function closeAccountModal(event) {
 }
 
 function setMobileBottomNavActive(activeId) {
-  const items = ['mobNavHome', 'mobNavShop', 'mobNavSearch', 'mobNavWishlist', 'mobNavCart'];
-  items.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.classList.toggle('active', id === activeId);
-  });
+  // Mobile bottom nav removed
 }
 
 function focusMobileSearch() {
-  setMobileBottomNavActive('mobNavSearch');
   const mInput = document.getElementById('mobileSearchInput');
   if (mInput) {
     mInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -265,9 +260,8 @@ function focusMobileSearch() {
 }
 
 function filterWishlistOnly() {
-  setMobileBottomNavActive('mobNavWishlist');
   if (wishlist.length === 0) {
-    showToast('Your wishlist is empty. Tap the heart on any product to save items!', 'info');
+    showToast('Your saved items list is empty. Tap "Save for later" on any product!', 'info');
     return;
   }
   currentCategory = 'all';
@@ -275,7 +269,7 @@ function filterWishlistOnly() {
   renderProducts(true);
   const catalogEl = document.getElementById('catalog');
   if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
-  showToast(`Showing ${wishlist.length} saved wishlist item(s)`, 'success');
+  showToast(`Showing ${wishlist.length} saved item(s)`, 'success');
 }
 
 function filterCatalog(category) {

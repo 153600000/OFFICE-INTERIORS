@@ -1164,31 +1164,6 @@
     <span class="mobile-whatsapp-fab-text">WhatsApp Order</span>
   </a>
 
-  <!-- ==================== MOBILE APP BOTTOM NAVIGATION BAR (iOS & Android) ==================== -->
-  <nav class="mobile-bottom-nav md:hidden" id="mobileBottomNav" aria-label="Mobile Bottom Navigation">
-    <a href="#hero" onclick="setMobileBottomNavActive('mobNavHome')" class="mobile-nav-item active" id="mobNavHome" aria-label="Home">
-      <i class="fas fa-home"></i>
-      <span>Home</span>
-    </a>
-    <a href="#catalog" onclick="filterCatalog('all'); setMobileBottomNavActive('mobNavShop')" class="mobile-nav-item" id="mobNavShop" aria-label="Shop Catalog">
-      <i class="fas fa-th-large"></i>
-      <span>Shop</span>
-    </a>
-    <button onclick="focusMobileSearch()" class="mobile-nav-item" id="mobNavSearch" aria-label="Search Catalog">
-      <i class="fas fa-search"></i>
-      <span>Search</span>
-    </button>
-    <button onclick="toggleWishlistDrawer(); setMobileBottomNavActive('mobNavWishlist')" class="mobile-nav-item relative" id="mobNavWishlist" aria-label="Wishlist">
-      <i class="far fa-heart"></i>
-      <span id="mobWishlistBadge" class="mobile-nav-badge bg-red-500">0</span>
-      <span>Wishlist</span>
-    </button>
-    <button onclick="toggleCartDrawer(); setMobileBottomNavActive('mobNavCart')" class="mobile-nav-item relative" id="mobNavCart" aria-label="Shopping Cart">
-      <i class="fas fa-shopping-bag"></i>
-      <span id="mobCartBadge" class="mobile-nav-badge bg-emerald-500">0</span>
-      <span>Cart</span>
-    </button>
-  </nav>
 
   <!-- ==================== TOAST NOTIFICATION CONTAINER ==================== -->
   <div id="toastContainer" class="toast-container"></div>
