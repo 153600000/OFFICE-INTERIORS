@@ -144,72 +144,85 @@
     </div>
   </header>
 
-  <!-- ==================== HERO SLIDER SECTION ==================== -->
-  <section id="hero" class="hero-slider-wrap relative">
-    <div class="container-custom relative z-10">
+  <!-- ==================== HERO SLIDER SECTION (MATCHES TOQRI REFERENCE EXACTLY) ==================== -->
+  <section id="hero" class="toqri-hero-wrap">
 
-      <!-- Slide 1 -->
+    <!-- Left Navigation Arrow (Mint Green Circle) -->
+    <button onclick="prevHeroSlide()" class="toqri-hero-arrow toqri-hero-prev" aria-label="Previous Slide">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Right Navigation Arrow (Mint Green Circle) -->
+    <button onclick="nextHeroSlide()" class="toqri-hero-arrow toqri-hero-next" aria-label="Next Slide">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <div class="container-custom">
+
+      <!-- Slide 1 (Matches User's Screenshot Exactly) -->
       <div class="hero-slide active" id="heroSlide1">
-        <div class="grid lg:grid-cols-12 gap-8 items-center min-h-[420px]">
-          <div class="lg:col-span-7">
-            <h1 class="hero-title">
-              Pre-Loved Furniture.<br><span style="color:var(--green);">Fresh Purpose.</span>
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[460px] py-8 lg:py-12">
+          
+          <!-- Left Text Content -->
+          <div class="lg:col-span-6 xl:col-span-6">
+            <span class="toqri-hero-eyebrow">RECYCLE. REUSE. RETHINK.</span>
+            
+            <h1 class="toqri-hero-title">
+              Pre-Loved Furniture,<br>Reimagined for You
             </h1>
-            <p class="hero-description">
-              Save up to 70% on certified Herman Miller, Steelcase & motorized standing desks. Rigorously inspected, sanitized, and delivered pan-India with a 1-year warranty.
+
+            <p class="toqri-hero-desc">
+              Make a sustainable switch with affordable, high-quality used furniture. Delivered pan India. Eco-friendly living starts right here.
             </p>
-            <div class="flex flex-wrap items-center gap-3.5">
-              <a href="#catalog" onclick="filterCatalog('chairs')" class="btn-primary">
-                <span>Shop Ergonomic Chairs</span>
-                <i class="fas fa-arrow-right text-xs"></i>
-              </a>
-              <a href="https://wa.me/917760951238?text=Hi%20Office%20Interiors%2C%20I'm%20looking%20for%20a%20certified%20ergonomic%20chair." target="_blank" class="btn-outline flex items-center gap-2">
-                <i class="fab fa-whatsapp text-emerald-600 text-base"></i>
-                <span>WhatsApp Specialist</span>
+
+            <div>
+              <a href="#catalog" onclick="filterCatalog('all')" class="toqri-hero-btn">
+                SHOP NOW
               </a>
             </div>
           </div>
-          <div class="lg:col-span-5 flex justify-center relative">
-            <div class="relative max-w-sm sm:max-w-md">
-              <img src="https://toqri.com/wp-content/uploads/2023/10/Aeron3-3-300x300.webp" alt="Herman Miller Aeron Refurbished Chair" class="w-full h-auto object-contain drop-shadow-2xl animate-float">
+
+          <!-- Right Image (Wooden Desk, Monitor, Lamp, Plant, Ergonomic Mesh Chair) -->
+          <div class="lg:col-span-6 xl:col-span-6 flex justify-center lg:justify-end">
+            <div class="relative w-full max-w-2xl">
+              <img src="https://toqri.com/wp-content/uploads/2025/05/Banner-Toqri-1.png" alt="Pre-Loved Furniture, Reimagined for You" class="w-full h-auto object-contain max-h-[440px] mx-auto">
             </div>
           </div>
+
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="hero-slide" id="heroSlide2">
-        <div class="grid lg:grid-cols-12 gap-8 items-center min-h-[420px]">
-          <div class="lg:col-span-7">
-            <h1 class="hero-title">
-              Solid Wood Tops.<br><span style="color:var(--green);">Electric Height Adjustable.</span>
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[460px] py-8 lg:py-12">
+          
+          <!-- Left Text Content -->
+          <div class="lg:col-span-6 xl:col-span-6">
+            <span class="toqri-hero-eyebrow">SMARTER SPACES, GREENER PLANET</span>
+            
+            <h1 class="toqri-hero-title">
+              Affordable Furniture,<br>That Makes a Difference
             </h1>
-            <p class="hero-description">
-              Electric standing desks with whisper-quiet dual motors, digital memory presets, and solid rubberwood finish. Boost your posture and productivity daily.
-            </p>
-            <div class="flex flex-wrap items-center gap-3.5">
-              <a href="#catalog" onclick="filterCatalog('desks')" class="btn-primary">
-                <span>Explore Standing Desks</span>
-                <i class="fas fa-arrow-right text-xs"></i>
-              </a>
-              <a href="#dealSection" class="btn-outline flex items-center gap-2">
-                <i class="fas fa-bolt text-amber-500"></i>
-                <span>Weekly Deal (Save ₹5,500)</span>
-              </a>
-            </div>
-          </div>
-          <div class="lg:col-span-5 flex justify-center relative">
-            <div class="relative max-w-sm sm:max-w-md">
-              <img src="https://toqri.com/wp-content/uploads/2023/10/WhatsApp-Image-2025-11-21-at-11.05.56-AM-300x300.jpeg" alt="Solid Wood Height Adjustable Standing Desk" class="w-full h-auto object-contain drop-shadow-2xl">
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Slider Indicators -->
-      <div class="flex justify-center items-center gap-3 pt-6 pb-2">
-        <button onclick="setSlide(0)" id="slideDot0" class="w-10 h-2.5 rounded-full bg-slate-900 transition-all duration-300" aria-label="Slide 1"></button>
-        <button onclick="setSlide(1)" id="slideDot1" class="w-3 h-2.5 rounded-full bg-slate-200 hover:bg-slate-300 transition-all duration-300" aria-label="Slide 2"></button>
+            <p class="toqri-hero-desc">
+              Save big while saving the planet. Shop refurbished furniture that’s good for your home—and even better for the Earth.
+            </p>
+
+            <div>
+              <a href="#catalog" onclick="filterCatalog('all')" class="toqri-hero-btn">
+                SHOP NOW
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Image (Workspace Setup 2) -->
+          <div class="lg:col-span-6 xl:col-span-6 flex justify-center lg:justify-end">
+            <div class="relative w-full max-w-2xl">
+              <img src="https://toqri.com/wp-content/uploads/2025/05/Toqri-banner_image_2.png" alt="Affordable Furniture That Makes a Difference" class="w-full h-auto object-contain max-h-[440px] mx-auto">
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>

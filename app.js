@@ -89,6 +89,18 @@ function initHeroSlider() {
     resetHeroTimer();
   };
 
+  window.nextHeroSlide = function() {
+    const nextIdx = (heroSlideIndex + 1) % slides.length;
+    showSlide(nextIdx);
+    resetHeroTimer();
+  };
+
+  window.prevHeroSlide = function() {
+    const prevIdx = (heroSlideIndex - 1 + slides.length) % slides.length;
+    showSlide(prevIdx);
+    resetHeroTimer();
+  };
+
   function nextSlide() {
     const nextIdx = (heroSlideIndex + 1) % slides.length;
     showSlide(nextIdx);
