@@ -286,8 +286,7 @@ const PRODUCTS_DATA = [
       "Brand": "Featherlite",
       "Material": "Cold Rolled Steel with Epoxy Powder Coating",
       "Locking": "Twin keys for independent doors"
-    },
-    badge: "60% OFF"
+    }
   },
   {
     id: "prod-14",
