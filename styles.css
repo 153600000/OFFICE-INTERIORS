@@ -243,53 +243,53 @@ img { display: block; max-width: 100%; }
   font-weight: 700;
 }
 
-/* Saved & Cart Nav Buttons */
+/* Saved & Cart Nav Buttons (Icon-Only Clean Design) */
 .toqri-nav-btn {
   position: relative;
   background: transparent;
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  justify-content: center;
   color: #374151;
-  font-size: 1.25rem;
-  padding: 0.35rem 0.65rem;
-  transition: all 0.15s ease;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
 }
 .toqri-nav-btn:hover {
   background: #f1f5f9;
   color: #23a455;
 }
 .toqri-nav-btn:hover .fa-heart {
-  transform: scale(1.2);
+  transform: scale(1.25);
   color: #e11d48;
 }
 .toqri-nav-btn .fa-heart {
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.15s ease;
 }
-.toqri-nav-btn-label {
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: #1f2937;
+.toqri-nav-btn:hover .fa-shopping-cart {
+  transform: scale(1.15);
+  color: #0f172a;
 }
-.toqri-nav-btn:hover .toqri-nav-btn-label {
-  color: #23a455;
+.toqri-nav-btn .fa-shopping-cart {
+  transition: transform 0.2s ease;
 }
 
 /* Cart & Modal Back Buttons */
 .cart-back-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  font-size: 0.75rem;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
   font-weight: 700;
-  color: #334155;
+  color: #1e293b;
   background: #f1f5f9;
   border: 1px solid #cbd5e1;
-  padding: 0.35rem 0.65rem;
-  border-radius: 6px;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.15s ease;
   user-select: none;

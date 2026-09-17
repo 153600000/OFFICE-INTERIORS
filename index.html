@@ -98,17 +98,15 @@
       <!-- Right: Saved for Later, Cart, Mobile Menu -->
       <div class="toqri-actions">
 
-        <!-- Saved / Liked Items -->
-        <button type="button" id="wishlistToggleBtn" onclick="toggleWishlistDrawer()" class="toqri-nav-btn" title="Saved / Likes" aria-label="Saved / Likes">
+        <!-- Saved / Liked Items (Icon only) -->
+        <button type="button" id="wishlistToggleBtn" onclick="toggleWishlistDrawer()" class="toqri-nav-btn" title="Saved items" aria-label="Saved items">
           <i class="fas fa-heart text-rose-500"></i>
-          <span class="toqri-nav-btn-label hidden sm:inline">Saved</span>
           <span id="wishlistCountBadge" class="toqri-badge">0</span>
         </button>
 
-        <!-- Cart -->
+        <!-- Cart (Icon only) -->
         <button type="button" id="cartDrawerBtn" onclick="toggleCartDrawer()" class="toqri-nav-btn" title="Shopping Cart" aria-label="Shopping Cart">
           <i class="fas fa-shopping-cart text-slate-700"></i>
-          <span class="toqri-nav-btn-label hidden sm:inline">Cart</span>
           <span id="cartCountBadge" class="toqri-badge">0</span>
         </button>
 
@@ -958,11 +956,11 @@
     <div class="modal-content-box p-4 sm:p-6 md:p-8" id="quickViewModalBox" onclick="event.stopPropagation()">
       <div class="sheet-drag-handle sm:hidden"></div>
       
-      <!-- Top Navigation Bar with Back button -->
-      <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-200">
+      <!-- Sticky Top Navigation Bar with Back button -->
+      <div class="sticky top-0 bg-white/95 backdrop-blur-md z-30 flex items-center justify-between pb-3 pt-1 -mt-1 mb-3 border-b border-slate-200">
         <button onclick="closeQuickView()" class="cart-back-btn flex items-center gap-1.5" aria-label="Go Back">
           <i class="fas fa-arrow-left text-xs"></i>
-          <span>Back</span>
+          <span>Back to Products</span>
         </button>
         <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Product Details</span>
         <button class="p-1.5 text-slate-400 hover:text-slate-700 rounded-full hover:bg-slate-100 transition" onclick="closeQuickView()" aria-label="Close Modal">

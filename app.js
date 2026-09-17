@@ -680,8 +680,9 @@ function updateCartUI() {
           </div>
           <p class="font-bold text-slate-700 text-sm">Your cart is currently empty</p>
           <p class="text-xs text-slate-400 mt-1">Discover premium refurbished ergonomic furniture at up to 70% off.</p>
-          <button onclick="toggleCartDrawer(); filterCatalog('all')" class="mt-4 btn-primary text-xs">
-            Start Shopping
+          <button onclick="toggleCartDrawer(); filterCatalog('all')" class="mt-4 btn-primary text-xs inline-flex items-center gap-2">
+            <i class="fas fa-arrow-left text-xs"></i>
+            <span>Back to Store / Start Shopping</span>
           </button>
         </div>
       `;
@@ -1263,6 +1264,14 @@ function openQuickView(productId) {
       </div>
 
       ${specsHtml}
+
+      <!-- Bottom Back Button for Easy Navigation -->
+      <div class="mt-5 pt-3.5 border-t border-slate-200">
+        <button onclick="closeQuickView()" class="w-full text-slate-700 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 font-bold py-2.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-xs border border-slate-200" aria-label="Back to Products">
+          <i class="fas fa-arrow-left text-xs"></i>
+          <span>Back to Products / Continue Browsing</span>
+        </button>
+      </div>
     </div>
   `;
 
