@@ -299,15 +299,8 @@ img { display: block; max-width: 100%; }
   color: #374151;
   font-size: 1.4rem;
 }
-.toqri-cart-btn:hover .toqri-cart-icon-wrap,
-.toqri-cart-btn:hover .toqri-cart-total {
-  color: #23a455;
-}
 .toqri-cart-total {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #1f2937;
-  transition: color 0.15s ease;
+  display: none !important;
 }
 
 .nav-link {
@@ -405,9 +398,9 @@ img { display: block; max-width: 100%; }
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center 30%;
+  background-position: center center;
   background-repeat: no-repeat;
-  transform: scale(1.05);
+  transform: scale(1.04);
   transition: transform 8s ease-out;
 }
 
@@ -416,16 +409,7 @@ img { display: block; max-width: 100%; }
 }
 
 .ai-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(11, 17, 32, 0.90) 0%, rgba(11, 17, 32, 0.72) 42%, rgba(11, 17, 32, 0.25) 100%);
-  z-index: 2;
-}
-
-@media (max-width: 768px) {
-  .ai-hero-overlay {
-    background: linear-gradient(180deg, rgba(11, 17, 32, 0.65) 0%, rgba(11, 17, 32, 0.92) 100%);
-  }
+  display: none;
 }
 
 .ai-hero-pill {
